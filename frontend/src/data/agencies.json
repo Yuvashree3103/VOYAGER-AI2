@@ -1,0 +1,293 @@
+[
+  {
+    "id": "ag1",
+    "name": "Tamil Nadu Explorer Travels",
+    "location": "Chennai",
+    "rating": 4.8,
+    "startingPrice": 12000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Marina_Beach_4.jpg",
+    "tourTypes": ["Temple tours", "Beach tours", "Heritage walks"],
+    "description": "Premier agency covering all of Tamil Nadu with expert guides, handcrafted itineraries, and 500+ happy travelers every year.",
+    "packages": [
+      {
+        "id": "p1",
+        "name": "Chennai Heritage & Coast Tour",
+        "duration": "2 Days / 1 Night",
+        "price": 8999,
+        "rating": 4.7,
+        "hotel": true,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Marina_Beach_4.jpg",
+        "locations": ["Marina Beach", "Kapaleeswarar Temple", "Government Museum", "San Thome Cathedral"],
+        "description": "Explore Chennai's coastal wonders and ancient temples. Includes hotel stay, all transport, and meals."
+      },
+      {
+        "id": "p2",
+        "name": "Kanchipuram Silk & Temples",
+        "duration": "1 Day",
+        "price": 3999,
+        "rating": 4.5,
+        "hotel": false,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Arunachaleswarar_Temple.jpg",
+        "locations": ["Kailasanathar Temple", "Ekambareswarar Temple", "Silk Weaving Centers"],
+        "description": "Day trip to the temple city of Kanchipuram. Shop for GI-certified Kanchipuram silk sarees after temple tours."
+      },
+      {
+        "id": "p3",
+        "name": "Mahabalipuram Day Trip",
+        "duration": "1 Day",
+        "price": 4499,
+        "rating": 4.6,
+        "hotel": false,
+        "transport": true,
+        "food": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Shore_Temple%2C_Mahabalipuram.jpg",
+        "locations": ["Shore Temple", "Five Rathas", "Arjuna's Penance"],
+        "description": "UNESCO World Heritage rock-cut temples along the Bay of Bengal. Expert heritage guide included."
+      }
+    ]
+  },
+  {
+    "id": "ag2",
+    "name": "Heritage South India Tours",
+    "location": "Thanjavur",
+    "rating": 4.7,
+    "startingPrice": 14500,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Brihadeeswarar_Temple%2C_Thanjavur%2C_Tamil_Nadu%2C_India.jpg",
+    "tourTypes": ["Heritage tours", "Temple circuits", "Museum trails"],
+    "description": "Specialists in UNESCO-tagged Chola dynasty heritage sites. Guided by historians and archaeologists.",
+    "packages": [
+      {
+        "id": "p4",
+        "name": "Thanjavur Heritage 3-Day Circuit",
+        "duration": "3 Days / 2 Nights",
+        "price": 14999,
+        "rating": 4.9,
+        "hotel": true,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Brihadeeswarar_Temple%2C_Thanjavur%2C_Tamil_Nadu%2C_India.jpg",
+        "locations": ["Brihadeeswarar Temple", "Thanjavur Palace", "Kumbakonam", "Darasuram"],
+        "description": "Dive deep into the Chola heartland. Includes Tanjore painting workshop, museum visits, and traditional Chettinad meals."
+      },
+      {
+        "id": "p5",
+        "name": "Trichy & Srirangam Heritage",
+        "duration": "2 Days / 1 Night",
+        "price": 8499,
+        "rating": 4.6,
+        "hotel": true,
+        "transport": true,
+        "food": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Rockfort_Temple%2C_Trichy.jpg",
+        "locations": ["Rock Fort Temple", "Srirangam Island Temple", "Jambukeswarar Temple"],
+        "description": "Explore the temple-studded city of Trichy and the sacred Srirangam — one of the largest temple complexes in the world."
+      }
+    ]
+  },
+  {
+    "id": "ag3",
+    "name": "Coastal Tamil Travels",
+    "location": "Mahabalipuram",
+    "rating": 4.6,
+    "startingPrice": 9800,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Shore_Temple%2C_Mahabalipuram.jpg",
+    "tourTypes": ["Coastal drives", "Beach stays", "Photography tours"],
+    "description": "Curated coastal experiences along Tamil Nadu's 1000 km coastline — from Pulicat Lake to Kanyakumari.",
+    "packages": [
+      {
+        "id": "p6",
+        "name": "East Coast Highway Drive",
+        "duration": "3 Days / 2 Nights",
+        "price": 11999,
+        "rating": 4.7,
+        "hotel": true,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Pamban_Bridge.jpg",
+        "locations": ["Chennai", "Mahabalipuram", "Pondicherry", "Cuddalore"],
+        "description": "Drive along the scenic East Coast Road. Explore French quarters, fishing villages, and ancient temples by the sea."
+      },
+      {
+        "id": "p7",
+        "name": "Rameswaram–Dhanushkodi Pilgrimage",
+        "duration": "2 Days / 1 Night",
+        "price": 7999,
+        "rating": 4.8,
+        "hotel": true,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Dhanushkodi_beach.jpeg",
+        "locations": ["Rameswaram Temple", "Pamban Bridge", "Dhanushkodi Ghost Town"],
+        "description": "Walk where Lord Rama stood — cross the legendary Pamban Bridge and reach the tip of the Indian subcontinent."
+      }
+    ]
+  },
+  {
+    "id": "ag4",
+    "name": "Hill Station Escapes",
+    "location": "Ooty",
+    "rating": 4.7,
+    "startingPrice": 16500,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Ooty_lake.jpg",
+    "tourTypes": ["Hill station tours", "Tea estate visits", "Nature treks"],
+    "description": "Premium hill station getaways across Ooty, Kodaikanal, Yercaud, and the Western Ghats.",
+    "packages": [
+      {
+        "id": "p8",
+        "name": "Ooty Hill Escape 3 Days",
+        "duration": "3 Days / 2 Nights",
+        "price": 17999,
+        "rating": 4.8,
+        "hotel": true,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_Nilgiri_Mountain_Railway_train.jpg",
+        "locations": ["Ooty Lake", "Botanical Gardens", "Tea Estate", "Nilgiri Toy Train"],
+        "description": "Ride the UNESCO Nilgiri Mountain Railway, explore tea estates, and enjoy the cool Nilgiri climate."
+      },
+      {
+        "id": "p9",
+        "name": "Kodaikanal Nature Retreat",
+        "duration": "3 Days / 2 Nights",
+        "price": 16999,
+        "rating": 4.7,
+        "hotel": true,
+        "transport": true,
+        "food": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Kodaikanal_Lake.jpg",
+        "locations": ["Kodaikanal Lake", "Coaker's Walk", "Bear Shola Falls", "Pillar Rocks"],
+        "description": "Explore the Star Lake, misty viewpoints, and hidden waterfalls of the Princess of Hill Stations."
+      },
+      {
+        "id": "p10",
+        "name": "Courtallam Waterfall Weekend",
+        "duration": "2 Days / 1 Night",
+        "price": 6999,
+        "rating": 4.5,
+        "hotel": true,
+        "transport": true,
+        "food": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Courtallam_Falls.jpg",
+        "locations": ["Main Falls", "Five Falls", "Peraruvi", "Shenbagadevi Temple"],
+        "description": "Take a dip in the medicinal waterfalls of Courtallam. Rejuvenate in the Spa of South India."
+      }
+    ]
+  },
+  {
+    "id": "ag5",
+    "name": "Temple Trails TN",
+    "location": "Rameswaram",
+    "rating": 4.8,
+    "startingPrice": 11000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Ramanathaswamy_Temple.jpg",
+    "tourTypes": ["Pilgrimage tours", "Temple circuits", "Senior-friendly"],
+    "description": "Dedicated pilgrimage and heritage tours across Tamil Nadu's most sacred temples with comfort-first logistics.",
+    "packages": [
+      {
+        "id": "p11",
+        "name": "Pancha Bhuta Stala Circuit",
+        "duration": "5 Days / 4 Nights",
+        "price": 22999,
+        "rating": 4.9,
+        "hotel": true,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Chidambaram_temple.jpg",
+        "locations": ["Chidambaram", "Tiruvannamalai", "Kanchipuram", "Rameswaram", "Kanyakumari"],
+        "description": "Visit all five Pancha Bhuta Stalas — the temples representing the five elements in Hindu cosmology."
+      },
+      {
+        "id": "p12",
+        "name": "Meenakshi Amman Madurai Special",
+        "duration": "2 Days / 1 Night",
+        "price": 8999,
+        "rating": 4.8,
+        "hotel": true,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Meenakshi_Amman_Temple_gopuram.jpg",
+        "locations": ["Meenakshi Amman Temple", "Thirumalai Nayakkar Palace", "Gandhi Museum"],
+        "description": "Early-morning darshan and full guided heritage walk through the city of Madurai."
+      }
+    ]
+  },
+  {
+    "id": "ag6",
+    "name": "Kanyakumari Sunrise Tours",
+    "location": "Kanyakumari",
+    "rating": 4.6,
+    "startingPrice": 9000,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Kanyakumari_sunrise.jpg",
+    "tourTypes": ["Sunrise tours", "Coastal heritage", "Weekend getaways"],
+    "description": "Specialists in the tip-of-India experience — sunrise viewing, Vivekananda Rock, and coastal heritage.",
+    "packages": [
+      {
+        "id": "p13",
+        "name": "Kanyakumari Sunrise Special",
+        "duration": "2 Days / 1 Night",
+        "price": 9999,
+        "rating": 4.7,
+        "hotel": true,
+        "transport": true,
+        "food": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Kanyakumari_sunrise.jpg",
+        "locations": ["Sunrise Point", "Vivekananda Rock", "Thiruvalluvar Statue", "Gandhi Memorial"],
+        "description": "Wake up before dawn to witness the three-sea confluence sunrise — rated among India's most stunning spectacles."
+      }
+    ]
+  },
+  {
+    "id": "ag7",
+    "name": "Western Ghats Nature Trips",
+    "location": "Kodaikanal",
+    "rating": 4.7,
+    "startingPrice": 15500,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Kodaikanal_Lake.jpg",
+    "tourTypes": ["Nature retreats", "Waterfalls", "Photography tours"],
+    "description": "Off-beaten-path adventures in the Western Ghats, Anamalai Tiger Reserve, and Palni Hills.",
+    "packages": [
+      {
+        "id": "p14",
+        "name": "Anaimalai Jungle & Valley Tour",
+        "duration": "3 Days / 2 Nights",
+        "price": 18999,
+        "rating": 4.6,
+        "hotel": true,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop",
+        "locations": ["Topslip", "Anaimalai Tiger Reserve", "Amaravathi Reservoir"],
+        "description": "Explore the biodiversity hotspot of Tamil Nadu's Western Ghats with jeep safaris and guided nature walks."
+      }
+    ]
+  },
+  {
+    "id": "ag8",
+    "name": "Kanchipuram Silk & Heritage",
+    "location": "Kanchipuram",
+    "rating": 4.6,
+    "startingPrice": 8500,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Kapaleeswarar_Temple_Chennai.jpg",
+    "tourTypes": ["Heritage shopping", "Temple visits", "Handloom routes"],
+    "description": "Customized tours combining Kanchipuram temple circuits with authentic handloom silk saree shopping experiences.",
+    "packages": [
+      {
+        "id": "p15",
+        "name": "Kanchipuram Full Day Heritage",
+        "duration": "1 Day",
+        "price": 4999,
+        "rating": 4.5,
+        "hotel": false,
+        "transport": true,
+        "food": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Arunachaleswarar_Temple.jpg",
+        "locations": ["Kailasanathar Temple", "Ekambareswarar Temple", "Silk Weavers Colony"],
+        "description": "Temple darshan followed by a guided silk weaving demonstration and direct purchase from artisan cooperatives."
+      }
+    ]
+  }
+]

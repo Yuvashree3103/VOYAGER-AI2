@@ -1,0 +1,31 @@
+POI_ID,POI,category,type,description,latitude,longitude,entry_fee,avg_duration_mins,opening_time,closing_time,best_time,popularity_score,Shows and Concerts,Scenic,Local Experiences,Religious,History and Culture,Museum,Food and Drinks,Adventure,Shopping,city
+TN1,Marina Beach,Beach,Beach,Urban beach and promenade,13.0499,80.2824,0,120,00:00,23:59,Evening 4-7 PM,9.7,1,5,4,0,2,0,3,2,1,Chennai
+TN2,Kapaleeshwarar Temple,Temple,Religious,Dravidian architecture temple in Mylapore,13.0337,80.2698,0,60,05:00,21:00,Morning 6-8 AM,9.4,0,3,4,5,5,2,1,0,1,Chennai
+TN3,Mahabalipuram Shore Temple,Heritage,Historical,UNESCO site with Pallava-era monuments,12.6208,80.1945,40,150,06:00,18:00,Morning,9.5,0,5,4,2,5,3,1,1,1,Mahabalipuram
+TN4,Pancha Rathas,Heritage,Historical,Monolithic rock-cut temples complex,12.6178,80.1917,40,120,06:00,18:00,Morning,9.2,0,4,4,1,5,2,0,1,0,Mahabalipuram
+TN5,Kanchipuram Kailasanathar Temple,Temple,Religious,Ancient Pallava temple and heritage,12.8420,79.6990,0,75,06:00,19:00,Morning,8.9,0,3,3,5,5,2,0,0,0,Kanchipuram
+TN6,Vellore Fort,Heritage,Historical,16th-century fort with museums and temples,12.9165,79.1325,60,120,09:00,17:30,Morning,8.7,0,3,3,2,5,4,0,0,1,Vellore
+TN7,Yercaud Lake,Nature,Scenic,Hill-station lake and viewpoints,11.7753,78.2090,0,120,06:00,20:00,Morning/Evening,8.6,0,5,4,0,1,0,2,4,0,Yercaud
+TN8,Meenakshi Amman Temple,Temple,Religious,Iconic temple with towering gopurams,9.9195,78.1193,0,120,05:00,21:00,Morning,9.6,0,4,4,5,5,2,1,0,1,Madurai
+TN9,Thirumalai Nayakkar Palace,Heritage,Cultural,Indo-Saracenic palace and evening light show,9.9177,78.1219,50,90,09:00,17:00,Evening,8.8,3,3,3,1,4,3,0,0,0,Madurai
+TN10,Alagar Kovil,Temple,Religious,Temple set in foothills near Madurai,10.0705,78.2091,0,90,06:00,20:00,Morning,8.4,0,4,3,5,4,1,0,1,0,Madurai
+TN11,Brihadeeswara Temple,Heritage,Religious,UNESCO Chola temple in Thanjavur,10.7828,79.1318,0,120,06:00,20:30,Morning,9.6,0,4,4,5,5,2,0,0,1,Thanjavur
+TN12,Thanjavur Palace Museum,Museum,Cultural,Maratha palace museum and art collection,10.7870,79.1378,50,120,09:00,17:00,Afternoon,8.3,1,2,3,0,4,5,0,0,1,Thanjavur
+TN13,Srirangam Ranganathaswamy Temple,Temple,Religious,Massive temple complex on Cauvery island,10.8600,78.6950,0,150,06:00,21:00,Morning,9.4,0,3,4,5,5,2,0,0,1,Trichy
+TN14,Rockfort Temple,Heritage,Religious,Historic hillfort with panoramic city views,10.8270,78.6956,0,90,06:00,20:00,Sunset,8.8,0,5,3,4,4,1,0,1,0,Trichy
+TN15,Kodaikanal Lake,Nature,Scenic,Lake loop walk and boating,10.2381,77.4892,0,150,06:00,20:00,Morning/Evening,9.1,0,5,4,0,1,0,2,4,1,Kodaikanal
+TN16,Pillar Rocks,Nature,Scenic,Viewpoint with rock formations and gardens,10.2167,77.4667,0,90,09:00,17:00,Morning,8.7,0,5,3,0,1,0,0,3,0,Kodaikanal
+TN17,Ooty Botanical Garden,Garden,Nature,Colonial-era botanical gardens,11.4117,76.7033,50,120,08:00,18:00,Morning,8.9,0,4,4,0,2,1,0,2,1,Ooty
+TN18,Doddabetta Peak,Nature,Scenic,Highest peak in Nilgiris with views,11.4000,76.7333,10,90,07:00,18:00,Morning,8.6,0,5,3,0,1,0,0,4,0,Ooty
+TN19,Isha Yoga Center,Spiritual,Local Experiences,Adiyogi statue and meditation center,11.0074,76.9558,0,180,06:00,20:00,Evening,8.8,1,4,5,4,2,0,1,2,0,Coimbatore
+TN20,Marudhamalai Murugan Temple,Temple,Religious,Hill temple overlooking Coimbatore,11.0400,76.8500,0,90,06:00,20:00,Morning,8.4,0,4,3,5,3,0,0,1,0,Coimbatore
+TN21,Courtallam Main Falls,Waterfall,Nature,Popular falls best in monsoon season,8.9300,77.2800,0,120,06:00,18:00,Monsoon,8.5,0,5,4,0,0,0,1,4,0,Tenkasi
+TN22,Papanasam Agasthiyar Falls,Waterfall,Nature,Falls and forest near Kalakad reserve,8.5670,77.2810,0,120,06:00,18:00,Monsoon,8.2,0,5,4,1,1,0,0,4,0,Tirunelveli
+TN23,Ramanathaswamy Temple,Temple,Religious,Famous temple with long corridors,9.2880,79.3129,0,150,05:00,20:00,Morning,9.3,0,4,4,5,5,2,0,0,0,Rameswaram
+TN24,Dhanushkodi Beach,Beach,Scenic,Ghost town ruins and dramatic shoreline,9.1672,79.4423,0,120,00:00,23:59,Sunrise,8.7,0,5,4,0,2,0,0,4,0,Dhanushkodi
+TN25,Vivekananda Rock Memorial,Landmark,Scenic,Boat ride to memorial and ocean views,8.0774,77.5490,20,120,08:00,16:00,Sunset,9.2,0,5,4,2,4,1,0,2,1,Kanyakumari
+TN26,Thiruvalluvar Statue,Landmark,Cultural,Iconic statue near the confluence,8.0778,77.5486,0,60,08:00,16:00,Sunset,8.8,0,5,3,0,3,1,0,1,0,Kanyakumari
+TN27,Arunachaleswarar Temple,Temple,Religious,Famous Shiva temple and Girivalam route,12.2253,79.0747,0,150,05:30,21:00,Evening,9.1,0,4,4,5,5,2,0,0,1,Tiruvannamalai
+TN28,Chidambaram Nataraja Temple,Temple,Religious,Historic temple dedicated to Nataraja,11.3993,79.6930,0,120,06:00,21:00,Morning,8.9,0,3,4,5,5,2,0,0,0,Chidambaram
+TN29,Kumbakonam Mahamaham Tank,Heritage,Cultural,Sacred tank and temple town walk,10.9621,79.3885,0,90,00:00,23:59,Morning,8.0,0,3,4,4,4,1,0,0,1,Kumbakonam
+TN30,Gangaikonda Cholapuram Temple,Heritage,Religious,Chola temple with intricate carvings,11.2000,79.4500,0,120,06:00,20:00,Morning,8.7,0,4,3,5,5,2,0,0,0,Ariyalur

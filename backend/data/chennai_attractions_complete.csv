@@ -1,0 +1,75 @@
+POI_ID,POI,category,type,description,latitude,longitude,entry_fee,avg_duration_mins,opening_time,closing_time,best_time,popularity_score,Shows and Concerts,Scenic,Local Experiences,Religious,History and Culture,Museum,Food and Drinks,Adventure,Shopping
+POI1,Marina Beach,Beach,Beach,World's second-longest urban beach (13 km),13.0499,80.2824,0,120,00:00,23:59,Evening 4-7 PM,9.8,1,5,4,0,2,0,4,2,1
+POI2,Kapaleeshwarar Temple,Temple,Religious,Ancient Shiva temple with Dravidian architecture,13.0337,80.2698,0,60,05:00,21:00,Morning 6-8 AM,9.5,0,3,4,5,5,2,1,0,1
+POI3,Phoenix Market City,Mall,Shopping,Premium shopping destination,12.9965,80.248,0,240,10:00,22:00,Evening,9.2,3,3,4,0,0,0,5,2,5
+POI4,Santhome Cathedral Basilica,Church,Religious,Built over tomb of St. Thomas,13.0327,80.2779,0,45,06:00,20:00,Morning,9.0,0,4,3,5,5,2,0,0,0
+POI5,T Nagar,Shopping,Market,Commercial hub for shopping,13.0419,80.2348,0,240,10:00,21:00,Evening,9.0,0,1,5,0,1,0,4,0,5
+POI6,Express Avenue Mall,Mall,Shopping,Large shopping mall,13.0631,80.2426,0,180,10:00,22:00,Evening,9.0,2,2,3,0,0,0,5,1,5
+POI7,Fort St. George,Heritage,Historical,First British fortress in India,13.08,80.2872,200,150,09:00,17:00,Morning,8.8,0,4,3,2,5,4,0,0,0
+POI8,Dakshina Chitra Museum,Museum,Cultural,Living museum of South Indian culture,12.8884,80.2619,300,240,10:00,18:00,Morning,8.5,3,4,5,2,5,5,2,1,3
+POI9,Edward Elliot's Beach,Beach,Beach,"Popular beach with lighthouse, less crowded than Marina",13.0012,80.2709,0,90,00:00,23:59,Evening 4-7 PM,8.5,1,5,4,0,1,0,3,1,1
+POI10,Pondy Bazaar,Shopping,Market,Street shopping paradise,13.0419,80.2348,0,180,10:00,21:00,Evening,8.5,0,2,5,0,1,0,4,0,5
+POI11,ISKCON Temple Chennai,Temple,Religious,Krishna temple with cultural center,13.0169,80.2228,0,60,04:30,21:00,Evening aarti,8.5,2,3,3,5,3,1,2,0,1
+POI12,VR Chennai,Mall,Shopping,Modern shopping mall,12.9965,80.248,0,180,10:00,22:00,Evening,8.5,2,2,3,0,0,0,5,1,5
+POI13,Parthasarathy Temple,Temple,Religious,8th-century Vaishnavite temple,13.0343,80.2778,0,45,06:00,12:00,Morning,8.5,0,3,3,5,4,1,0,0,0
+POI14,Kora Food Street,Food,Food,Famous street food destination,13.0631,80.2426,0,90,18:00,23:00,Evening,8.5,0,1,5,0,0,0,5,0,0
+POI15,ECR Road Drive,Scenic Drive,Adventure,Scenic coastal highway,12.8956,80.2678,0,120,00:00,23:59,Morning/Evening,8.5,0,5,3,0,0,0,3,3,0
+POI16,The Forum Vijaya Mall,Mall,Shopping,Shopping mall in Vadapalani,13.0542,80.2189,0,180,10:00,22:00,Evening,8.2,2,2,3,0,0,0,5,1,5
+POI17,Arignar Anna Zoological Park,Zoo,Nature,Large zoo with safari,12.8829,80.0824,50,240,09:00,17:00,Morning,8.2,0,3,3,0,1,1,1,2,0
+POI18,Amethyst Cafe,Cafe,Food,Heritage cafe and restaurant,13.0452,80.2772,0,90,09:00,22:00,Afternoon,8.2,0,4,4,0,2,0,5,0,1
+POI19,Kalakshetra Foundation,Cultural,Art,Fine arts and dance academy,13.0085,80.2736,0,120,09:00,17:00,During performances,8.2,5,4,4,1,4,2,0,0,1
+POI20,Government Museum Chennai,Museum,Cultural,Archaeological and historical museum,13.0712,80.2635,50,180,09:30,17:00,Morning,8.2,0,2,3,1,5,5,0,0,0
+POI21,Kalakshetra Foundation,Cultural,Art,Fine arts and dance academy,13.0085,80.2736,0,120,09:00,17:00,During performances,8.2,5,4,4,1,4,2,0,0,1
+POI22,Ashtalakshmi Temple,Temple,Religious,Temple dedicated to Goddess Lakshmi,13.0102,80.2768,0,45,06:30,20:00,Evening,8.2,0,4,3,5,3,0,0,0,0
+POI23,Mangadu Kamakshi Amman Temple,Temple,Religious,Famous Devi temple,13.0212,80.2228,0,60,06:00,20:00,Friday,8.2,0,2,3,5,3,0,0,0,0
+POI24,St. Thomas Mount,Church,Religious,Historic mount where St. Thomas martyred,13.0105,80.1935,0,60,06:00,20:00,Morning,8.2,0,5,2,4,4,1,0,1,0
+POI25,VGP Universal Kingdom,Amusement Park,Entertainment,Amusement park with rides,12.9408,80.2461,800,300,10:00,20:00,Weekdays,8.0,2,2,3,0,0,0,3,5,1
+POI26,Vivekananda House,Heritage,Historical,Memorial of Swami Vivekananda,13.0452,80.2772,20,60,10:00,19:00,Morning,8.0,1,3,3,3,4,4,0,0,0
+POI27,Spencer Plaza,Mall,Shopping,One of oldest malls,13.0631,80.2426,0,150,10:00,21:00,Afternoon,8.0,1,2,3,0,1,0,4,0,4
+POI28,Chennai Lighthouse,Landmark,Scenic,Iconic lighthouse with city views,13.0499,80.2824,20,30,10:00,18:00,Evening,8.0,0,5,2,0,1,0,0,1,0
+POI29,Madras Crocodile Bank,Zoo,Nature,Crocodile conservation center,12.8884,80.2619,100,120,09:00,17:00,Morning,8.0,0,2,3,0,1,0,1,3,1
+POI30,Guindy National Park,National Park,Nature,National park inside city,13.0073,80.2298,50,150,09:00,17:00,Morning,8.0,0,5,3,0,1,0,0,3,0
+POI31,Birla Planetarium,Science,Educational,Science and planetarium,13.0151,80.2431,50,90,10:00,19:00,Afternoon,8.0,4,2,2,0,2,3,0,0,0
+POI32,Shirdi Sai Baba Temple,Temple,Religious,Popular Sai Baba temple,13.0212,80.2228,0,45,05:00,21:00,Thursday,8.0,0,2,3,5,2,0,1,0,0
+POI33,Anna Centenary Library,Library,Cultural,Modern library complex,13.0212,80.2228,0,90,09:00,20:00,Afternoon,8.0,1,3,2,0,3,1,0,0,0
+POI34,Muttukadu Boat House,Water Sports,Adventure,Boating and water sports complex,12.8241,80.2465,50,120,09:00,18:00,Morning,7.8,0,4,3,0,0,0,2,5,1
+POI35,Mahalingapuram Ayyappan Temple,Temple,Religious,Famous Ayyappan temple,13.0212,80.2228,0,45,05:00,21:00,Morning,7.8,0,2,2,5,2,0,0,0,0
+POI36,Arulmigu Marundeeswarar Temple,Temple,Religious,Ancient temple near beach,13.0105,80.2769,0,45,06:00,20:00,Morning,7.8,0,3,3,5,3,0,0,0,0
+POI37,Semmozhi Poonga,Garden,Nature,Botanical garden,13.0571,80.2457,20,90,10:00,19:00,Morning,7.8,1,5,3,0,1,0,0,1,0
+POI38,Cholamandal Artists' Village,Art,Cultural,Artists' commune and gallery,13.0012,80.2709,0,120,10:00,18:00,Morning,7.8,2,4,4,0,3,3,1,0,2
+POI39,Queensland Amusement Park,Amusement Park,Entertainment,Water and amusement park,12.9526,80.2496,700,300,10:00,19:00,Weekdays,7.8,1,2,2,0,0,0,3,5,0
+POI40,Valluvar Kottam,Monument,Cultural,Memorial monument,13.0364,80.2401,0,45,08:00,20:00,Evening,7.8,1,3,3,0,4,2,0,0,0
+POI41,The Royal Chitran (Chokhi Dhani),Cultural,Entertainment,Rajasthani cultural village,13.0822,80.2746,800,240,18:00,23:00,Evening,7.8,5,3,5,0,4,1,5,1,2
+POI42,Velankanni Church,Church,Religious,Church dedicated to Our Lady of Health,13.0452,80.2672,0,45,06:00,20:00,Evening,7.8,0,3,2,5,2,0,0,0,0
+POI43,Chennai City Center Mall,Mall,Shopping,Central shopping mall,13.0631,80.2426,0,150,10:00,21:00,Afternoon,7.5,1,2,2,0,0,0,4,0,4
+POI44,MGM Film City,Entertainment,Entertainment,Film studio and theme park,12.9061,80.2192,300,180,10:00,18:00,Weekends,7.5,3,3,3,0,1,1,2,2,1
+POI45,FlyDining Chennai,Adventure,Adventure,Unique dining experience,13.0822,80.2746,2500,60,18:00,22:00,Evening,7.5,3,5,4,0,0,0,5,5,0
+POI46,VGP Marine Kingdom,Water Park,Amusement,Water theme park,12.9408,80.2461,500,240,10:00,19:00,Weekdays,7.5,3,3,2,0,0,0,3,5,1
+POI47,Golden Beach,Beach,Beach,Private beach with water sports,12.9408,80.2461,100,180,08:00,18:00,Morning 8-11 AM,7.5,2,4,3,0,0,0,3,4,1
+POI48,MGM Beach Resort,Resort,Accommodation,Beach resort,12.9408,80.2461,0,1440,00:00,23:59,All day,7.5,2,4,3,0,0,0,4,2,1
+POI49,Shirdi Sai Baba Temple Injambakkam,Temple,Religious,Sai Baba temple on ECR,12.8956,80.2678,0,45,06:00,20:00,Morning,7.5,0,3,2,5,1,0,0,0,0
+POI50,Theosophical Society,Garden,Nature,Peaceful garden with ancient trees,13.0085,80.2736,0,90,09:00,17:00,Morning,7.5,0,5,3,1,2,0,0,1,0
+POI51,Thousand Lights Mosque,Mosque,Religious,Historic Shia mosque,13.0452,80.2672,0,30,05:00,21:00,Friday prayers,7.5,0,3,2,5,3,0,0,0,0
+POI52,Rail Museum Chennai,Museum,Cultural,Railway heritage museum,13.0742,80.2501,50,90,10:00,17:00,Weekends,7.5,0,2,2,0,4,4,0,1,1
+POI53,St. Mary's Church,Church,Religious,First Anglican church in Asia,13.0805,80.2872,0,30,09:00,17:00,Morning,7.5,0,3,2,4,4,0,0,0,0
+POI54,Chetpet EcoPark,Park,Nature,Urban eco-park with lake,13.0822,80.2746,30,120,10:00,19:00,Evening,7.5,1,4,3,0,0,0,2,2,0
+POI55,MGR Memorial,Memorial,Historical,Memorial of former CM MGR,13.0452,80.2772,0,30,08:00,20:00,Evening,7.5,0,3,2,0,4,1,0,0,0
+POI56,Ripon Building,Heritage,Historical,Historic municipal building,13.0822,80.2746,0,30,10:00,17:00,Morning,7.2,0,4,2,0,4,1,0,0,0
+POI57,ECR Beach,Beach,Beach,Scenic beach along East Coast Road,12.8956,80.2678,0,90,00:00,23:59,Morning,7.2,0,5,3,0,0,0,2,2,0
+POI58,The Faraway Tree Gallery,Art Gallery,Art,Contemporary art gallery,13.0452,80.2772,0,60,10:00,19:00,Afternoon,7.2,2,2,3,0,2,2,1,0,1
+POI59,St. George's Cathedral,Church,Religious,Anglican cathedral,13.0452,80.2672,0,30,09:00,17:00,Sunday service,7.2,1,3,2,4,3,0,0,0,0
+POI60,Chennai Snake Park Trust,Zoo,Nature,Snake and reptile park,13.0822,80.2746,50,60,09:00,17:00,Morning,7.0,0,1,2,0,0,0,0,2,0
+POI61,Chennai Snake Park Trust,Zoo,Nature,Snake and reptile park,13.0822,80.2746,50,60,09:00,17:00,Morning,7.0,0,1,2,0,0,0,0,2,0
+POI62,Kapaleeshwarar Temple Tank,Temple,Religious,Sacred temple tank,13.0337,80.2698,0,20,00:00,23:59,Morning,7.0,0,3,2,4,2,0,0,0,0
+POI63,Higginbotham's,Bookstore,Shopping,Historic bookstore,13.0631,80.2426,0,45,10:00,20:00,Afternoon,7.0,0,1,2,0,2,0,0,0,2
+POI64,CSI St. Thomas English Church,Church,Religious,Historic CSI church,13.0452,80.2672,0,30,09:00,17:00,Sunday,7.0,0,2,2,4,3,0,0,0,0
+POI65,Armenian Church,Church,Religious,Historic Armenian church,13.0822,80.2746,0,30,09:00,17:00,Morning,7.0,0,3,1,4,4,1,0,0,0
+POI66,Connemara Library,Library,Cultural,Historic public library,13.0724,80.2628,0,60,10:00,17:00,Morning,7.0,0,2,2,0,3,2,0,0,0
+POI67,Madras War Cemetery,Heritage,Historical,WWII war cemetery,13.0452,80.2672,0,30,08:00,17:00,Morning,6.8,0,3,1,0,4,0,0,0,0
+POI68,St. Luke's Church,Church,Religious,Anglican church,13.0452,80.2672,0,30,09:00,17:00,Morning,6.8,0,2,1,4,2,0,0,0,0
+POI69,St. Andrew's Church,Church,Religious,Historic Scottish church,13.0822,80.2746,0,30,09:00,17:00,Morning,6.8,0,3,1,4,3,0,0,0,0
+POI70,Madhavaram Botanical Garden,Garden,Nature,Botanical garden with diverse plants,13.0822,80.2746,20,90,09:00,17:00,Morning,6.8,0,4,2,0,0,0,0,0,0
+POI71,Chennai Port,Landmark,Industrial,Major seaport,13.0822,80.2746,0,30,00:00,23:59,Morning,6.5,0,2,1,0,1,0,0,0,0
+POI72,Pantheon Road,Heritage,Historical,Historic area with colonial buildings,13.0712,80.2635,0,45,00:00,23:59,Morning,6.5,0,3,2,0,4,2,0,0,0
+POI73,Asiatic Society Chennai,Cultural,Historical,Oriental research society,13.0712,80.2635,0,60,10:00,17:00,Weekdays,6.5,1,2,2,0,4,3,0,0,0
+POI74,Velachery Lake,Lake,Nature,Urban lake and bird watching,13.0822,80.2746,0,60,00:00,23:59,Morning,6.5,0,3,2,0,0,0,0,0,0

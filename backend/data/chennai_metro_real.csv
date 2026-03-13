@@ -1,0 +1,31 @@
+station_name,line,latitude,longitude,opening_time,closing_time,parking_available,feeder_available,interchange,peak_passenger_flow,offpeak_passenger_flow
+Chennai Central,Blue Line,13.0825,80.2752,5:00,23:00,Yes,Yes,Chennai Park,45000,15000
+Chennai Park,Blue Line,13.0822,80.2746,5:00,23:00,No,Yes,Chennai Central,35000,12000
+Chennai Egmore,Blue Line,13.0787,80.2609,5:00,23:00,Yes,Yes,None,30000,10000
+Kilpauk,Blue Line,13.0875,80.2512,5:00,23:00,Yes,Yes,None,25000,8000
+Pachaiyappa's College,Blue Line,13.0862,80.2456,5:00,23:00,No,Yes,None,20000,7000
+Shenoy Nagar,Blue Line,13.0834,80.2401,5:00,23:00,Yes,Yes,None,18000,6000
+Anna Nagar East,Blue Line,13.0891,80.2257,5:00,23:00,Yes,Yes,None,28000,9000
+Anna Nagar Tower,Blue Line,13.0876,80.2178,5:00,23:00,Yes,Yes,None,26000,8500
+Thirumangalam,Blue Line,13.0854,80.2102,5:00,23:00,Yes,Yes,None,22000,7500
+Koyambedu,Blue Line,13.0721,80.2001,5:00,23:00,Yes,Yes,CMBT,40000,14000
+CMBT,Blue Line,13.0698,80.2045,5:00,23:00,Yes,Yes,Koyambedu,35000,12000
+Arumbakkam,Blue Line,13.0634,80.2123,5:00,23:00,Yes,Yes,None,20000,7000
+Vadapalani,Blue Line,13.0542,80.2189,5:00,23:00,Yes,Yes,None,30000,10000
+Ashok Nagar,Blue Line,13.0421,80.2156,5:00,23:00,Yes,Yes,None,22000,7500
+Ekkattuthangal,Blue Line,13.0356,80.2201,5:00,23:00,No,Yes,None,18000,6000
+St. Thomas Mount,Blue Line,13.0105,80.1935,5:00,23:00,Yes,Yes,Green Line,50000,18000
+Alandur,Green Line,13.0021,80.2001,5:00,23:00,Yes,Yes,None,28000,9000
+Nanganallur Road,Green Line,12.9821,80.1912,5:00,23:00,Yes,Yes,None,20000,7000
+Meenambakkam,Green Line,12.9778,80.1654,5:00,23:00,Yes,Yes,None,15000,5000
+Airport,Green Line,12.9721,80.1598,5:00,23:00,Yes,Yes,Chennai Airport,60000,20000
+station_name,line,latitude,longitude,opening_time,closing_time,parking,feeder,interchange
+Chennai Central,Blue Line,13.0825,80.2752,5:00,23:00,Yes,Yes,Chennai Park
+Chennai Park,Blue Line,13.0822,80.2746,5:00,23:00,No,Yes,Chennai Central
+Chennai Egmore,Blue Line,13.0787,80.2609,5:00,23:00,Yes,Yes,None
+Kilpauk,Blue Line,13.0875,80.2512,5:00,23:00,Yes,Yes,None
+Koyambedu,Blue Line,13.0721,80.2001,5:00,23:00,Yes,Yes,CMBT
+St. Thomas Mount,Blue Line,13.0105,80.1935,5:00,23:00,Yes,Yes,Green Line
+Alandur,Green Line,13.0021,80.2001,5:00,23:00,Yes,Yes,None
+Nanganallur Road,Green Line,12.9821,80.1912,5:00,23:00,Yes,Yes,None
+Airport,Green Line,12.9721,80.1598,5:00,23:00,Yes,Yes,Airport

@@ -1,0 +1,184 @@
+{
+  "Chennai": [
+    {
+      "type": "Food",
+      "title": "Filter Coffee",
+      "description": "Chennai's soul in a cup — fragrant, frothy, and served in the iconic dabarah-tumbler set.",
+      "imageUrl": "https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Idli & Sambar",
+      "description": "The quintessential Tamil breakfast — pillowy soft idlis with aromatic sambar and three chutneys.",
+      "imageUrl": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Chettinad Chicken Curry",
+      "description": "Bold, complex spice blend unique to Chettinad cuisine — a fiery masterpiece.",
+      "imageUrl": "https://images.unsplash.com/photo-1604908177522-402df02f6b7e?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Kanchipuram Silk Saree",
+      "description": "Authentic GI-tagged Kanchipuram silk with gold zari borders — the queen of Indian sarees.",
+      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
+    }
+  ],
+  "Madurai": [
+    {
+      "type": "Food",
+      "title": "Jigarthanda",
+      "description": "Madurai's legendary cold drink — almond resin, milk, ice cream, and sarsaparilla syrup.",
+      "imageUrl": "https://images.unsplash.com/photo-1541544537156-7627a7a4aa1c?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Bun Parotta",
+      "description": "Soft layered parotta served with mutton or veg salna — Madurai's beloved street staple.",
+      "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Mutton Biryani",
+      "description": "Madurai-style biryani is pot-roasted with whole spices giving a unique smoky flavour.",
+      "imageUrl": "https://images.unsplash.com/photo-1563379091339-03246963d96c?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Sungudi Saree",
+      "description": "GI-tagged tie-dye cotton saree created near Madurai — famous for its geometric dot patterns.",
+      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
+    }
+  ],
+  "Ooty": [
+    {
+      "type": "Food",
+      "title": "Ooty Homemade Chocolates",
+      "description": "Rich, creamy homemade chocolates from Nilgiri dairies — best from Chocolate Grove and King Chocolates.",
+      "imageUrl": "https://images.unsplash.com/photo-1511381939415-c1cbe9a5c7b3?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Ooty Varkey Biscuits",
+      "description": "Crispy, buttery traditional biscuits — iconic to Ooty. Best bought fresh from Ooty Bakery.",
+      "imageUrl": "https://images.unsplash.com/photo-1548943487-a2e4ad159a6a?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Nilgiri Tea",
+      "description": "Aromatic orthodox tea from Nilgiri estates — best purchased directly from estate shops.",
+      "imageUrl": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Eucalyptus Oil",
+      "description": "Pure cold-pressed eucalyptus oil — therapeutic and abundantly available in Ooty markets.",
+      "imageUrl": "https://images.unsplash.com/photo-1514996937319-344454492b37?w=800&auto=format&fit=crop"
+    }
+  ],
+  "Thanjavur": [
+    {
+      "type": "Food",
+      "title": "Thanjavur Special Meals",
+      "description": "Traditional banana-leaf meals with rasam, sambar, kootu, and payasam — a Chola-era feast.",
+      "imageUrl": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Chettinad Cuisine",
+      "description": "Iconic spice-heavy cuisine unique to Chettinad — vellai paniyaram and kuzhi paniyaram are must-tries.",
+      "imageUrl": "https://images.unsplash.com/photo-1604908177522-402df02f6b7e?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Thalaiyatti Bommai Doll",
+      "description": "The iconic nodding-head Tanjore doll — handcrafted with clay, papier-mâché, and gold leaf.",
+      "imageUrl": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Tanjore Painting",
+      "description": "Classical South Indian gold-foil paintings of deities — best from Government Emporium, Thanjavur.",
+      "imageUrl": "https://images.unsplash.com/photo-1579762593175-20226054cad0?w=800&auto=format&fit=crop"
+    }
+  ],
+  "Kanchipuram": [
+    {
+      "type": "Food",
+      "title": "Kanchipuram Idli",
+      "description": "Coarser, spicier idli flavored with cumin, pepper, and ginger — offered as prasad in Varadaraja Temple.",
+      "imageUrl": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Temple Prasadam Sweets",
+      "description": "Panchaamirtham and other temple sweets — a divine treat after temple visits.",
+      "imageUrl": "https://images.unsplash.com/photo-1548943487-a2e4ad159a6a?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Kanchipuram Silk Saree",
+      "description": "GI-certified handwoven silk with heavy gold zari — buy from weavers' cooperatives for authenticity.",
+      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Kanchipuram Cotton Saree",
+      "description": "Affordable, elegantly patterned cotton sarees — perfect for daily wear with a heritage touch.",
+      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
+    }
+  ],
+  "Kodaikanal": [
+    {
+      "type": "Food",
+      "title": "Homemade Chocolates",
+      "description": "Kodaikanal-style handmade chocolates — truffle, walnut, and fruit flavors from local shops.",
+      "imageUrl": "https://images.unsplash.com/photo-1511381939415-c1cbe9a5c7b3?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Freshly Baked Goods",
+      "description": "Carlton Hotel and local bakeries serve fresh bread, buns, and pastries loved by trekkers.",
+      "imageUrl": "https://images.unsplash.com/photo-1549931319-a545dcf3bc7c?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Eucalyptus Oil",
+      "description": "Pure Kodaikanal eucalyptus oil — widely used for respiratory relief and body massage.",
+      "imageUrl": "https://images.unsplash.com/photo-1514996937319-344454492b37?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Handmade Jam & Preserves",
+      "description": "Kodaikanal is famous for homemade strawberry, plum, and mixed-fruit jams from local cottages.",
+      "imageUrl": "https://images.unsplash.com/photo-1535403045997-3a39cbb7f41e?w=800&auto=format&fit=crop"
+    }
+  ],
+  "Thirunelveli": [
+    {
+      "type": "Food",
+      "title": "Tirunelveli Halwa",
+      "description": "The legendary wheat-based halwa soaked in ghee — a 200-year-old Iruttu Kadai secret recipe.",
+      "imageUrl": "https://images.unsplash.com/photo-1574484284002-952d92a03a44?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Food",
+      "title": "Kola Urundai",
+      "description": "Spiced minced meat balls — a beloved Tirunelveli street snack with unique local spice blend.",
+      "imageUrl": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Palm Products",
+      "description": "Palmyra-based crafts, baskets, fans, and accessories — handmade by local artisans.",
+      "imageUrl": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&auto=format&fit=crop"
+    },
+    {
+      "type": "Shopping",
+      "title": "Shenbagam Cloth",
+      "description": "Traditional cotton fabric with distinct patterns — used for dhotis and sarees in southern TN.",
+      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
+    }
+  ]
+}

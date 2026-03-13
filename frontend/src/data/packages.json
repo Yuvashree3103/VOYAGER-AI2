@@ -1,0 +1,53 @@
+[
+  {
+    "id": "temple-circuit-madurai-rameswaram",
+    "name": "Temple Circuit – Madurai & Rameswaram",
+    "durationDays": 3,
+    "citiesCovered": ["Madurai", "Rameswaram", "Dhanushkodi"],
+    "price": 14999,
+    "rating": 4.8,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Ramanathaswamy_Temple.jpg",
+    "summary": "Iconic temples, sea-side drive, and a sunrise visit to Dhanushkodi with comfortable pacing."
+  },
+  {
+    "id": "chennai-mahabalipuram-coastal-tour",
+    "name": "Chennai to Mahabalipuram Coastal Tour",
+    "durationDays": 2,
+    "citiesCovered": ["Chennai", "Mahabalipuram"],
+    "price": 8999,
+    "rating": 4.6,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Shore_Temple%2C_Mahabalipuram.jpg",
+    "summary": "Beaches, heritage shore temple, and photogenic coastal stops—perfect weekend getaway."
+  },
+  {
+    "id": "ooty-hill-station-escape",
+    "name": "Ooty Hill Station Escape",
+    "durationDays": 3,
+    "citiesCovered": ["Ooty", "Coonoor"],
+    "price": 17999,
+    "rating": 4.7,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Ooty_lake.jpg",
+    "summary": "Tea estates, viewpoints, and pleasant weather experiences with optional toy train add-on."
+  },
+  {
+    "id": "kodaikanal-nature-retreat",
+    "name": "Kodaikanal Nature Retreat",
+    "durationDays": 3,
+    "citiesCovered": ["Kodaikanal"],
+    "price": 16999,
+    "rating": 4.6,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Kodaikanal_Lake.jpg",
+    "summary": "Lakeside walks, pine forests, and scenic viewpoints with relaxed itinerary spacing."
+  },
+  {
+    "id": "kanyakumari-sunrise-special",
+    "name": "Kanyakumari Sunrise Special",
+    "durationDays": 2,
+    "citiesCovered": ["Kanyakumari"],
+    "price": 9999,
+    "rating": 4.5,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Kanyakumari_sunrise.jpg",
+    "summary": "Sunrise viewpoint, Vivekananda Rock visit, and coastal heritage highlights."
+  }
+]
+

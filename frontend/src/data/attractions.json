@@ -1,0 +1,63 @@
+{
+  "Chennai": [
+    { "title": "Marina Beach", "category": "Beach", "durationHours": 2.0, "entryFee": 0, "bestTime": "Evening", "notes": "Sunset walk and street snacks." },
+    { "title": "Kapaleeshwarar Temple (Mylapore)", "category": "Temple", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Traditional Dravidian architecture." },
+    { "title": "Fort St. George", "category": "Heritage", "durationHours": 2.0, "entryFee": 25, "bestTime": "Morning", "notes": "Colonial history and museum visit." },
+    { "title": "Government Museum (Egmore)", "category": "Museum", "durationHours": 2.0, "entryFee": 15, "bestTime": "Afternoon", "notes": "Archaeology and art collections." },
+    { "title": "Besant Nagar Beach", "category": "Beach", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Clean beach vibe and cafes." },
+    { "title": "Food Tour: Mylapore Tiffin Trail", "category": "Food Tour", "durationHours": 2.0, "entryFee": 300, "bestTime": "Morning", "notes": "Filter coffee, idli, pongal." },
+    { "title": "Photowalk: Georgetown Heritage Streets", "category": "Photography", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Markets, colonial facades, street life." }
+  ],
+  "Madurai": [
+    { "title": "Meenakshi Amman Temple", "category": "Temple", "durationHours": 2.5, "entryFee": 0, "bestTime": "Morning", "notes": "Iconic gopurams and carvings." },
+    { "title": "Thirumalai Nayakkar Palace", "category": "Heritage", "durationHours": 1.5, "entryFee": 50, "bestTime": "Evening", "notes": "Light & sound show if available." },
+    { "title": "Gandhi Memorial Museum", "category": "Museum", "durationHours": 1.5, "entryFee": 0, "bestTime": "Afternoon", "notes": "Freedom movement exhibits." },
+    { "title": "Food Tour: Jigarthanda + Street Snacks", "category": "Food Tour", "durationHours": 1.0, "entryFee": 250, "bestTime": "Evening", "notes": "Must-try local refreshment." },
+    { "title": "Photowalk: Temple Streets", "category": "Photography", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Golden hour near temple markets." }
+  ],
+  "Mahabalipuram": [
+    { "title": "Shore Temple", "category": "Heritage", "durationHours": 1.5, "entryFee": 40, "bestTime": "Morning", "notes": "UNESCO monument by the sea." },
+    { "title": "Pancha Rathas", "category": "Heritage", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Rock-cut monoliths." },
+    { "title": "Mahabalipuram Beach", "category": "Beach", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Seaside stroll and photos." },
+    { "title": "Photowalk: Stone Carving Lanes", "category": "Photography", "durationHours": 1.0, "entryFee": 0, "bestTime": "Afternoon", "notes": "Local artisans and sculpture shops." }
+  ],
+  "Thanjavur": [
+    { "title": "Brihadeeswarar Temple (Big Temple)", "category": "Temple", "durationHours": 2.0, "entryFee": 0, "bestTime": "Morning", "notes": "Chola-era masterpiece." },
+    { "title": "Thanjavur Palace & Art Gallery", "category": "Museum", "durationHours": 2.0, "entryFee": 50, "bestTime": "Afternoon", "notes": "Royal heritage and exhibits." },
+    { "title": "Heritage Walk: Old Town", "category": "Heritage", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Markets and temple streets." },
+    { "title": "Food Tour: Banana Leaf Meals", "category": "Food Tour", "durationHours": 1.0, "entryFee": 250, "bestTime": "Afternoon", "notes": "Traditional South Indian meals." }
+  ],
+  "Ooty": [
+    { "title": "Ooty Lake", "category": "Hill Station", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Boating and lakeside views." },
+    { "title": "Doddabetta Peak", "category": "Hill Station", "durationHours": 2.0, "entryFee": 20, "bestTime": "Morning", "notes": "Panoramic Nilgiris viewpoint." },
+    { "title": "Tea Estate Viewpoints", "category": "Photography", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Golden hour in tea gardens." },
+    { "title": "Easy Trek: Pine Forest Trail", "category": "Trekking", "durationHours": 2.0, "entryFee": 0, "bestTime": "Morning", "notes": "Light hike with scenic stops." },
+    { "title": "Wildlife Spotting (Mudumalai add-on)", "category": "Wildlife", "durationHours": 3.0, "entryFee": 350, "bestTime": "Morning", "notes": "Safari availability varies by season." }
+  ],
+  "Kodaikanal": [
+    { "title": "Kodaikanal Lake", "category": "Hill Station", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Cycling and lakeside walk." },
+    { "title": "Coaker’s Walk", "category": "Photography", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Misty viewpoints." },
+    { "title": "Bear Shola Falls", "category": "Waterfall", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Seasonal waterfall." },
+    { "title": "Nature Trail: Pine Forest", "category": "Trekking", "durationHours": 2.0, "entryFee": 0, "bestTime": "Afternoon", "notes": "Short trek and photos." },
+    { "title": "Wildlife: Berijam Lake Region", "category": "Wildlife", "durationHours": 3.0, "entryFee": 300, "bestTime": "Morning", "notes": "Permit-based routes." }
+  ],
+  "Kanyakumari": [
+    { "title": "Sunrise Viewpoint", "category": "Photography", "durationHours": 1.0, "entryFee": 0, "bestTime": "Morning", "notes": "Arrive early for the best spot." },
+    { "title": "Vivekananda Rock Memorial", "category": "Heritage", "durationHours": 2.0, "entryFee": 40, "bestTime": "Morning", "notes": "Ferry ride and memorial visit." },
+    { "title": "Kanyakumari Beach", "category": "Beach", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Sunset and sea breeze." },
+    { "title": "Thiruvalluvar Statue View", "category": "Heritage", "durationHours": 1.0, "entryFee": 0, "bestTime": "Evening", "notes": "Great photo vantage points." }
+  ],
+  "Rameswaram": [
+    { "title": "Ramanathaswamy Temple", "category": "Temple", "durationHours": 2.5, "entryFee": 0, "bestTime": "Morning", "notes": "Famous corridors and rituals." },
+    { "title": "Pamban Bridge Viewpoint", "category": "Photography", "durationHours": 1.0, "entryFee": 0, "bestTime": "Morning", "notes": "Iconic rail/road bridge views." },
+    { "title": "Dhanushkodi Beach", "category": "Beach", "durationHours": 2.0, "entryFee": 0, "bestTime": "Evening", "notes": "Windy and photogenic coastline." },
+    { "title": "Heritage: APJ Abdul Kalam Memorial", "category": "Museum", "durationHours": 1.5, "entryFee": 0, "bestTime": "Afternoon", "notes": "Memorial and exhibits." }
+  ],
+  "Pondicherry": [
+    { "title": "Promenade Beach Walk", "category": "Beach", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Seafront and cafés." },
+    { "title": "White Town Heritage Streets", "category": "Heritage", "durationHours": 2.0, "entryFee": 0, "bestTime": "Morning", "notes": "French-era architecture." },
+    { "title": "Auroville Visit", "category": "Heritage", "durationHours": 3.0, "entryFee": 0, "bestTime": "Morning", "notes": "Matri Mandir viewing by slots." },
+    { "title": "Food Tour: Cafés & Bakeries", "category": "Food Tour", "durationHours": 1.5, "entryFee": 400, "bestTime": "Afternoon", "notes": "Fusion cuisine and pastries." }
+  ]
+}
+
