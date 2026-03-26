@@ -1,133 +1,182 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
+import { ChevronLeft, ChevronRight, MapPin, ArrowRight, Star } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
+// Local images provided by user (first 5 slides)
+import kanyakumariImg from '../assets/images/kanyakumari.jpg'
+import meenakshiImg from '../assets/images/meenakshi.png'
+import ootyImg from '../assets/images/ooty.png'
+import brihadeeswarar from '../assets/images/brihadeeswarar.png'
+import mahabalipuramImg from '../assets/images/mahabalipuram.png'
+import kodaikanal from '../assets/images/kodaikanal.png'
+import rameswaramImg from '../assets/images/rameswaram.png'
+import yercaudImg from '../assets/images/yercaud.png'
+import hogenakkalImg from '../assets/images/hogenakkal.png'
+import courtallamImg from '../assets/images/courtallam.png'
+import dhanushkodiImg from '../assets/images/dhanushkodi.png'
+import velankanniImg from '../assets/images/velankanni.png'
+import marinaImg from '../assets/images/marina.png'
+import kanchipuramImg from '../assets/images/kanchipuram.png'
+import chidambaramImg from '../assets/images/chidambaram.png'
 
 const tnLocations = [
   {
     id: 1,
     name: 'Kanyakumari Sunrise',
-    description: 'The southernmost tip of India, where three seas meet — famous for its breathtaking sunrise and multi-coloured ocean view.',
-    location: 'Kanyakumari, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Kanyakumari_sunrise.jpg',
-    color: 'from-orange-900/70 via-orange-800/40 to-transparent',
+    district: 'Kanyakumari',
+    description: "India's southernmost tip where three oceans meet — Bay of Bengal, Arabian Sea, and Indian Ocean. Watch the sun rise and set over the meeting point of three seas.",
+    famous: 'Famous for the spectacular tri-ocean sunrise, Vivekananda Rock Memorial, and Thiruvalluvar Statue.',
+    image: kanyakumariImg,
+    color: 'from-orange-900/80 via-amber-800/40 to-transparent',
+    accent: '#f97316',
   },
   {
     id: 2,
     name: 'Meenakshi Amman Temple',
-    description: 'A marvel of Dravidian architecture with 14 ornate gopurams towering over Madurai — the living heart of Tamil culture.',
-    location: 'Madurai, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Meenakshi_Amman_Temple_gopuram.jpg',
-    color: 'from-yellow-900/70 via-yellow-800/40 to-transparent',
+    district: 'Madurai',
+    description: 'A masterpiece of Dravidian architecture with 14 towering gopurams adorned with thousands of sculptures. The living cultural heart of Tamil Nadu.',
+    famous: 'Famous for the 1500-year-old temple with 33,000 sculptures and the golden lotus tank.',
+    image: meenakshiImg,
+    color: 'from-yellow-900/80 via-yellow-800/40 to-transparent',
+    accent: '#eab308',
   },
   {
     id: 3,
     name: 'Ooty Hills',
-    description: 'The Queen of Hill Stations nestled in the Nilgiris — rolling tea estates, eucalyptus groves, and misty mornings await.',
-    location: 'Ooty, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Ooty_lake.jpg',
-    color: 'from-green-900/70 via-green-800/40 to-transparent',
+    district: 'Nilgiris',
+    description: 'The Queen of Hill Stations nestled in the Nilgiri mountains. Famous for rolling tea estates, the UNESCO Nilgiri Mountain Railway toy train, and cool refreshing climate.',
+    famous: 'Famous for UNESCO Nilgiri Mountain Railway, Botanical Gardens, and premium Nilgiri tea estates.',
+    image: ootyImg,
+    color: 'from-green-900/80 via-green-800/40 to-transparent',
+    accent: '#22c55e',
   },
   {
     id: 4,
-    name: 'Brihadeeswarar Temple',
-    description: 'A UNESCO World Heritage Site standing 66 metres tall — the crown jewel of Chola dynasty craftsmanship and devotion.',
-    location: 'Thanjavur, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/Brihadeeswarar_Temple%2C_Thanjavur%2C_Tamil_Nadu%2C_India.jpg',
-    color: 'from-stone-900/70 via-stone-800/40 to-transparent',
+    name: 'Thanjavur Brihadeeswarar Temple',
+    district: 'Thanjavur',
+    description: 'The Brihadeeswarar Temple, a UNESCO World Heritage Site. Built by Raja Raja Chola I, it stands 66 metres tall — an unmatched feat of Chola engineering from 1010 AD.',
+    famous: 'Famous as a UNESCO World Heritage Site, the shadow-less vimana, and Chola-era bronze sculptures.',
+    image: brihadeeswarar,
+    color: 'from-stone-900/80 via-stone-800/40 to-transparent',
+    accent: '#78716c',
   },
   {
     id: 5,
     name: 'Mahabalipuram Shore Temple',
-    description: 'Ancient rock-cut temples kissed by the Bay of Bengal. A UNESCO site that whispers stories of the mighty Pallava kings.',
-    location: 'Mahabalipuram, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Shore_Temple%2C_Mahabalipuram.jpg',
-    color: 'from-blue-900/70 via-blue-800/40 to-transparent',
+    district: 'Chengalpattu',
+    description: 'Rock-cut Pallava temples kissed by the Bay of Bengal waves, a UNESCO World Heritage Site. The 7th century Arjuna\'s Penance is the world\'s largest bas-relief carved on a single boulder.',
+    famous: 'Famous for UNESCO World Heritage rock-cut temples, Arjuna\'s Penance, and Five Rathas.',
+    image: mahabalipuramImg,
+    color: 'from-blue-900/80 via-blue-800/40 to-transparent',
+    accent: '#3b82f6',
   },
   {
     id: 6,
-    name: 'Pamban Bridge',
-    description: 'India\'s first sea bridge, spanning the Palk Strait — an engineering wonder framing the sacred island of Rameswaram.',
-    location: 'Rameswaram, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Pamban_Bridge.jpg',
-    color: 'from-sky-900/70 via-sky-800/40 to-transparent',
+    name: 'Kodaikanal Lake',
+    district: 'Dindigul',
+    description: 'The Princess of Hill Stations — a serene star-shaped lake surrounded by misty Palani Hills. Famous for boating, Coaker\'s Walk views, and world-class handmade chocolates.',
+    famous: 'Famous for the star-shaped lake, Coaker\'s Walk, Bear Shola Falls, and local handmade chocolates.',
+    image: kodaikanal,
+    color: 'from-teal-900/80 via-teal-800/40 to-transparent',
+    accent: '#14b8a6',
   },
   {
     id: 7,
-    name: 'Kodaikanal Lake',
-    description: 'A serene star-shaped lake in the heart of the Princess of Hill Stations — perfect for boating, cycling, and mist-walks.',
-    location: 'Kodaikanal, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/8/86/Kodaikanal_Lake.jpg',
-    color: 'from-teal-900/70 via-teal-800/40 to-transparent',
+    name: 'Rameswaram Pamban Bridge',
+    district: 'Ramanathapuram',
+    description: 'Sri Ramanathaswamy Temple on Pamban Island — one of India\'s most sacred pilgrimage sites. The iconic Pamban Bridge, India\'s first sea bridge, connects the island to the mainland.',
+    famous: 'Famous for the Pamban Railway Bridge, world\'s longest temple corridor, and Dhanushkodi ruins.',
+    image: rameswaramImg,
+    color: 'from-amber-900/80 via-amber-800/40 to-transparent',
+    accent: '#f59e0b',
   },
   {
     id: 8,
-    name: 'Yercaud Hills',
-    description: 'The hidden gem of Salem district — coffee and orange orchards, gentle treks, and colonial-era heritage sites.',
-    location: 'Yercaud, Tamil Nadu',
-    image: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200&auto=format&fit=crop',
-    color: 'from-emerald-900/70 via-emerald-800/40 to-transparent',
+    name: 'Yercaud Lake',
+    district: 'Salem',
+    description: 'The Jewel of the South — a quiet hill station in the Shevaroy Hills with beautiful coffee estates, orange orchards, a scenic lake, and the famous Pagoda Point viewpoint.',
+    famous: 'Famous for Pagoda Point sunset views, coffee and orange plantations, and the annual flower show.',
+    image: yercaudImg,
+    color: 'from-green-900/80 via-green-800/40 to-transparent',
+    accent: '#16a34a',
   },
   {
     id: 9,
-    name: 'Courtallam Waterfalls',
-    description: 'The Spa of South India — five main falls cascade through medicinal herb-scented forests in the Pothigai Hills.',
-    location: 'Courtallam, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/Courtallam_Falls.jpg',
-    color: 'from-cyan-900/70 via-cyan-800/40 to-transparent',
+    name: 'Hogenakkal Falls',
+    district: 'Dharmapuri',
+    description: 'Called the Niagara of India — the mighty Kaveri river erupts into spectacular falls through ancient carbonatite rocks. Famous for coracle (round boat) rides through misty rapids.',
+    famous: 'Famous for coracle boat rides, carbonatite rock formations, and therapeutic fish spa massages.',
+    image: hogenakkalImg,
+    color: 'from-lime-900/80 via-lime-800/40 to-transparent',
+    accent: '#84cc16',
   },
   {
     id: 10,
-    name: 'Marina Beach',
-    description: 'The world\'s second longest natural urban beach — 13 km of golden sands, kite-flyers, and fresh-catch delicacies.',
-    location: 'Chennai, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Marina_Beach_4.jpg',
-    color: 'from-blue-900/70 via-blue-800/40 to-transparent',
+    name: 'Courtallam Falls',
+    district: 'Tenkasi',
+    description: 'Dubbed "The Spa of South India" — five spectacular waterfalls cascade through herb-scented forests of the Pothigai Hills. The waters are believed to have medicinal and healing properties.',
+    famous: 'Famous as the Spa of South India with 5 different falls and medicinal herb-rich forest waters.',
+    image: courtallamImg,
+    color: 'from-cyan-900/80 via-cyan-800/40 to-transparent',
+    accent: '#06b6d4',
   },
   {
     id: 11,
-    name: 'Hogenakkal Falls',
-    description: 'The Niagara of India — the Kaveri erupts into spectacular falls through ancient carbonatite rocks in lush jungle.',
-    location: 'Dharmapuri, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Hogenakkal_falls.jpg',
-    color: 'from-lime-900/70 via-lime-800/40 to-transparent',
+    name: 'Dhanushkodi Beach',
+    district: 'Ramanathapuram',
+    description: 'A ghost town at the tip of Pamban Island — where the Bay of Bengal and Indian Ocean meet. The ruins of the 1964-cyclone-destroyed town create an eerie, hauntingly beautiful landscape.',
+    famous: 'Famous for the ghost town ruins, the point where two seas meet, and its untouched pristine beach.',
+    image: dhanushkodiImg,
+    color: 'from-blue-900/80 via-indigo-800/40 to-transparent',
+    accent: '#6366f1',
   },
   {
     id: 12,
     name: 'Velankanni Church',
-    description: 'The Lourdes of the East — a magnificent basilica that draws millions of pilgrims of all faiths every year.',
-    location: 'Velankanni, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Basilica_of_Our_Lady_of_Good_Health%2C_Velankanni.jpg',
-    color: 'from-white/30 via-slate-900/40 to-transparent',
+    district: 'Nagapattinam',
+    description: 'The Basilica of Our Lady of Good Health — the Lourdes of the East. A magnificent seaside basilica that draws millions of pilgrims annually regardless of religious background.',
+    famous: 'Famous as the Lourdes of the East, drawing devotees of all faiths for miraculous healings.',
+    image: velankanniImg,
+    color: 'from-slate-700/80 via-slate-600/40 to-transparent',
+    accent: '#64748b',
   },
   {
     id: 13,
-    name: 'Dhanushkodi Beach',
-    description: 'A dramatic, ghost-town peninsula at the edge of India — pristine white-sand shores where the Indian Ocean meets the Bay of Bengal.',
-    location: 'Dhanushkodi, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Dhanushkodi_beach.jpeg',
-    color: 'from-amber-900/70 via-amber-800/40 to-transparent',
+    name: 'Marina Beach Chennai',
+    district: 'Chennai',
+    description: "World's second longest natural urban beach — 13 km of golden sands. Home to kite flyers, fishermen, fresh beach food stalls, and iconic monuments along the promenade.",
+    famous: 'Famous as the world\'s 2nd longest beach with the iconic lighthouse and Anna memorial.',
+    image: marinaImg,
+    color: 'from-blue-900/80 via-blue-800/40 to-transparent',
+    accent: '#2563eb',
   },
   {
     id: 14,
-    name: 'Chidambaram Nataraja Temple',
-    description: 'One of the Pancha Bhuta Stalas — the cosmic dance of Lord Nataraja is embroidered into every inch of this ancient temple.',
-    location: 'Chidambaram, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Chidambaram_temple.jpg',
-    color: 'from-rose-900/70 via-rose-800/40 to-transparent',
+    name: 'Kanchipuram Temples',
+    district: 'Kanchipuram',
+    description: 'The City of Thousand Temples — one of the seven sacred cities (Sapta Puri) in Hinduism. Home to the Kailasanathar Temple, one of the oldest temples in South India (700 AD).',
+    famous: 'Famous for GI-tagged Kanchipuram silk sarees and 108 ancient Pallava-era temples.',
+    image: kanchipuramImg,
+    color: 'from-violet-900/80 via-purple-800/40 to-transparent',
+    accent: '#7c3aed',
   },
   {
     id: 15,
-    name: 'Nilgiri Mountain Railway',
-    description: 'A UNESCO heritage rack railway winding through misty tea estates and mountains — the most scenic train ride in South India.',
-    location: 'Ooty–Mettupalayam, Tamil Nadu',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/The_Nilgiri_Mountain_Railway_train.jpg',
-    color: 'from-indigo-900/70 via-indigo-800/40 to-transparent',
+    name: 'Chidambaram Natarajar Temple',
+    district: 'Cuddalore',
+    description: 'One of the Pancha Bhuta Stalas representing Akasha (sky/space). The cosmic dance of Lord Nataraja is enshrined here — a center of Tamil Shaivism for over 2,000 years.',
+    famous: 'Famous for the cosmic dance of Nataraja, Akasha Lingam, and the Adi Annamalai Festival.',
+    image: chidambaramImg,
+    color: 'from-rose-900/80 via-rose-800/40 to-transparent',
+    accent: '#e11d48',
   },
 ]
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
+  const [paused, setPaused] = useState(false)
 
   const goTo = useCallback((idx, dir = 1) => {
     setDirection(dir)
@@ -143,20 +192,26 @@ const HeroCarousel = () => {
   }, [current, goTo])
 
   useEffect(() => {
-    const t = setInterval(next, 5000)
+    if (paused) return
+    const t = setInterval(next, 6000)
     return () => clearInterval(t)
-  }, [next])
+  }, [next, paused])
 
   const slide = tnLocations[current]
 
   const variants = {
-    enter: (dir) => ({ x: dir > 0 ? '100%' : '-100%', opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (dir) => ({ x: dir > 0 ? '-100%' : '100%', opacity: 0 }),
+    enter: (dir) => ({ x: dir > 0 ? '100%' : '-100%', opacity: 0, scale: 1.05 }),
+    center: { x: 0, opacity: 1, scale: 1 },
+    exit: (dir) => ({ x: dir > 0 ? '-60%' : '60%', opacity: 0, scale: 0.95 }),
   }
 
   return (
-    <div className="relative w-full h-[70vh] min-h-[500px] rounded-3xl overflow-hidden shadow-2xl" style={{ marginTop: '0' }}>
+    <div
+      className="relative w-full rounded-3xl overflow-hidden shadow-2xl"
+      style={{ height: 'min(78vh, 640px)' }}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={slide.id}
@@ -165,37 +220,68 @@ const HeroCarousel = () => {
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
+          transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
           className="absolute inset-0"
         >
+          {/* Background image */}
           <img
             src={slide.image}
             alt={slide.name}
             className="w-full h-full object-cover"
-            loading="lazy"
-            onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=1200&auto=format&fit=crop' }}
+            loading={slide.id === 1 ? 'eager' : 'lazy'}
+            onError={(e) => {
+              e.target.src = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&auto=format&fit=crop&q=80'
+            }}
           />
-          {/* Gradient overlay */}
+          {/* Colour gradient overlay */}
           <div className={`absolute inset-0 bg-gradient-to-r ${slide.color}`} />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+          {/* Dark bottom gradient for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-          {/* Content */}
+          {/* Content overlay */}
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15, duration: 0.5 }}
+              transition={{ delay: 0.2, duration: 0.55 }}
             >
+              {/* Location tag */}
               <div className="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1.5 text-xs font-bold text-white mb-4">
                 <MapPin className="h-3.5 w-3.5 text-orange-300" />
-                {slide.location}
+                {slide.district} District, Tamil Nadu
               </div>
-              <h1 className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tight drop-shadow-lg">
+
+              {/* Place name */}
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight drop-shadow-lg max-w-3xl">
                 {slide.name}
               </h1>
-              <p className="mt-3 text-sm md:text-base text-white/80 max-w-2xl leading-relaxed">
+
+              {/* Description */}
+              <p className="mt-3 text-sm md:text-base text-white/85 max-w-2xl leading-relaxed line-clamp-2">
                 {slide.description}
               </p>
+
+              {/* Why famous */}
+              <div className="mt-3 flex items-start gap-2">
+                <Star className="h-4 w-4 text-amber-400 mt-0.5 shrink-0" />
+                <p className="text-xs text-white/70 leading-relaxed">{slide.famous}</p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  to={`/plan?district=${encodeURIComponent(slide.district)}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-black text-sm hover:bg-orange-50 hover:shadow-xl transition-all"
+                >
+                  Plan Your Trip <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  to="/advisor"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-black text-sm hover:bg-white/25 backdrop-blur transition-all"
+                >
+                  Ask AI Advisor
+                </Link>
+              </div>
             </motion.div>
           </div>
         </motion.div>
@@ -204,34 +290,52 @@ const HeroCarousel = () => {
       {/* Navigation arrows */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 backdrop-blur border border-white/20 flex items-center justify-center text-white hover:bg-black/60 transition z-10"
-        aria-label="Previous"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 backdrop-blur border border-white/20 flex items-center justify-center text-white hover:bg-black/60 transition z-10 hover:scale-110"
+        aria-label="Previous slide"
       >
         <ChevronLeft className="h-5 w-5" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 backdrop-blur border border-white/20 flex items-center justify-center text-white hover:bg-black/60 transition z-10"
-        aria-label="Next"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 backdrop-blur border border-white/20 flex items-center justify-center text-white hover:bg-black/60 transition z-10 hover:scale-110"
+        aria-label="Next slide"
       >
         <ChevronRight className="h-5 w-5" />
       </button>
 
+      {/* Slide counter */}
+      <div className="absolute top-4 right-4 bg-black/50 backdrop-blur rounded-full px-3 py-1 text-xs font-bold text-white/90 z-10">
+        {current + 1} / {tnLocations.length}
+      </div>
+
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-10">
+        <motion.div
+          key={current}
+          className="h-full bg-white"
+          initial={{ width: '0%' }}
+          animate={{ width: '100%' }}
+          transition={{ duration: paused ? 0 : 6, ease: 'linear' }}
+        />
+      </div>
+
       {/* Dot indicators */}
-      <div className="absolute bottom-4 right-6 flex gap-1.5 z-10 flex-wrap justify-end max-w-[200px]">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {tnLocations.map((_, i) => (
           <button
             key={i}
             onClick={() => goTo(i, i > current ? 1 : -1)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-white' : 'w-1.5 bg-white/40'}`}
+            className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-white' : 'w-1.5 bg-white/40 hover:bg-white/70'}`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
       </div>
 
-      {/* Slide counter */}
-      <div className="absolute top-4 right-4 bg-black/40 backdrop-blur rounded-full px-3 py-1 text-xs font-bold text-white/80 z-10">
-        {current + 1} / {tnLocations.length}
+      {/* Place thumbnail strip (bottom right) */}
+      <div className="absolute top-4 left-4 flex gap-2 z-10">
+        <div className="bg-black/40 backdrop-blur rounded-2xl px-3 py-1.5 text-xs font-bold text-white/90 border border-white/20">
+          🗺️ Tamil Nadu — 15 Must-Visit Places
+        </div>
       </div>
     </div>
   )

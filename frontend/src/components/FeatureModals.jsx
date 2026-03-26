@@ -2,65 +2,162 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Luggage, Globe, Shield, Users, BookOpen, Phone } from 'lucide-react'
 
-// Smart Packing feature
+// Smart Packing feature — 3-step wizard
 const PackingModal = ({ onClose }) => {
+  const [step, setStep] = useState(1)
   const [dest, setDest] = useState('')
+  const [duration, setDuration] = useState('')
   const [season, setSeason] = useState('summer')
   const [list, setList] = useState(null)
 
   const packingData = {
-    common: ['National ID / Passport', 'Phone charger', 'Power bank', 'Cash (INR)', 'Debit/Credit card', 'First aid kit', 'Water bottle', 'Sunscreen SPF 50+'],
-    summer: ['Light cotton clothes (3-4 pairs)', 'Sunglasses', 'Wide-brim hat', 'Electrolyte sachets'],
-    monsoon: ['Raincoat / Poncho', 'Waterproof sandals', 'Quick-dry clothes', 'Ziplock bags for gadgets'],
-    winter: ['Light jacket', 'Fleece layer', 'Wool socks', 'Thermal inner wear'],
-    hills: ['Walking shoes / trekking boots', 'Windproof jacket', 'Sunscreen', 'Trekking pole (optional)'],
-    beach: ['Swimwear', 'Flip-flops', 'Beach towel', 'Waterproof bag'],
-    temple: ['Traditional clothes / saree / dhoti', 'Cotton dupatta/shawl', 'Slip-on footwear'],
+    common: ['National ID / Passport', 'Phone charger & cables', 'Power bank (10000mAh+)', 'Cash (INR)', 'Debit/Credit card', 'First aid kit & medicines', 'Reusable water bottle', 'Sunscreen SPF 50+', 'Hand sanitiser', 'Mask (N95)', 'Snacks for journey'],
+    summer: ['Light cotton clothes (3–4 pairs)', 'Sunglasses & UV protection', 'Wide-brim hat or cap', 'Electrolyte sachets', 'ORS packets', 'Cooling towel'],
+    monsoon: ['Compact raincoat / Poncho', 'Waterproof sandals / shoes', 'Quick-dry synthetic clothes', 'Ziplock bags for gadgets', 'Umbrella', 'Extra pair of dry socks'],
+    winter: ['Warm jacket & fleece layer', 'Woollen sweater', 'Thermal inner wear', 'Wool socks & gloves', 'Lip balm for dry weather'],
+    hills: ['Trekking shoes / boots', 'Windproof light jacket', 'Trekking pole (optional)', 'Energy bars & dry fruits', 'Insect repellent', 'Torch / headlamp'],
+    beach: ['Swimwear / beach wear', 'Flip-flops / slippers', 'Beach towel', 'Waterproof pouch for phone'],
+    temple: ['Traditional cotton clothes', 'Saree / Dhoti for darshan', 'Cotton dupatta / shawl', 'Slip-on footwear (easy removal)'],
+    long: ['Extra clothes (+2 pairs)', 'Laundry bag', 'Travel pillow & eye mask', 'Portable clothesline', 'Digital entertainment'],
   }
 
   const generateList = () => {
     const extra = []
     const d = dest.toLowerCase()
-    if (['ooty', 'kodaikanal', 'yercaud', 'kotagiri', 'coonoor'].some(v => d.includes(v))) extra.push(...packingData.hills)
-    if (['marina', 'kanyakumari', 'rameswaram', 'mahabalipuram', 'dhanushkodi'].some(v => d.includes(v))) extra.push(...packingData.beach)
-    if (['meenakshi', 'temple', 'rameswaram', 'thanjavur', 'chidambaram', 'madurai'].some(v => d.includes(v))) extra.push(...packingData.temple)
+    const days = parseInt(duration) || 1
+    if (['ooty', 'kodaikanal', 'yercaud', 'kotagiri', 'nilgiris', 'yelagiri', 'kolli', 'coonoor', 'valparai'].some(v => d.includes(v))) extra.push(...packingData.hills)
+    if (['marina', 'kanyakumari', 'rameswaram', 'mahabalipuram', 'dhanushkodi', 'beach', 'coastal'].some(v => d.includes(v))) extra.push(...packingData.beach)
+    if (['meenakshi', 'temple', 'rameswaram', 'thanjavur', 'chidambaram', 'madurai', 'kovil', 'kovil'].some(v => d.includes(v))) extra.push(...packingData.temple)
+    if (days >= 4) extra.push(...packingData.long)
     const seasonItems = packingData[season] || packingData.summer
-    setList([...new Set([...packingData.common, ...seasonItems, ...extra])])
+    const finalList = [...new Set([...packingData.common, ...seasonItems, ...extra])]
+    setList(finalList)
+    setStep(4)
   }
+
+  const stepLabel = ['', 'Destination', 'Duration', 'Season']
+  const stepColor = ['', 'from-blue-500 to-cyan-500', 'from-violet-500 to-purple-600', 'from-orange-500 to-amber-500']
 
   return (
     <FeatureModal title="Smart Packing Checklist" icon={<Luggage className="h-5 w-5" />} onClose={onClose}>
-      <div className="space-y-4">
-        <div>
-          <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Destination</label>
-          <input
-            className="mt-1 w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm"
-            placeholder="e.g. Ooty, Madurai, Kanyakumari..."
-            value={dest}
-            onChange={e => setDest(e.target.value)}
-          />
+      {/* Step progress bar */}
+      <div className="flex items-center gap-2 mb-6">
+        {[1, 2, 3].map(s => (
+          <React.Fragment key={s}>
+            <div className={`flex items-center justify-center w-8 h-8 rounded-full text-xs font-black transition-all ${step > s ? 'bg-blue-600 text-white' : step === s ? `bg-gradient-to-br ${stepColor[s]} text-white` : 'bg-slate-100 dark:bg-slate-800 text-slate-400'}`}>
+              {step > s ? '✓' : s}
+            </div>
+            <div className="text-xs font-bold text-slate-400">{stepLabel[s]}</div>
+            {s < 3 && <div className={`flex-1 h-0.5 rounded-full ${step > s ? 'bg-blue-600' : 'bg-slate-200 dark:bg-slate-700'}`} />}
+          </React.Fragment>
+        ))}
+      </div>
+
+      {/* Step 1: Destination */}
+      {step === 1 && (
+        <div className="space-y-4">
+          <div>
+            <div className="text-base font-black text-slate-900 dark:text-white mb-1">Where are you going?</div>
+            <div className="text-xs text-slate-500 mb-4">Enter your Tamil Nadu destination and we'll personalise your list.</div>
+            <input
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
+              placeholder="e.g. Ooty, Madurai, Kanyakumari..."
+              value={dest}
+              onChange={e => setDest(e.target.value)}
+              autoFocus
+            />
+            <div className="mt-3 flex flex-wrap gap-2">
+              {['Ooty', 'Madurai', 'Kanyakumari', 'Kodaikanal', 'Rameswaram'].map(q => (
+                <button key={q} onClick={() => setDest(q)} className="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 text-xs font-bold text-blue-700 dark:text-blue-300 hover:bg-blue-100 transition-colors">
+                  {q}
+                </button>
+              ))}
+            </div>
+          </div>
+          <button
+            onClick={() => setStep(2)}
+            disabled={!dest.trim()}
+            className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-black text-sm disabled:opacity-50 hover:shadow-lg transition-all"
+          >
+            Next: Trip Duration →
+          </button>
         </div>
-        <div>
-          <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Season / Weather</label>
-          <div className="mt-1 flex gap-2 flex-wrap">
-            {['summer', 'monsoon', 'winter'].map(s => (
-              <button key={s} onClick={() => setSeason(s)} className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all ${season === s ? 'bg-blue-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300'}`}>
-                {s.charAt(0).toUpperCase() + s.slice(1)}
-              </button>
-            ))}
+      )}
+
+      {/* Step 2: Duration */}
+      {step === 2 && (
+        <div className="space-y-4">
+          <div>
+            <div className="text-base font-black text-slate-900 dark:text-white mb-1">How many days?</div>
+            <div className="text-xs text-slate-500 mb-4">Trip to <strong className="text-blue-600">{dest}</strong> — how long will you stay?</div>
+            <div className="grid grid-cols-4 gap-2">
+              {['1', '2–3', '4–6', '7+'].map(d => (
+                <button
+                  key={d}
+                  onClick={() => setDuration(d === '7+' ? '7' : d === '4–6' ? '4' : d === '2–3' ? '2' : '1')}
+                  className={`py-3 rounded-xl text-sm font-black border-2 transition-all ${duration && (
+                    (d === '1' && duration === '1') || (d === '2–3' && duration === '2') || (d === '4–6' && duration === '4') || (d === '7+' && duration === '7')
+                  ) ? 'border-blue-600 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300' : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:border-blue-400'}`}
+                >
+                  {d} day{d !== '1' ? 's' : ''}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <button onClick={() => setStep(1)} className="flex-1 py-3 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-black text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">← Back</button>
+            <button onClick={() => setStep(3)} disabled={!duration} className="flex-1 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-black text-sm disabled:opacity-50 hover:shadow-lg transition-all">
+              Next: Season →
+            </button>
           </div>
         </div>
-        <button
-          onClick={generateList}
-          disabled={!dest}
-          className="w-full py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-black text-sm disabled:opacity-50 hover:shadow-lg transition-all"
-        >
-          Generate Packing List
-        </button>
-        {list && (
-          <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-4">
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Your Packing List — {dest}</div>
-            <div className="grid grid-cols-1 gap-2 max-h-56 overflow-y-auto">
+      )}
+
+      {/* Step 3: Season */}
+      {step === 3 && (
+        <div className="space-y-4">
+          <div>
+            <div className="text-base font-black text-slate-900 dark:text-white mb-1">What's the season?</div>
+            <div className="text-xs text-slate-500 mb-4">This helps us add weather-appropriate items to your list.</div>
+            <div className="grid grid-cols-3 gap-2">
+              {[
+                { key: 'summer', label: 'Summer', emoji: '☀️', desc: 'Apr–Jun' },
+                { key: 'monsoon', label: 'Monsoon', emoji: '🌧️', desc: 'Jul–Sep' },
+                { key: 'winter', label: 'Winter', emoji: '❄️', desc: 'Oct–Mar' },
+              ].map(s => (
+                <button
+                  key={s.key}
+                  onClick={() => setSeason(s.key)}
+                  className={`py-3 px-2 rounded-xl text-center border-2 transition-all ${season === s.key ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20' : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-orange-300'}`}
+                >
+                  <div className="text-2xl">{s.emoji}</div>
+                  <div className="text-xs font-black text-slate-900 dark:text-white mt-1">{s.label}</div>
+                  <div className="text-xs text-slate-400">{s.desc}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <button onClick={() => setStep(2)} className="flex-1 py-3 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-black text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">← Back</button>
+            <button onClick={generateList} className="flex-1 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-sm hover:shadow-lg transition-all">
+              🧳 Generate List
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Step 4: Generated List */}
+      {step === 4 && list && (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <div>
+              <div className="font-black text-slate-900 dark:text-white text-sm">Packing List for {dest}</div>
+              <div className="text-xs text-slate-400">{season.charAt(0).toUpperCase() + season.slice(1)} · {duration} days · {list.length} items</div>
+            </div>
+            <button onClick={() => setStep(1)} className="text-xs text-blue-600 dark:text-blue-400 font-bold hover:underline">Start Over</button>
+          </div>
+          <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-4 max-h-64 overflow-y-auto">
+            <div className="grid grid-cols-1 gap-2">
               {list.map((item, i) => (
                 <label key={i} className="flex items-center gap-3 cursor-pointer group">
                   <input type="checkbox" className="w-4 h-4 accent-blue-600 rounded" defaultChecked />
@@ -69,8 +166,17 @@ const PackingModal = ({ onClose }) => {
               ))}
             </div>
           </div>
-        )}
-      </div>
+          <button
+            onClick={() => {
+              const text = `Packing List for ${dest} (${season}, ${duration} days):\n${list.map(i => `• ${i}`).join('\n')}`
+              navigator.clipboard?.writeText(text).then(() => alert('Copied to clipboard!'))
+            }}
+            className="w-full py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-black text-sm hover:shadow-lg transition-all"
+          >
+            📋 Copy List
+          </button>
+        </div>
+      )}
     </FeatureModal>
   )
 }

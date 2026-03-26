@@ -1,0 +1,364 @@
+{
+  "districts": {
+    "Chennai": {
+      "capital": true,
+      "interests": ["Temple", "Beach", "Heritage", "Museum", "Shopping", "Food Tour", "Photography"],
+      "attractions": [
+        {
+          "name": "Marina Beach",
+          "category": "Beach",
+          "area": "Marina",
+          "openingTime": "6:00 AM",
+          "closingTime": "8:00 PM",
+          "entryFee": 0,
+          "description": "India's second longest beach with pristine sand and sea view",
+          "travelTimeFromCenter": "3 km",
+          "transportMode": ["Bus", "Auto", "Taxi"],
+          "estimatedCost": 50,
+          "highlights": ["Lighthouse", "Sunset view", "Street food"]
+        },
+        {
+          "name": "Kapaleeshwarar Temple",
+          "category": "Temple",
+          "area": "Mylapore",
+          "openingTime": "5:00 AM",
+          "closingTime": "8:00 PM",
+          "entryFee": 0,
+          "description": "Ancient Shiva temple with intricate Dravidian architecture",
+          "travelTimeFromCenter": "8 km",
+          "transportMode": ["Bus", "Auto", "Metro"],
+          "estimatedCost": 30,
+          "highlights": ["Golden Gopuram", "Religious rituals", "Photography"]
+        },
+        {
+          "name": "Fort St George",
+          "category": "Heritage",
+          "area": "George Town",
+          "openingTime": "9:00 AM",
+          "closingTime": "5:00 PM",
+          "entryFee": 50,
+          "description": "Historic British fort containing museum and government buildings",
+          "travelTimeFromCenter": "5 km",
+          "transportMode": ["Bus", "Auto", "Metro"],
+          "estimatedCost": 60,
+          "highlights": ["British architecture", "Museum", "Historical significance"]
+        },
+        {
+          "name": "Government Museum",
+          "category": "Museum",
+          "area": "Egmore",
+          "openingTime": "9:00 AM",
+          "closingTime": "5:00 PM",
+          "entryFee": 25,
+          "description": "One of India's oldest museums with bronze sculptures and exhibits",
+          "travelTimeFromCenter": "7 km",
+          "transportMode": ["Bus", "Auto", "Metro"],
+          "estimatedCost": 50,
+          "highlights": ["Bronze statues", "Ancient artifacts", "Educational"]
+        },
+        {
+          "name": "T. Nagar Shopping",
+          "category": "Shopping",
+          "area": "T. Nagar",
+          "openingTime": "9:00 AM",
+          "closingTime": "9:00 PM",
+          "entryFee": 0,
+          "description": "Premier shopping district with diverse retail stores",
+          "travelTimeFromCenter": "10 km",
+          "transportMode": ["Bus", "Auto", "Metro"],
+          "estimatedCost": 100,
+          "highlights": ["Silk sarees", "Jewelry", "Local products"]
+        }
+      ]
+    },
+    "Madurai": {
+      "capital": false,
+      "interests": ["Temple", "Heritage", "Food Tour", "Photography", "Shopping"],
+      "attractions": [
+        {
+          "name": "Meenakshi Temple",
+          "category": "Temple",
+          "area": "City Center",
+          "openingTime": "4:30 AM",
+          "closingTime": "9:30 PM",
+          "entryFee": 0,
+          "description": "2500-year-old temple with stunning Gopurams and architecture",
+          "travelTimeFromCenter": "1 km",
+          "transportMode": ["Walk", "Auto"],
+          "estimatedCost": 20,
+          "highlights": ["Golden Gopuram", "Thousand Pillar Hall", "Night lighting"]
+        },
+        {
+          "name": "Thirumalai Nayakkar Palace",
+          "category": "Heritage",
+          "area": "City Center",
+          "openingTime": "9:00 AM",
+          "closingTime": "5:00 PM",
+          "entryFee": 15,
+          "description": "Historic 400-year-old palace built by Nayakkar dynasty",
+          "travelTimeFromCenter": "2 km",
+          "transportMode": ["Bus", "Auto"],
+          "estimatedCost": 50,
+          "highlights": ["Architecture", "Sound and Light show", "Royal heritage"]
+        },
+        {
+          "name": "Jigarthanda",
+          "category": "Food Tour",
+          "area": "Bazaar Street",
+          "openingTime": "10:00 AM",
+          "closingTime": "10:00 PM",
+          "entryFee": 0,
+          "description": "Famous local dessert drink unique to Madurai",
+          "travelTimeFromCenter": "3 km",
+          "transportMode": ["Auto"],
+          "estimatedCost": 40,
+          "highlights": ["Traditional recipe", "Milk-based", "Must-try local"]
+        }
+      ]
+    },
+    "Kodaikanal": {
+      "capital": false,
+      "interests": ["Hill Station", "Trekking", "Nature", "Photography", "Lake"],
+      "attractions": [
+        {
+          "name": "Kodaikanal Lake",
+          "category": "Lake",
+          "area": "City Center",
+          "openingTime": "6:00 AM",
+          "closingTime": "6:00 PM",
+          "entryFee": 20,
+          "description": "Star-shaped artificial lake surrounded by misty hills",
+          "travelTimeFromCenter": "0.5 km",
+          "transportMode": ["Walk", "Boat"],
+          "estimatedCost": 30,
+          "highlights": ["Boating", "Misty views", "Photography"]
+        },
+        {
+          "name": "Pillar Rocks",
+          "category": "Trekking",
+          "area": "South Kodai",
+          "openingTime": "6:00 AM",
+          "closingTime": "6:00 PM",
+          "entryFee": 10,
+          "description": "Three massive rock formations with panoramic valley views",
+          "travelTimeFromCenter": "4 km",
+          "transportMode": ["Bus", "Auto"],
+          "estimatedCost": 80,
+          "highlights": ["Rock formations", "Valley view", "Trekking"]
+        },
+        {
+          "name": "Coaker's Walk",
+          "category": "Photography",
+          "area": "North Kodai",
+          "openingTime": "5:00 AM",
+          "closingTime": "6:00 PM",
+          "entryFee": 5,
+          "description": "Scenic walking trail with stunning views of plains below",
+          "travelTimeFromCenter": "2 km",
+          "transportMode": ["Auto", "Walk"],
+          "estimatedCost": 50,
+          "highlights": ["Walking trail", "Panoramic views", "Photography"]
+        }
+      ]
+    },
+    "Ooty": {
+      "capital": false,
+      "interests": ["Hill Station", "Nature", "Photography", "Tea Gardens", "Trekking"],
+      "attractions": [
+        {
+          "name": "Ooty Lake",
+          "category": "Nature",
+          "area": "City Center",
+          "openingTime": "6:00 AM",
+          "closingTime": "6:00 PM",
+          "entryFee": 15,
+          "description": "Scenic lake in elevated hill station with boating facilities",
+          "travelTimeFromCenter": "1 km",
+          "transportMode": ["Bus", "Auto"],
+          "estimatedCost": 60,
+          "highlights": ["Boating", "Horse riding", "Photography"]
+        },
+        {
+          "name": "Botanical Garden",
+          "category": "Photography",
+          "area": "North Ooty",
+          "openingTime": "8:00 AM",
+          "closingTime": "6:00 PM",
+          "entryFee": 40,
+          "description": "180-acre garden with rare plants, flowers, and diverse flora",
+          "travelTimeFromCenter": "2 km",
+          "transportMode": ["Bus", "Auto"],
+          "estimatedCost": 70,
+          "highlights": ["Flower show", "Rare plants", "Photography"]
+        }
+      ]
+    },
+    "Coimbatore": {
+      "capital": false,
+      "interests": ["Temple", "Nature", "Shopping", "Adventure", "Photography"],
+      "attractions": [
+        {
+          "name": "Isha Yoga Center",
+          "category": "Adventure",
+          "area": "West Coimbatore",
+          "openingTime": "10:00 AM",
+          "closingTime": "4:00 PM",
+          "entryFee": 0,
+          "description": "16m tall Adiyogi statue and spiritual center",
+          "travelTimeFromCenter": "30 km",
+          "transportMode": ["Bus", "Auto", "Taxi"],
+          "estimatedCost": 200,
+          "highlights": ["Yoga programs", "Adiyogi statue", "Spiritual retreat"]
+        },
+        {
+          "name": "Marudhamalai Temple",
+          "category": "Temple",
+          "area": "North Coimbatore",
+          "openingTime": "6:00 AM",
+          "closingTime": "8:00 PM",
+          "entryFee": 0,
+          "description": "Ancient Murugan temple on hilltop with scenic surroundings",
+          "travelTimeFromCenter": "15 km",
+          "transportMode": ["Bus", "Auto"],
+          "estimatedCost": 100,
+          "highlights": ["Hilltop temple", "Trekking", "Spiritual"]
+        }
+      ]
+    },
+    "Thanjavur": {
+      "capital": false,
+      "interests": ["Temple", "Heritage", "Art", "Photography"],
+      "attractions": [
+        {
+          "name": "Brihadeeswara Temple",
+          "category": "Temple",
+          "area": "City Center",
+          "openingTime": "5:00 AM",
+          "closingTime": "9:00 PM",
+          "entryFee": 0,
+          "description": "1000-year-old UNESCO World Heritage temple with bronze domed roof",
+          "travelTimeFromCenter": "1 km",
+          "transportMode": ["Walk", "Auto"],
+          "estimatedCost": 30,
+          "highlights": ["Bronze dome", "Architecture", "Historical significance"]
+        }
+      ]
+    },
+    "Trichy": {
+      "capital": false,
+      "interests": ["Temple", "Heritage", "Rock Fort", "Photography"],
+      "attractions": [
+        {
+          "name": "Rock Fort Temple",
+          "category": "Rock Fort",
+          "area": "City Center",
+          "openingTime": "6:00 AM",
+          "closingTime": "8:00 PM",
+          "entryFee": 10,
+          "description": "Ancient temple carved into 83m high rock with 434 steps",
+          "travelTimeFromCenter": "2 km",
+          "transportMode": ["Bus", "Auto"],
+          "estimatedCost": 60,
+          "highlights": ["Rock climbing", "City view", "Ancient temples"]
+        }
+      ]
+    },
+    "Kanyakumari": {
+      "capital": false,
+      "interests": ["Beach", "Sunset", "Monument", "Photography", "Spiritual"],
+      "attractions": [
+        {
+          "name": "Vivekananda Rock",
+          "category": "Monument",
+          "area": "South Tip",
+          "openingTime": "7:00 AM",
+          "closingTime": "5:00 PM",
+          "entryFee": 30,
+          "description": "Historic rock memorial of Swami Vivekananda with ocean views",
+          "travelTimeFromCenter": "2 km",
+          "transportMode": ["Ferry", "Boat"],
+          "estimatedCost": 100,
+          "highlights": ["Boat ride", "Spiritual site", "Sunset view"]
+        }
+      ]
+    },
+    "Rameswaram": {
+      "capital": false,
+      "interests": ["Temple", "Beach", "Spiritual", "Photography"],
+      "attractions": [
+        {
+          "name": "Ramanathaswamy Temple",
+          "category": "Temple",
+          "area": "Island Center",
+          "openingTime": "4:00 AM",
+          "closingTime": "10:00 PM",
+          "entryFee": 0,
+          "description": "Ancient temple on island with longest corridors in any Hindu temple",
+          "travelTimeFromCenter": "1 km",
+          "transportMode": ["Walk", "Auto"],
+          "estimatedCost": 40,
+          "highlights": ["Long corridors", "Sacred baths", "Pilgrimage site"]
+        }
+      ]
+    },
+    "Vellore": {
+      "capital": false,
+      "interests": ["Fort", "Temple", "Heritage", "Medical Tourism"],
+      "attractions": [
+        {
+          "name": "Vellore Fort",
+          "category": "Fort",
+          "area": "City Center",
+          "openingTime": "9:00 AM",
+          "closingTime": "5:00 PM",
+          "entryFee": 25,
+          "description": "16th-century fort built by the Aravidu dynasty",
+          "travelTimeFromCenter": "1 km",
+          "transportMode": ["Bus", "Auto"],
+          "estimatedCost": 50,
+          "highlights": ["Architecture", "Museum", "Historical fort"]
+        }
+      ]
+    }
+  },
+  "allInterests": ["Temple", "Beach", "Heritage", "Museum", "Shopping", "Food Tour", "Photography", "Waterfall", "Trekking", "Hill Station", "Wildlife", "Adventure", "Nature", "Monument", "Spiritual", "Rock Fort", "Art", "Tea Gardens", "Lake", "Sunset"],
+  "interestAvailabilityMap": {
+    "Chennai": ["Temple", "Beach", "Heritage", "Museum", "Shopping", "Food Tour", "Photography"],
+    "Madurai": ["Temple", "Heritage", "Food Tour", "Photography", "Shopping"],
+    "Kodaikanal": ["Hill Station", "Trekking", "Nature", "Photography", "Lake"],
+    "Ooty": ["Hill Station", "Nature", "Photography", "Tea Gardens", "Trekking"],
+    "Coimbatore": ["Temple", "Nature", "Shopping", "Adventure", "Photography"],
+    "Thanjavur": ["Temple", "Heritage", "Art", "Photography"],
+    "Trichy": ["Temple", "Heritage", "Rock Fort", "Photography"],
+    "Kanyakumari": ["Beach", "Sunset", "Monument", "Photography", "Spiritual"],
+    "Rameswaram": ["Temple", "Beach", "Spiritual", "Photography"],
+    "Vellore": ["Fort", "Temple", "Heritage", "Medical Tourism"]
+  },
+  "nearbyAlternatives": {
+    "Waterfall": {
+      "Chennai": ["Hogenakkal Falls – 5 hrs", "Kiliyur Falls (Yercaud) – 4 hrs"],
+      "Madurai": ["Suruli Falls (Theni) – 2.5 hrs", "Kumbakarai Falls – 3 hrs"],
+      "Coimbatore": ["Siruvani Falls – 1.5 hrs", "Kovai Kutralam – 2 hrs"]
+    },
+    "Wildlife": {
+      "Chennai": ["Vedanthangal Bird Sanctuary – 3 hrs", "Mudumalai Tiger Reserve – 6 hrs"],
+      "Coimbatore": ["Anamalai Tiger Reserve – 1.5 hrs", "Mudumalai Tiger Reserve – 2 hrs"]
+    },
+    "Hill Station": {
+      "Chennai": ["Yelagiri – 3 hrs", "Yercaud – 4 hrs", "Kodaikanal – 6 hrs"],
+      "Madurai": ["Kodaikanal – 3 hrs", "Megamalai – 3 hrs"],
+      "Coimbatore": ["Ooty – 2 hrs", "Valparai – 2 hrs"]
+    }
+  },
+  "transportOptions": {
+    "modes": ["Bus", "Train", "Metro", "Auto", "Taxi", "Walk"],
+    "costPerMode": {
+      "Bus": 30,
+      "Train": 50,
+      "Metro": 25,
+      "Auto": 80,
+      "Taxi": 150,
+      "Walk": 0
+    }
+  }
+}

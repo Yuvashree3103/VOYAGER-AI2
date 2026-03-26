@@ -76,6 +76,24 @@ export const plannerAPI = {
   trainModel: () => api.post('/train-model'),
   modelStatus: () => api.get('/model-status'),
 }
+
+// ============ ADVANCED PLANNER APIS (NEW) ============
+export const advancedPlannerAPI = {
+  // Main trip planning endpoint
+  planTrip: (data) => api.post('/plan-trip-v2', data),
+  
+  // Interest validation
+  validateInterests: (data) => api.post('/validate-interests', data),
+  
+  // Get available interests for a city
+  getInterests: (city) => api.get(`/interests/${city}`),
+  
+  // Get all available cities
+  getCities: () => api.get('/cities'),
+  
+  // Budget estimation
+  estimateBudget: (data) => api.post('/budget-estimate', data),
+}
 // ============ SERVICES APIS ============
 export const servicesAPI = {
   getWeather: () => api.get('/weather'),

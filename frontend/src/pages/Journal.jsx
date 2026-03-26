@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
+import {
   PhotoIcon,
   VideoCameraIcon,
   MicrophoneIcon,
@@ -35,7 +35,7 @@ const Journal = () => {
   const [audioURL, setAudioURL] = useState(null)
   const mediaRecorder = useRef(null)
   const audioChunks = useRef([])
-  
+
   const [newEntry, setNewEntry] = useState({
     type: 'note', // photo, video, voice, note
     title: '',
@@ -91,11 +91,11 @@ const Journal = () => {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
       mediaRecorder.current = new MediaRecorder(stream)
       audioChunks.current = []
-      
+
       mediaRecorder.current.ondataavailable = (event) => {
         audioChunks.current.push(event.data)
       }
-      
+
       mediaRecorder.current.onstop = () => {
         const audioBlob = new Blob(audioChunks.current, { type: 'audio/wav' })
         const audioUrl = URL.createObjectURL(audioBlob)
@@ -106,7 +106,7 @@ const Journal = () => {
           audioUrl
         })
       }
-      
+
       mediaRecorder.current.start()
       setRecording(true)
       toast.success('Recording started...')
@@ -130,14 +130,14 @@ const Journal = () => {
       toast.error('Please add a title')
       return
     }
-    
+
     const entry = {
       ...newEntry,
       id: Date.now(),
       timestamp: new Date().toISOString(),
-      userId: user?.id
+      userId
     }
-    
+
     setEntries([entry, ...entries])
     setShowAddModal(false)
     resetNewEntry()
@@ -150,7 +150,7 @@ const Journal = () => {
   }
 
   const toggleFavorite = (id) => {
-    setEntries(entries.map(entry => 
+    setEntries(entries.map(entry =>
       entry.id === id ? { ...entry, favorite: !entry.favorite } : entry
     ))
   }
@@ -172,7 +172,7 @@ const Journal = () => {
   }
 
   const getEntryIcon = (type) => {
-    switch(type) {
+    switch (type) {
       case 'photo': return <PhotoIcon className="w-5 h-5" />
       case 'video': return <VideoCameraIcon className="w-5 h-5" />
       case 'voice': return <MicrophoneIcon className="w-5 h-5" />
@@ -180,30 +180,30 @@ const Journal = () => {
     }
   }
 
-  const filteredEntries = entries.filter(entry => 
+  const filteredEntries = entries.filter(entry =>
     filter === 'all' || entry.type === filter
   )
 
   return (
-    <div className="py-8">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-slate-950 px-4 md:px-6 pt-24 pb-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="mb-8 flex justify-between items-center"
       >
         <div>
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
             Travel Journal
           </h1>
-          <p className="text-gray-600 dark:text-gray-300">
-            Capture and remember your Chennai memories
+          <p className="text-slate-600 dark:text-slate-300">
+            Capture and remember your travel memories
           </p>
         </div>
         <button
           onClick={() => setShowAddModal(true)}
-          className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 flex items-center"
+          className="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 flex items-center gap-2 font-bold"
         >
-          <PhotoIcon className="w-5 h-5 mr-2" />
+          <PhotoIcon className="w-5 h-5" />
           New Entry
         </button>
       </motion.div>
@@ -215,11 +215,10 @@ const Journal = () => {
             <button
               key={type}
               onClick={() => setFilter(type)}
-              className={`px-3 py-1 rounded-full text-sm capitalize ${
-                filter === type
-                  ? 'bg-accent text-white'
-                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-              }`}
+              className={`px-3 py-1.5 rounded-full text-sm font-semibold capitalize transition-all ${filter === type
+                ? 'bg-blue-600 text-white'
+                : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
+                }`}
             >
               {type === 'all' ? 'All' : type + 's'}
             </button>
@@ -228,13 +227,13 @@ const Journal = () => {
         <div className="flex space-x-2">
           <button
             onClick={() => setViewMode('grid')}
-            className={`p-2 rounded ${viewMode === 'grid' ? 'bg-accent text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
+            className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'}`}
           >
             ⊞
           </button>
           <button
             onClick={() => setViewMode('list')}
-            className={`p-2 rounded ${viewMode === 'list' ? 'bg-accent text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
+            className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'}`}
           >
             ≡
           </button>
@@ -259,7 +258,7 @@ const Journal = () => {
           </button>
         </AnimatedCard>
       ) : (
-        <div className={viewMode === 'grid' 
+        <div className={viewMode === 'grid'
           ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
           : 'space-y-4'
         }>
@@ -273,33 +272,33 @@ const Journal = () => {
               <AnimatedCard className="overflow-hidden">
                 {entry.type === 'photo' && entry.images.length > 0 && (
                   <div className="relative h-48 bg-gray-100 dark:bg-gray-800">
-                    <img 
-                      src={entry.images[0]} 
+                    <img
+                      src={entry.images[0]}
                       alt={entry.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 )}
-                
+
                 {entry.type === 'video' && entry.videoUrl && (
-                  <video 
-                    src={entry.videoUrl} 
-                    controls 
+                  <video
+                    src={entry.videoUrl}
+                    controls
                     className="w-full h-48 object-cover"
                   />
                 )}
-                
+
                 {entry.type === 'voice' && entry.audioUrl && (
                   <div className="p-4 bg-gray-100 dark:bg-gray-800">
                     <audio src={entry.audioUrl} controls className="w-full" />
                   </div>
                 )}
-                
+
                 <div className="p-4">
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex items-center">
                       {getEntryIcon(entry.type)}
-                      <h3 className="font-semibold ml-2">{entry.title || 'Untitled'}</h3>
+                      <h3 className="font-semibold ml-2 text-slate-900 dark:text-white">{entry.title || 'Untitled'}</h3>
                     </div>
                     <button onClick={() => toggleFavorite(entry.id)}>
                       {entry.favorite ? (
@@ -309,13 +308,13 @@ const Journal = () => {
                       )}
                     </button>
                   </div>
-                  
+
                   {entry.content && (
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                       {entry.content}
                     </p>
                   )}
-                  
+
                   <div className="flex items-center text-xs text-gray-500 dark:text-gray-500 space-x-3">
                     {entry.location && (
                       <span className="flex items-center">
@@ -328,7 +327,7 @@ const Journal = () => {
                       {new Date(entry.date).toLocaleDateString()}
                     </span>
                   </div>
-                  
+
                   {entry.images.length > 1 && (
                     <div className="mt-2 flex space-x-1">
                       {entry.images.slice(1, 4).map((img, i) => (
@@ -343,17 +342,17 @@ const Journal = () => {
                       )}
                     </div>
                   )}
-                  
+
                   <div className="mt-3 flex justify-end space-x-2">
                     <button
                       onClick={() => setSelectedEntry(entry)}
-                      className="p-1 text-gray-500 hover:text-accent"
+                      className="p-1 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
                     >
                       <PencilIcon className="w-4 h-4" />
                     </button>
                     <button
                       onClick={() => deleteEntry(entry.id)}
-                      className="p-1 text-gray-500 hover:text-red-500"
+                      className="p-1 text-slate-400 hover:text-red-500 dark:hover:text-red-400 transition"
                     >
                       <TrashIcon className="w-4 h-4" />
                     </button>
@@ -398,12 +397,11 @@ const Journal = () => {
                   {['note', 'photo', 'video', 'voice'].map(type => (
                     <button
                       key={type}
-                      onClick={() => setNewEntry({...newEntry, type})}
-                      className={`flex-1 py-2 rounded-lg capitalize flex items-center justify-center ${
-                        newEntry.type === type
-                          ? 'bg-accent text-white'
-                          : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-                      }`}
+                      onClick={() => setNewEntry({ ...newEntry, type })}
+                      className={`flex-1 py-2 rounded-xl capitalize flex items-center justify-center text-sm font-semibold transition ${newEntry.type === type
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+                        }`}
                     >
                       {type === 'note' && <DocumentTextIcon className="w-4 h-4 mr-1" />}
                       {type === 'photo' && <PhotoIcon className="w-4 h-4 mr-1" />}
@@ -420,7 +418,7 @@ const Journal = () => {
                     type="text"
                     placeholder="Title"
                     value={newEntry.title}
-                    onChange={(e) => setNewEntry({...newEntry, title: e.target.value})}
+                    onChange={(e) => setNewEntry({ ...newEntry, title: e.target.value })}
                     className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
                   />
 
@@ -428,7 +426,7 @@ const Journal = () => {
                     <textarea
                       placeholder="Write your notes..."
                       value={newEntry.content}
-                      onChange={(e) => setNewEntry({...newEntry, content: e.target.value})}
+                      onChange={(e) => setNewEntry({ ...newEntry, content: e.target.value })}
                       rows="4"
                       className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
                     />
@@ -489,27 +487,27 @@ const Journal = () => {
                     type="text"
                     placeholder="Location (optional)"
                     value={newEntry.location}
-                    onChange={(e) => setNewEntry({...newEntry, location: e.target.value})}
+                    onChange={(e) => setNewEntry({ ...newEntry, location: e.target.value })}
                     className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
                   />
 
                   <input
                     type="date"
                     value={newEntry.date}
-                    onChange={(e) => setNewEntry({...newEntry, date: e.target.value})}
+                    onChange={(e) => setNewEntry({ ...newEntry, date: e.target.value })}
                     className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
                   />
 
                   <div className="flex justify-end space-x-3">
                     <button
                       onClick={() => setShowAddModal(false)}
-                      className="px-4 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                      className="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold"
                     >
                       Cancel
                     </button>
                     <button
                       onClick={saveEntry}
-                      className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90"
+                      className="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-bold"
                     >
                       Save Entry
                     </button>
@@ -525,3 +523,4 @@ const Journal = () => {
 }
 
 export default Journal
+
