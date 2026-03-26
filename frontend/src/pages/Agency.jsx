@@ -150,7 +150,7 @@ const PaymentModal = ({ pkg, agency, onClose, onConfirm }) => {
               <h3 className="text-2xl font-black text-slate-900 dark:text-white">Booking Confirmed! 🎉</h3>
               <p className="text-slate-500 dark:text-slate-300">Your booking for <strong>{pkg.name}</strong> has been confirmed. Confirmation details have been sent to {travelerEmail}.</p>
               <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-4 text-left space-y-2">
-                <div className="flex justify-between text-sm"><span className="text-slate-500">Booking ID</span><span className="font-bold text-slate-900 dark:text-white">VYG-{Math.random().toString(36).substring(2,8).toUpperCase()}</span></div>
+                <div className="flex justify-between text-sm"><span className="text-slate-500">Booking ID</span><span className="font-bold text-slate-900 dark:text-white">VYG-{Math.random().toString(36).substring(2, 8).toUpperCase()}</span></div>
                 <div className="flex justify-between text-sm"><span className="text-slate-500">Package</span><span className="font-bold text-slate-900 dark:text-white">{pkg.name}</span></div>
                 <div className="flex justify-between text-sm"><span className="text-slate-500">Travelers</span><span className="font-bold text-slate-900 dark:text-white">{travelers}</span></div>
                 <div className="flex justify-between text-sm"><span className="text-slate-500">Amount Paid</span><span className="font-black text-green-600">₹{total.toLocaleString()}</span></div>
@@ -185,22 +185,39 @@ const Agency = () => {
   return (
     <div className="min-h-screen bg-background dark:bg-slate-950">
       {/* Hero */}
-      <div className="relative h-72 md:h-96 overflow-hidden">
-        <img
-          src={agency.imageUrl}
-          alt={agency.name}
-          className="w-full h-full object-cover"
-          onError={e => { e.target.src = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-          <button onClick={() => navigate(-1)} className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-bold mb-4 transition">
-            <ArrowLeft className="h-4 w-4" /> Back
-          </button>
-          <h1 className="text-3xl md:text-4xl font-black text-white">{agency.name}</h1>
-          <div className="mt-2 flex flex-wrap items-center gap-4">
-            <span className="flex items-center gap-1.5 text-white/80 text-sm"><MapPin className="h-4 w-4 text-orange-300" />{agency.location}</span>
-            <span className="flex items-center gap-1.5 bg-amber-500/20 border border-amber-500/30 rounded-full px-3 py-1 text-amber-300 text-sm font-bold"><Star className="h-3.5 w-3.5" />{agency.rating}</span>
+      <div className="relative h-72 md:h-96 overflow-hidden" style={{ background: `linear-gradient(135deg, ${agency.brandColor || '#3b82f6'}22, ${agency.brandColor || '#3b82f6'}55)` }}>
+        <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${agency.brandColor || '#1e40af'}, #0f172a)` }} />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
+        <div className="absolute inset-0 flex items-end p-6 md:p-10">
+          <div className="w-full">
+            <button onClick={() => navigate(-1)} className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-bold mb-4 transition">
+              <ArrowLeft className="h-4 w-4" /> Back
+            </button>
+            <div className="flex items-center gap-5">
+              {/* Agency Logo */}
+              <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center overflow-hidden shrink-0">
+                <img
+                  src={agency.logoUrl}
+                  alt={agency.name}
+                  className="max-w-full max-h-full object-contain p-2"
+                  onError={e => {
+                    e.target.style.display = 'none'
+                    e.target.nextSibling.style.display = 'flex'
+                  }}
+                />
+                <span style={{ display: 'none' }} className="text-xl font-black text-white">
+                  {agency.name.split(' ').map(w => w[0]).join('').slice(0, 2)}
+                </span>
+              </div>
+              <div>
+                <h1 className="text-3xl md:text-4xl font-black text-white">{agency.name}</h1>
+                <div className="mt-2 flex flex-wrap items-center gap-4">
+                  <span className="flex items-center gap-1.5 text-white/80 text-sm"><MapPin className="h-4 w-4 text-orange-300" />{agency.location}</span>
+                  <span className="flex items-center gap-1.5 bg-amber-500/20 border border-amber-500/30 rounded-full px-3 py-1 text-amber-300 text-sm font-bold"><Star className="h-3.5 w-3.5" />{agency.rating}</span>
+                  <span className="flex items-center gap-1.5 text-white/70 text-sm font-bold">Starting ₹{agency.startingPrice?.toLocaleString()}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -220,56 +237,38 @@ const Agency = () => {
         {/* Packages */}
         <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-6">Available Packages</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {agency.packages.map(pkg => (
-            <motion.div key={pkg.id} whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 260, damping: 22 }}>
+          {(agency.packages_list || []).map((pkg, idx) => (
+            <motion.div key={pkg.name || idx} whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 260, damping: 22 }}>
               <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
-                <div className="relative h-48">
-                  <img
-                    src={pkg.imageUrl}
-                    alt={pkg.name}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    onError={e => { e.target.src = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800' }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="relative h-48 bg-gradient-to-br from-blue-100 to-violet-100 dark:from-blue-900/30 dark:to-violet-900/30 flex items-center justify-center">
+                  <div className="text-center p-4">
+                    <div className="text-4xl mb-2">
+                      {pkg.type?.includes('Heritage') ? '🏛️' : pkg.type?.includes('Hill') ? '⛰️' : pkg.type?.includes('Beach') ? '🏖️' : pkg.type?.includes('Pilgrimage') ? '🛕' : pkg.type?.includes('Wildlife') ? '🦁' : pkg.type?.includes('Culinary') ? '🍛' : pkg.type?.includes('Honeymoon') ? '💑' : pkg.type?.includes('Budget') ? '💰' : pkg.type?.includes('Adventure') ? '🧗' : pkg.type?.includes('Premium') ? '⭐' : '✈️'}
+                    </div>
+                    <div className="text-sm font-bold text-slate-600 dark:text-slate-300">{pkg.type}</div>
+                  </div>
                   <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-black/50 rounded-full px-3 py-1 text-white text-xs font-bold backdrop-blur">
-                    <Star className="h-3 w-3 text-amber-400" />{pkg.rating}
+                    <Clock className="h-3 w-3" /> {pkg.duration}
                   </div>
                 </div>
                 <div className="p-5">
                   <h3 className="font-black text-slate-900 dark:text-white text-base leading-snug">{pkg.name}</h3>
-                  <div className="mt-2 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-                    <Clock className="h-4 w-4" />{pkg.duration}
-                  </div>
                   <p className="mt-2 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{pkg.description}</p>
 
                   {/* Inclusions */}
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {pkg.hotel && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 px-2.5 py-0.5 text-xs font-bold text-green-700 dark:text-green-300">
-                        <Hotel className="h-3 w-3" /> Hotel
-                      </span>
-                    )}
-                    {pkg.transport && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 text-xs font-bold text-blue-700 dark:text-blue-300">
-                        <Car className="h-3 w-3" /> Transport
-                      </span>
-                    )}
-                    {pkg.food && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 px-2.5 py-0.5 text-xs font-bold text-orange-700 dark:text-orange-300">
-                        <Utensils className="h-3 w-3" /> Meals
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Locations */}
-                  <div className="mt-3 text-xs text-slate-500 dark:text-slate-400">
-                    <span className="font-bold">Covers: </span>{pkg.locations.join(' → ')}
-                  </div>
+                  {pkg.includes && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {pkg.includes.map((inc, j) => (
+                        <span key={j} className="inline-flex items-center gap-1 rounded-full bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 px-2.5 py-0.5 text-xs font-bold text-green-700 dark:text-green-300">
+                          ✓ {inc}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
                   <div className="mt-4 flex items-center justify-between">
                     <div>
-                      <span className="text-xl font-black text-slate-900 dark:text-white">₹{pkg.price.toLocaleString()}</span>
+                      <span className="text-xl font-black text-slate-900 dark:text-white">₹{pkg.price?.toLocaleString()}</span>
                       <span className="text-xs text-slate-500 ml-1">/ person</span>
                     </div>
                     <button

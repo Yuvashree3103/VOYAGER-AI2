@@ -1,184 +1,1463 @@
 {
-  "Chennai": [
-    {
-      "type": "Food",
-      "title": "Filter Coffee",
-      "description": "Chennai's soul in a cup — fragrant, frothy, and served in the iconic dabarah-tumbler set.",
-      "imageUrl": "https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Idli & Sambar",
-      "description": "The quintessential Tamil breakfast — pillowy soft idlis with aromatic sambar and three chutneys.",
-      "imageUrl": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Chettinad Chicken Curry",
-      "description": "Bold, complex spice blend unique to Chettinad cuisine — a fiery masterpiece.",
-      "imageUrl": "https://images.unsplash.com/photo-1604908177522-402df02f6b7e?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Kanchipuram Silk Saree",
-      "description": "Authentic GI-tagged Kanchipuram silk with gold zari borders — the queen of Indian sarees.",
-      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
-    }
-  ],
-  "Madurai": [
-    {
-      "type": "Food",
-      "title": "Jigarthanda",
-      "description": "Madurai's legendary cold drink — almond resin, milk, ice cream, and sarsaparilla syrup.",
-      "imageUrl": "https://images.unsplash.com/photo-1541544537156-7627a7a4aa1c?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Bun Parotta",
-      "description": "Soft layered parotta served with mutton or veg salna — Madurai's beloved street staple.",
-      "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Mutton Biryani",
-      "description": "Madurai-style biryani is pot-roasted with whole spices giving a unique smoky flavour.",
-      "imageUrl": "https://images.unsplash.com/photo-1563379091339-03246963d96c?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Sungudi Saree",
-      "description": "GI-tagged tie-dye cotton saree created near Madurai — famous for its geometric dot patterns.",
-      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
-    }
-  ],
-  "Ooty": [
-    {
-      "type": "Food",
-      "title": "Ooty Homemade Chocolates",
-      "description": "Rich, creamy homemade chocolates from Nilgiri dairies — best from Chocolate Grove and King Chocolates.",
-      "imageUrl": "https://images.unsplash.com/photo-1511381939415-c1cbe9a5c7b3?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Ooty Varkey Biscuits",
-      "description": "Crispy, buttery traditional biscuits — iconic to Ooty. Best bought fresh from Ooty Bakery.",
-      "imageUrl": "https://images.unsplash.com/photo-1548943487-a2e4ad159a6a?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Nilgiri Tea",
-      "description": "Aromatic orthodox tea from Nilgiri estates — best purchased directly from estate shops.",
-      "imageUrl": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Eucalyptus Oil",
-      "description": "Pure cold-pressed eucalyptus oil — therapeutic and abundantly available in Ooty markets.",
-      "imageUrl": "https://images.unsplash.com/photo-1514996937319-344454492b37?w=800&auto=format&fit=crop"
-    }
-  ],
-  "Thanjavur": [
-    {
-      "type": "Food",
-      "title": "Thanjavur Special Meals",
-      "description": "Traditional banana-leaf meals with rasam, sambar, kootu, and payasam — a Chola-era feast.",
-      "imageUrl": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Chettinad Cuisine",
-      "description": "Iconic spice-heavy cuisine unique to Chettinad — vellai paniyaram and kuzhi paniyaram are must-tries.",
-      "imageUrl": "https://images.unsplash.com/photo-1604908177522-402df02f6b7e?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Thalaiyatti Bommai Doll",
-      "description": "The iconic nodding-head Tanjore doll — handcrafted with clay, papier-mâché, and gold leaf.",
-      "imageUrl": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Tanjore Painting",
-      "description": "Classical South Indian gold-foil paintings of deities — best from Government Emporium, Thanjavur.",
-      "imageUrl": "https://images.unsplash.com/photo-1579762593175-20226054cad0?w=800&auto=format&fit=crop"
-    }
-  ],
-  "Kanchipuram": [
-    {
-      "type": "Food",
-      "title": "Kanchipuram Idli",
-      "description": "Coarser, spicier idli flavored with cumin, pepper, and ginger — offered as prasad in Varadaraja Temple.",
-      "imageUrl": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Temple Prasadam Sweets",
-      "description": "Panchaamirtham and other temple sweets — a divine treat after temple visits.",
-      "imageUrl": "https://images.unsplash.com/photo-1548943487-a2e4ad159a6a?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Kanchipuram Silk Saree",
-      "description": "GI-certified handwoven silk with heavy gold zari — buy from weavers' cooperatives for authenticity.",
-      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Kanchipuram Cotton Saree",
-      "description": "Affordable, elegantly patterned cotton sarees — perfect for daily wear with a heritage touch.",
-      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
-    }
-  ],
-  "Kodaikanal": [
-    {
-      "type": "Food",
-      "title": "Homemade Chocolates",
-      "description": "Kodaikanal-style handmade chocolates — truffle, walnut, and fruit flavors from local shops.",
-      "imageUrl": "https://images.unsplash.com/photo-1511381939415-c1cbe9a5c7b3?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Freshly Baked Goods",
-      "description": "Carlton Hotel and local bakeries serve fresh bread, buns, and pastries loved by trekkers.",
-      "imageUrl": "https://images.unsplash.com/photo-1549931319-a545dcf3bc7c?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Eucalyptus Oil",
-      "description": "Pure Kodaikanal eucalyptus oil — widely used for respiratory relief and body massage.",
-      "imageUrl": "https://images.unsplash.com/photo-1514996937319-344454492b37?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Handmade Jam & Preserves",
-      "description": "Kodaikanal is famous for homemade strawberry, plum, and mixed-fruit jams from local cottages.",
-      "imageUrl": "https://images.unsplash.com/photo-1535403045997-3a39cbb7f41e?w=800&auto=format&fit=crop"
-    }
-  ],
-  "Thirunelveli": [
-    {
-      "type": "Food",
-      "title": "Tirunelveli Halwa",
-      "description": "The legendary wheat-based halwa soaked in ghee — a 200-year-old Iruttu Kadai secret recipe.",
-      "imageUrl": "https://images.unsplash.com/photo-1574484284002-952d92a03a44?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Food",
-      "title": "Kola Urundai",
-      "description": "Spiced minced meat balls — a beloved Tirunelveli street snack with unique local spice blend.",
-      "imageUrl": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Palm Products",
-      "description": "Palmyra-based crafts, baskets, fans, and accessories — handmade by local artisans.",
-      "imageUrl": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&auto=format&fit=crop"
-    },
-    {
-      "type": "Shopping",
-      "title": "Shenbagam Cloth",
-      "description": "Traditional cotton fabric with distinct patterns — used for dhotis and sarees in southern TN.",
-      "imageUrl": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop"
-    }
-  ]
+  "Chennai": {
+    "famous_places": [
+      "Marina Beach",
+      "Kapaleeshwarar Temple",
+      "Fort St. George",
+      "Government Museum",
+      "Santhome Basilica"
+    ],
+    "food": [
+      {
+        "title": "Filter Coffee",
+        "description": "Classic Chennai decoction coffee served in a stainless steel tumbler & davara — a morning ritual across Tamil Nadu.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Indian_Filter_Coffee.JPG/640px-Indian_Filter_Coffee.JPG",
+        "price_range": "₹10–30",
+        "where_to_buy": "Saravana Bhavan, Murugan Idli Shop",
+        "best_time": "Morning 6–10 AM",
+        "shelf_life": "Serve immediately"
+      },
+      {
+        "title": "Marina Sundal",
+        "description": "Spiced boiled chickpeas sold by beach vendors at Marina. An iconic Chennai street snack eaten at sunset.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sundal_2.jpg/640px-Sundal_2.jpg",
+        "price_range": "₹20–50",
+        "where_to_buy": "Marina Beach vendors",
+        "best_time": "Evening 4–8 PM",
+        "shelf_life": "1 day"
+      },
+      {
+        "title": "Atho Noodles",
+        "description": "Burmese-origin street noodles beloved in North Chennai — a spicy, tangy quick bite unique to the city.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Atho.jpg/640px-Atho.jpg",
+        "price_range": "₹40–80",
+        "where_to_buy": "Burma Bazaar, North Chennai stalls",
+        "best_time": "Evening snack time",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "T. Nagar Textiles",
+        "description": "Asia's largest textile hub. Sarees, dress materials, and fabrics at wholesale prices from hundreds of shops.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Saree_shop_in_T._Nagar%2C_Chennai.jpg/640px-Saree_shop_in_T._Nagar%2C_Chennai.jpg",
+        "price_range": "₹200–5000",
+        "where_to_buy": "Nalli, Kumaran Silks, Saravana Stores",
+        "best_time": "Weekdays (less crowd)",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Artificial Jewellery",
+        "description": "Imitation gold jewellery in latest designs at Pondy Bazaar and Ranganathan Street — best gifting option.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Gold_jewelry.jpg/640px-Gold_jewelry.jpg",
+        "price_range": "₹100–1000",
+        "where_to_buy": "Pondy Bazaar, Ranganathan St",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Jute & Eco Bags",
+        "description": "Designer jute and cloth bags from handicraft stores — sustainable souvenirs from Chennai.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Jute_bag.jpg/640px-Jute_bag.jpg",
+        "price_range": "₹80–300",
+        "where_to_buy": "Khadi stores, T.Nagar shops",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      }
+    ]
+  },
+  "Kanchipuram": {
+    "famous_places": [
+      "Kailasanathar Temple",
+      "Ekambareswarar Temple",
+      "Vaikunta Perumal Temple",
+      "Kamakshi Amman Temple"
+    ],
+    "food": [
+      {
+        "title": "Kanchipuram Idli",
+        "description": "Famous steamed idli flavoured with pepper, cumin, and ghee — offered as prasad at Varadharaja Perumal Temple.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Kanchipuram_idly.jpg/640px-Kanchipuram_idly.jpg",
+        "price_range": "₹20–60",
+        "where_to_buy": "Local hotels near Varadharaja Temple",
+        "best_time": "Breakfast 7–10 AM",
+        "shelf_life": "4–6 hours"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Kanchipuram Silk Sarees",
+        "description": "GI-tagged world-famous silk sarees with pure zari borders. Every saree takes 3–7 days to weave by hand.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Kanchipuram_Silk_Sarees.jpg/640px-Kanchipuram_Silk_Sarees.jpg",
+        "price_range": "₹3,000–1,00,000",
+        "where_to_buy": "Nalli, Co-optex, Silk weaver shops",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Silk Stoles",
+        "description": "Lightweight Kanchipuram silk stoles — perfect and affordable return gift from the Silk City.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Kanchipuram_Silk_Sarees.jpg/640px-Kanchipuram_Silk_Sarees.jpg",
+        "price_range": "₹300–1500",
+        "where_to_buy": "Kanchipuram textile stores",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      }
+    ]
+  },
+  "Madurai": {
+    "famous_places": [
+      "Meenakshi Amman Temple",
+      "Thirumalai Nayakkar Mahal",
+      "Gandhi Memorial Museum",
+      "Alagar Kovil"
+    ],
+    "food": [
+      {
+        "title": "Jigarthanda",
+        "description": "Madurai's iconic chilled drink — a heavenly blend of milk, almond gum, sarsaparilla syrup, and ice cream.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jigarthanda.jpg/640px-Jigarthanda.jpg",
+        "price_range": "₹60–120",
+        "where_to_buy": "Famous Jigarthanda shops near Meenakshi Temple",
+        "best_time": "Summer afternoons",
+        "shelf_life": "Consume immediately"
+      },
+      {
+        "title": "Bun Parotta",
+        "description": "Flaky layered parotta stuffed and served with spicy mutton or chicken gravy — a Madurai street food institution.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Parotta.jpg/640px-Parotta.jpg",
+        "price_range": "₹60–120",
+        "where_to_buy": "Amma Mess, Murugan Idly shops",
+        "best_time": "Dinner 7–10 PM",
+        "shelf_life": "Same day"
+      },
+      {
+        "title": "Mutton Biryani",
+        "description": "Madurai-style biryani cooked with seeraga samba rice — known for its bold, aromatic spice profile.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Biryani_of_TN.jpg/640px-Biryani_of_TN.jpg",
+        "price_range": "₹120–200",
+        "where_to_buy": "Hotel Jayaram, Amma Mess Madurai",
+        "best_time": "Lunch 12–3 PM",
+        "shelf_life": "8 hours"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Sungudi Sarees",
+        "description": "GI-tagged hand-tied and dyed cotton sarees — vibrant circles on plain fabric, a Madurai weaving tradition.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Sungudi_saree.jpg/640px-Sungudi_saree.jpg",
+        "price_range": "₹500–5000",
+        "where_to_buy": "Madurai textile shops, Meenakshi market",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Jasmine (Malli)",
+        "description": "Madurai is the Jasmine capital of India. Buy fresh bundles or jasmine-based perfume as a fragrant souvenir.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Jasmines.jpg/640px-Jasmines.jpg",
+        "price_range": "₹30–100/bundle",
+        "where_to_buy": "Madurai flower market (Pazhamudhir Solai)",
+        "best_time": "Morning 5–9 AM",
+        "shelf_life": "24 hours"
+      }
+    ]
+  },
+  "Ooty": {
+    "famous_places": [
+      "Nilgiri Mountain Railway",
+      "Ooty Botanical Garden",
+      "Ooty Lake",
+      "Doddabetta Peak",
+      "Rose Garden"
+    ],
+    "food": [
+      {
+        "title": "Homemade Chocolates",
+        "description": "Ooty's handcrafted chocolates — available in dozens of varieties at the Government Chocolate Factory and local shops.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chocolate_box.jpg/640px-Chocolate_box.jpg",
+        "price_range": "₹50–300",
+        "where_to_buy": "Govt Chocolate Factory, King Star Chocolates",
+        "best_time": "Cool season (Oct–Feb)",
+        "shelf_life": "3–6 months"
+      },
+      {
+        "title": "Varkey Biscuits",
+        "description": "Thin, buttery, flaky pastry biscuits native to the Nilgiris. A must-buy from Ooty bakeries.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Biscuits.jpg/640px-Biscuits.jpg",
+        "price_range": "₹40–120",
+        "where_to_buy": "Ooty bakeries, Nilgiri Dairy Farm",
+        "best_time": "Anytime",
+        "shelf_life": "2 weeks"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Nilgiri Tea",
+        "description": "Premium Nilgiri single-estate tea leaves — bright, aromatic, and distinctly smooth. Buy directly from estates.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tea_in_a_cup.jpg/640px-Tea_in_a_cup.jpg",
+        "price_range": "₹100–500",
+        "where_to_buy": "Tea Factory outlets, Chamraj Tea Estate",
+        "best_time": "Anytime",
+        "shelf_life": "18 months"
+      },
+      {
+        "title": "Eucalyptus Oil",
+        "description": "Pure Nilgiri eucalyptus oil — therapeutic and aromatic. An affordable and useful return gift from Ooty.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Essential_oils.jpg/640px-Essential_oils.jpg",
+        "price_range": "₹80–250",
+        "where_to_buy": "Pharmacy shops, Govt stores Ooty",
+        "best_time": "Anytime",
+        "shelf_life": "2 years"
+      },
+      {
+        "title": "Assorted Chocolates Box",
+        "description": "Box of Ooty handmade chocolates — the best return gift for friends and family from the Nilgiris.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chocolate_box.jpg/640px-Chocolate_box.jpg",
+        "price_range": "₹150–500",
+        "where_to_buy": "King Star, Merit Chocolates",
+        "best_time": "Cool months preferred",
+        "shelf_life": "3–6 months"
+      }
+    ]
+  },
+  "Thanjavur": {
+    "famous_places": [
+      "Brihadeeswarar Temple",
+      "Thanjavur Palace",
+      "Art Gallery",
+      "Gangaikonda Cholapuram",
+      "Saraswathi Mahal Library"
+    ],
+    "food": [
+      {
+        "title": "Thavala Vadai",
+        "description": "Crispy savoury lentil fritter made with a unique combination of dals — a Thanjavur temple town delicacy.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vadai.jpg/640px-Vadai.jpg",
+        "price_range": "₹30–50",
+        "where_to_buy": "Temple streets near Brihadeeswarar",
+        "best_time": "Morning & evening",
+        "shelf_life": "Same day"
+      },
+      {
+        "title": "Kumbakonam Degree Coffee",
+        "description": "The gold standard of South Indian filter coffee — rich, frothy, and made with freshly drawn buffalo milk.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Indian_Filter_Coffee.JPG/640px-Indian_Filter_Coffee.JPG",
+        "price_range": "₹15–40",
+        "where_to_buy": "Sri Bala Vilas, Murugan Coffee Kumbakonam",
+        "best_time": "Morning 6–10 AM",
+        "shelf_life": "Serve immediately"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Thanjavur Paintings",
+        "description": "Classical semi-relief paintings on glass with embedded gold foil and gemstones — a Chola-era art form.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Thanjavur_painting.jpg/640px-Thanjavur_painting.jpg",
+        "price_range": "₹500–50,000",
+        "where_to_buy": "Thanjavur Art Gallery shops, TNHB complex",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Thalaiyatti Bommai",
+        "description": "The iconic dancing bobble-head doll of Thanjavur — a perfect souvenir representing Bharatnatyam art.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tanjore_doll.jpg/640px-Tanjore_doll.jpg",
+        "price_range": "₹100–2000",
+        "where_to_buy": "Kumbakonam road, Thanjavur craft shops",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      }
+    ]
+  },
+  "Tirunelveli": {
+    "famous_places": [
+      "Nellaiyappar Temple",
+      "Papanasam Falls",
+      "Mundanthurai Tiger Reserve",
+      "Krishnapuram Palace"
+    ],
+    "food": [
+      {
+        "title": "Iruttu Kadai Halwa",
+        "description": "The legendary Tirunelveli wheat halwa — slow-cooked with ghee for hours. Sold exclusively at night from the dark shop.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Tirunelveli_halwa.jpg/640px-Tirunelveli_halwa.jpg",
+        "price_range": "₹80–200/100g",
+        "where_to_buy": "Iruttu Kadai, Sri Krishnasamy Halwa",
+        "best_time": "Evening after 6 PM (night shop)",
+        "shelf_life": "15 days"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Pathamadai Mats (Paai)",
+        "description": "Handwoven korai grass mats from Pathamadai — so fine they can be rolled into a ring. GI-tagged craft.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pathamadai_mats.jpg/640px-Pathamadai_mats.jpg",
+        "price_range": "₹500–5000",
+        "where_to_buy": "Pathamadai village shops, Tirunelveli govt emporium",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Korai Grass Hand Fans",
+        "description": "Beautiful hand-woven grass fans from Pathamadai — eco-friendly and unique return gifts.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pathamadai_mats.jpg/640px-Pathamadai_mats.jpg",
+        "price_range": "₹80–300",
+        "where_to_buy": "Pathamadai craft village",
+        "best_time": "Summer (Apr–Jun)",
+        "shelf_life": "Permanent"
+      }
+    ]
+  },
+  "Kodaikanal": {
+    "famous_places": [
+      "Kodaikanal Lake",
+      "Coaker's Walk",
+      "Bryant Park",
+      "Pillar Rocks",
+      "Bear Shola Falls"
+    ],
+    "food": [
+      {
+        "title": "Kodai Chocolates",
+        "description": "Handmade artisan chocolates in dozens of flavours — the must-buy treat from the Princess of Hill Stations.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chocolate_box.jpg/640px-Chocolate_box.jpg",
+        "price_range": "₹80–400",
+        "where_to_buy": "Kodai Main Market stalls",
+        "best_time": "Cool months (Oct–Mar)",
+        "shelf_life": "3–6 months"
+      },
+      {
+        "title": "Garlic from Poombarai",
+        "description": "Fragrant mountain garlic grown at Poombarai village — used in Ayurvedic remedies and cooking.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Garlic_bulbs.jpg/640px-Garlic_bulbs.jpg",
+        "price_range": "₹60–120/kg",
+        "where_to_buy": "Poombarai village weekly market",
+        "best_time": "Nov–Jan harvest season",
+        "shelf_life": "2–3 months"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Eucalyptus Products",
+        "description": "Essential oils, soaps, and balms infused with Kodai hill herbs — popular among tourists.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Essential_oils.jpg/640px-Essential_oils.jpg",
+        "price_range": "₹100–350",
+        "where_to_buy": "Kodai Bakery Lane shops",
+        "best_time": "Anytime",
+        "shelf_life": "1–2 years"
+      },
+      {
+        "title": "Handmade Jam & Pickles",
+        "description": "Strawberry jam, mixed fruit preserves, and local pickles — Kodai's signature cottage industry products.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Jam_on_a_spoon.jpg/640px-Jam_on_a_spoon.jpg",
+        "price_range": "₹80–250",
+        "where_to_buy": "Kodai main market, HADCO stores",
+        "best_time": "Anytime",
+        "shelf_life": "6–12 months"
+      }
+    ]
+  },
+  "Coimbatore": {
+    "famous_places": [
+      "Marudhamalai Temple",
+      "Velliangiri Hills",
+      "Isha Yoga Center",
+      "VOC Park & Zoo",
+      "Siruvani Falls"
+    ],
+    "food": [
+      {
+        "title": "Annapoorna Sambar",
+        "description": "The legendary Coimbatore restaurant's thick, flavour-packed sambar that has become a city institution since 1946.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sambar.jpg/640px-Sambar.jpg",
+        "price_range": "₹60–120/meal",
+        "where_to_buy": "Annapoorna Restaurant, Coimbatore",
+        "best_time": "Lunch 11 AM–3 PM",
+        "shelf_life": "Same day"
+      },
+      {
+        "title": "Arisi Paruppu Sadam",
+        "description": "Rice and toor dal cooked together with pepper and ghee — a comforting Coimbatore-style one pot meal.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dal_rice.jpg/640px-Dal_rice.jpg",
+        "price_range": "₹50–100",
+        "where_to_buy": "Local mess restaurants",
+        "best_time": "Lunch",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Wet Grinders",
+        "description": "Coimbatore is the Wet Grinder capital of India. Buy directly from factories at factory price.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Wet_grinder.jpg/640px-Wet_grinder.jpg",
+        "price_range": "₹2,500–8,000",
+        "where_to_buy": "Elgi Ultra Showrooms, Coimbatore factories",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Cotton Kurtas",
+        "description": "Pure cotton kurtas from Tiruppur mills — light, durable, and available in hundreds of designs.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Cotton_Kurta.jpg/640px-Cotton_Kurta.jpg",
+        "price_range": "₹150–800",
+        "where_to_buy": "Tiruppur garment outlets",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      }
+    ]
+  },
+  "Salem": {
+    "famous_places": [
+      "Yercaud Lake",
+      "Kiliyur Falls",
+      "Mettur Dam",
+      "Mecheri Temple",
+      "Nagiyampatti Fort"
+    ],
+    "food": [
+      {
+        "title": "Thattu Vadai Set",
+        "description": "Salem-style snack plate — crispy vadai topped with onions, sev, and chutneys. A popular street food combo.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Masala_vadai.jpg/640px-Masala_vadai.jpg",
+        "price_range": "₹30–60",
+        "where_to_buy": "Salem bus stand stalls, Suramangalam area",
+        "best_time": "Evening 4–8 PM",
+        "shelf_life": "Same day"
+      },
+      {
+        "title": "Salem Mangoes",
+        "description": "Suvarnarekha and Bangalora mango varieties from Salem — known for sweetness and unique aroma.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mango_Maduro_y_Verde.jpg/640px-Mango_Maduro_y_Verde.jpg",
+        "price_range": "₹60–150/kg",
+        "where_to_buy": "Regulated market, Salem fruit stalls",
+        "best_time": "April–June mango season",
+        "shelf_life": "5–7 days"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Steel Utensils",
+        "description": "Salem is famous for stainless steel cookware — tumblers, vessels, pressure cookers at wholesale prices.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Steel_utensils.jpg/640px-Steel_utensils.jpg",
+        "price_range": "₹100–2000",
+        "where_to_buy": "Salem steel wholesale market",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Silver Anklets (Golusu)",
+        "description": "Handcrafted pure silver anklets — traditional jewellery unique to Salem artisans.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silver_anklet.jpg/640px-Silver_anklet.jpg",
+        "price_range": "₹300–1500",
+        "where_to_buy": "Salem jewellery shops, Attur market",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      }
+    ]
+  },
+  "Trichy": {
+    "famous_places": [
+      "Rock Fort Temple",
+      "Ranganathaswamy Temple",
+      "Jambukeswarar Temple",
+      "Uppiliappan Temple"
+    ],
+    "food": [
+      {
+        "title": "Manapparai Murukku",
+        "description": "The king of all murukku — twisted rice-flour snack from Manapparai made with a 100-year-old recipe. Crunchy and light.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Chakli_%28Murukku%29.jpg/640px-Chakli_%28Murukku%29.jpg",
+        "price_range": "₹80–200/pack",
+        "where_to_buy": "Manapparai shops, Trichy bus stand",
+        "best_time": "Anytime",
+        "shelf_life": "30 days"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Artificial Diamonds",
+        "description": "Trichy is famous for high-quality synthetic diamonds and imitation jewellery at affordable rates.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Gold_jewelry.jpg/640px-Gold_jewelry.jpg",
+        "price_range": "₹200–2000",
+        "where_to_buy": "Trichy Teppakulam area jewellery shops",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Murukku Packets",
+        "description": "Vacuum-packed Manapparai Murukku — a popular and delicious travel snack souvenir from Trichy.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Chakli_%28Murukku%29.jpg/640px-Chakli_%28Murukku%29.jpg",
+        "price_range": "₹80–200/pack",
+        "where_to_buy": "Manapparai town shops",
+        "best_time": "Anytime",
+        "shelf_life": "30 days"
+      }
+    ]
+  },
+  "Kumbakonam": {
+    "famous_places": [
+      "Sarangapani Temple",
+      "Aadikombeswarar Temple",
+      "Mahamaham Tank",
+      "Dharasuram",
+      "Swamimalai Murugan Temple"
+    ],
+    "food": [
+      {
+        "title": "Kumbakonam Degree Coffee",
+        "description": "The authentic filter coffee made with freshly drawn buffalo milk — a Kumbakonam specialty since generations.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Indian_Filter_Coffee.JPG/640px-Indian_Filter_Coffee.JPG",
+        "price_range": "₹15–40",
+        "where_to_buy": "Sri Bala Vilas, Murugan Coffee Kumbakonam",
+        "best_time": "Morning 6–10 AM",
+        "shelf_life": "Serve immediately"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Brass & Bronze Vessels",
+        "description": "Traditional ceremonial brass and bronze lamps, vessels, and idols crafted by skilled Kammalar artisans.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Brass_artifacts.jpg/640px-Brass_artifacts.jpg",
+        "price_range": "₹500–10,000",
+        "where_to_buy": "Kammalar Streets, Kumbakonam",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Kamatchi Vilakku (Brass Lamp)",
+        "description": "Small brass deepam lamps — an auspicious and beautiful return gift from Kumbakonam.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Brass_artifacts.jpg/640px-Brass_artifacts.jpg",
+        "price_range": "₹150–800",
+        "where_to_buy": "Kumbakonam craft shops",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      }
+    ]
+  },
+  "Thoothukudi": {
+    "famous_places": [
+      "Tiruchendur Murugan Temple",
+      "Kalugumalai Rock-cut Temple",
+      "Vembar Beach",
+      "Kayalpattinam Port"
+    ],
+    "food": [
+      {
+        "title": "Thoothukudi Macaroons",
+        "description": "Fluffy, coconut-flavoured egg macaroons that are a colonial-era confection unique to Thoothukudi.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Macaron.jpg/640px-Macaron.jpg",
+        "price_range": "₹5–10/piece",
+        "where_to_buy": "SJN Bakery, Jacob's Bakery Tuticorin",
+        "best_time": "Anytime",
+        "shelf_life": "5–7 days"
+      },
+      {
+        "title": "Poricha Parotta",
+        "description": "A unique local street food — layered roti lightly fried and tossed with egg and spices.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Parotta.jpg/640px-Parotta.jpg",
+        "price_range": "₹60–100",
+        "where_to_buy": "Thoothukudi local dhabas",
+        "best_time": "Dinner",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Sea Pearls",
+        "description": "Natural Gulf of Mannar pearls — once famous worldwide. Available at certified shops in Thoothukudi.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pearls.jpg/640px-Pearls.jpg",
+        "price_range": "₹500–5000",
+        "where_to_buy": "Certified shops near Thoothukudi port",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Box of Macaroons",
+        "description": "A box of freshly baked Thoothukudi macaroons — the most unique food souvenir from Tamil Nadu's port city.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Macaron.jpg/640px-Macaron.jpg",
+        "price_range": "₹100–300",
+        "where_to_buy": "SJN Bakery, Jacob's Bakery",
+        "best_time": "Anytime",
+        "shelf_life": "7 days"
+      }
+    ]
+  },
+  "Kanyakumari": {
+    "famous_places": [
+      "Vivekananda Rock Memorial",
+      "Thiruvalluvar Statue",
+      "Suchindram Temple",
+      "Padmanabhapuram Palace",
+      "Gandhi Memorial"
+    ],
+    "food": [
+      {
+        "title": "Fish Curry (Meen Kuzhambu)",
+        "description": "Fresh sea fish cooked in tamarind and coconut-based curry — the daily staple of Kanyakumari's fishing community.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fish_curry.jpg/640px-Fish_curry.jpg",
+        "price_range": "₹80–150/plate",
+        "where_to_buy": "Seafront restaurants near statue",
+        "best_time": "Lunch 12–3 PM",
+        "shelf_life": "Same day"
+      },
+      {
+        "title": "Nendran Banana Chips",
+        "description": "Crispy banana chips made from Kerala-border Nendram variety — salted or spiced, sold by the kilo.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Banana_chips.jpg/640px-Banana_chips.jpg",
+        "price_range": "₹60–120/pack",
+        "where_to_buy": "Kanyakumari market stalls",
+        "best_time": "Anytime",
+        "shelf_life": "1 month"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Coconut Shell Crafts",
+        "description": "Handcrafted showpieces made from coconut shells — unique to Kanyakumari coastal artisans.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Coconut_shells.jpg/640px-Coconut_shells.jpg",
+        "price_range": "₹100–800",
+        "where_to_buy": "Kanyakumari beach shops",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Shell Keychains & Décor",
+        "description": "Sea shell souvenirs — keychains, mirrors, and frames crafted from Gulf of Mannar shells.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Seashells.jpg/640px-Seashells.jpg",
+        "price_range": "₹50–500",
+        "where_to_buy": "Kanyakumari souvenir shops",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      }
+    ]
+  },
+  "Nilgiris": {
+    "famous_places": [
+      "Ooty Botanical Garden",
+      "Nilgiri Mountain Railway",
+      "Doddabetta Peak",
+      "Mudumalai Tiger Reserve",
+      "Avalanche Lake"
+    ],
+    "food": [
+      {
+        "title": "Nilgiri Tea",
+        "description": "Premium single-estate Nilgiri tea known for its distinctive bright colour and full-bodied flavour.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tea_in_a_cup.jpg/640px-Tea_in_a_cup.jpg",
+        "price_range": "₹100–500",
+        "where_to_buy": "Tea Factory outlets, Chamraj Tea Estate",
+        "best_time": "Anytime",
+        "shelf_life": "18 months"
+      },
+      {
+        "title": "Varkey Biscuits",
+        "description": "Buttery, crispy traditional Nilgiri pastry — a delicacy baked by Anglo-Indian families settled in Ooty for generations.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Biscuits.jpg/640px-Biscuits.jpg",
+        "price_range": "₹40–120",
+        "where_to_buy": "Ooty bakeries, Nilgiri Dairy Farm",
+        "best_time": "Anytime",
+        "shelf_life": "2 weeks"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Assorted Tea Boxes",
+        "description": "Gift boxes with multiple Nilgiri tea varieties — green, black, white, and masala. Perfect souvenir.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tea_in_a_cup.jpg/640px-Tea_in_a_cup.jpg",
+        "price_range": "₹200–600",
+        "where_to_buy": "Tea estate shops near Ooty",
+        "best_time": "Anytime",
+        "shelf_life": "18 months"
+      },
+      {
+        "title": "Eucalyptus Oil",
+        "description": "Distilled from Nilgiri hill eucalyptus — used for aromatherapy, cold relief, and massage.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Essential_oils.jpg/640px-Essential_oils.jpg",
+        "price_range": "₹80–250",
+        "where_to_buy": "Pharmacy shops, Govt stores Ooty",
+        "best_time": "Anytime",
+        "shelf_life": "2 years"
+      }
+    ]
+  },
+  "Dindigul": {
+    "famous_places": [
+      "Dindigul Fort",
+      "Kodaikanal Lake",
+      "Palani Murugan Temple",
+      "Sirumalai Hills"
+    ],
+    "food": [
+      {
+        "title": "Dindigul Biryani",
+        "description": "Famous seeraga samba rice biryani cooked in clay pots with a unique spice blend — a biryani lover's paradise.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Biryani_of_TN.jpg/640px-Biryani_of_TN.jpg",
+        "price_range": "₹120–200",
+        "where_to_buy": "Dindigul Thalappakatti, Ponram",
+        "best_time": "Lunch 11 AM–3 PM",
+        "shelf_life": "6 hours"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Dindigul Locks",
+        "description": "World-famous hand-crafted iron locks — over 200 years old tradition. Sold as unique souvenirs.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Old_lock.jpg/640px-Old_lock.jpg",
+        "price_range": "₹50–500",
+        "where_to_buy": "Dindigul lock shopsgrown wholesale",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Miniature Dindigul Lock",
+        "description": "A small branded lock key chain — the most iconic and unique return gift from Dindigul district.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Old_lock.jpg/640px-Old_lock.jpg",
+        "price_range": "₹50–200",
+        "where_to_buy": "Dindigul souvenirs, TNHB emporium",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      }
+    ]
+  },
+  "Vellore": {
+    "famous_places": [
+      "Vellore Fort",
+      "Sripuram Golden Temple",
+      "Jalakandeswarar Temple",
+      "Government Museum"
+    ],
+    "food": [
+      {
+        "title": "Mullu Kathirikai Curry",
+        "description": "A tangy, spiced eggplant curry made with local spiny brinjal — a Vellore household specialty.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Brinjal_curry.jpg/640px-Brinjal_curry.jpg",
+        "price_range": "₹60–120/plate",
+        "where_to_buy": "Local mess restaurants Vellore",
+        "best_time": "Lunch",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Leather Jackets & Shoes",
+        "description": "High-quality leather goods at factory prices from the Melvisharam leather hub — India's leather capital.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Leather_jacket.jpg/640px-Leather_jacket.jpg",
+        "price_range": "₹500–5000",
+        "where_to_buy": "Melvisharam leather hub",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Leather Wallet & Belt",
+        "description": "Premium genuine leather wallets and belts from Vellore's SIPCOT leather complex — affordable luxury.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Leather_jacket.jpg/640px-Leather_jacket.jpg",
+        "price_range": "₹200–800",
+        "where_to_buy": "SIPCOT leather complex, Ranipet",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      }
+    ]
+  },
+  "Tirupattur": {
+    "famous_places": [
+      "Yelagiri Hills",
+      "Jalagamparai Falls",
+      "Swamimalai Hills",
+      "Kavalur Observatory"
+    ],
+    "food": [
+      {
+        "title": "Yelagiri Honey",
+        "description": "Pure raw forest honey collected from wild beehives in Yelagiri Hills — aromatic and medicinal.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Honey_in_a_jar.jpg/640px-Honey_in_a_jar.jpg",
+        "price_range": "₹150–400/500g",
+        "where_to_buy": "Yelagiri hill shops",
+        "best_time": "Oct–Feb harvest",
+        "shelf_life": "2 years"
+      },
+      {
+        "title": "Jackfruit Preparations",
+        "description": "Tender jackfruit curries and dried jackfruit chips — seasonal delicacy from Tirupattur's lush orchards.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Jackfruit_cut.jpg/640px-Jackfruit_cut.jpg",
+        "price_range": "₹40–100",
+        "where_to_buy": "Village markets Tirupattur",
+        "best_time": "April–June jackfruit season",
+        "shelf_life": "1–3 days"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Forest Honey Bottles",
+        "description": "Organic bottled honey from Yelagiri Hills — a pure, healthy, and affordable return gift.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Honey_in_a_jar.jpg/640px-Honey_in_a_jar.jpg",
+        "price_range": "₹200–500",
+        "where_to_buy": "Yelagiri hill top shops",
+        "best_time": "Anytime",
+        "shelf_life": "2 years"
+      }
+    ]
+  },
+  "Tiruvannamalai": {
+    "famous_places": [
+      "Annamalayar Temple",
+      "Arunachala Hill",
+      "Ramana Ashram",
+      "Sathanur Dam"
+    ],
+    "food": [
+      {
+        "title": "Pongal & Sambar",
+        "description": "Temple-style Pongal served as prasad from Annamalayar Temple — a simple divine treat during Karthigai.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pongal.jpg/640px-Pongal.jpg",
+        "price_range": "₹30–80/plate",
+        "where_to_buy": "Temple street vendors",
+        "best_time": "Morning Karthigai festival",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Rudraksha Malas",
+        "description": "Sacred Rudraksha bead necklaces from ashram shops around Arunachala — popular spiritual souvenirs.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Rudraksha_mala.jpg/640px-Rudraksha_mala.jpg",
+        "price_range": "₹150–2000",
+        "where_to_buy": "Ramana Ashram gift shop",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Arani Silk Sarees",
+        "description": "Affordable silk sarees from nearby Arani town — lighter and less expensive than Kanchipuram silk.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Kanchipuram_Silk_Sarees.jpg/640px-Kanchipuram_Silk_Sarees.jpg",
+        "price_range": "₹800–6000",
+        "where_to_buy": "Arani town weaver shops",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      }
+    ]
+  },
+  "Sivaganga": {
+    "famous_places": [
+      "Kalaiyarkoil Temple",
+      "Keeladi Museum",
+      "Pillayarpatti Vinayagar Temple",
+      "Devakottai Church"
+    ],
+    "food": [
+      {
+        "title": "Chettinad Chicken Curry",
+        "description": "World-famous bold and aromatic curry with 18+ freshly ground spices — a Chettinad Nattukotai tradition.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Chettinad_chicken.jpg/640px-Chettinad_chicken.jpg",
+        "price_range": "₹150–300/plate",
+        "where_to_buy": "Bangala Hotel Karaikudi, local mess",
+        "best_time": "Lunch 12–3 PM",
+        "shelf_life": "Same day"
+      },
+      {
+        "title": "Vellai Paniyaram",
+        "description": "White, fluffy deep-fried rice dumplings served with coconut chutney — a Chettinad breakfast staple.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Paniyaram.jpg/640px-Paniyaram.jpg",
+        "price_range": "₹40–80",
+        "where_to_buy": "Chettinad breakfast stalls",
+        "best_time": "Breakfast 7–10 AM",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Athangudi Tiles",
+        "description": "Hand-crafted geometric cement tiles from Athangudi — Chettinad's signature architectural element.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Athangudi_tile.jpg/640px-Athangudi_tile.jpg",
+        "price_range": "₹50–200/tile",
+        "where_to_buy": "Athangudi village tile workshops",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Kottan Baskets",
+        "description": "Hand-woven Chettinad baskets from Rettanad — intricate and beautiful eco-friendly gift items.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wicker_basket.jpg/640px-Wicker_basket.jpg",
+        "price_range": "₹200–1200",
+        "where_to_buy": "Rettanad village artisan shops",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      }
+    ]
+  },
+  "Dharmapuri": {
+    "famous_places": [
+      "Hogenakkal Falls",
+      "Krishnagiri Reservoir",
+      "Theerthamalai Temple",
+      "Mallur Naganathaswamy Temple"
+    ],
+    "food": [
+      {
+        "title": "Ragi Kali",
+        "description": "Finger millet porridge ball — the traditional staple food of Dharmapuri's farming communities, rich in calcium.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ragi_mudde.jpg/640px-Ragi_mudde.jpg",
+        "price_range": "₹30–60",
+        "where_to_buy": "Local village restaurants",
+        "best_time": "Lunch",
+        "shelf_life": "Same day"
+      },
+      {
+        "title": "Dharmapuri Mangoes",
+        "description": "Famous Banganapalli and local mango varieties from the mango orchards of Dharmapuri and surrounding areas.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mango_Maduro_y_Verde.jpg/640px-Mango_Maduro_y_Verde.jpg",
+        "price_range": "₹50–100/kg",
+        "where_to_buy": "Dharmapuri regulated market",
+        "best_time": "April–June season",
+        "shelf_life": "5 days"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Dried Mango Slices",
+        "description": "Sun-dried mango slices from Dharmapuri's orchards — a tangy, healthy snack and souvenir.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mango_Maduro_y_Verde.jpg/640px-Mango_Maduro_y_Verde.jpg",
+        "price_range": "₹80–200/pack",
+        "where_to_buy": "Dharmapuri market stalls",
+        "best_time": "Post-mango season (Jun–Aug)",
+        "shelf_life": "6 months"
+      }
+    ]
+  },
+  "Krishnagiri": {
+    "famous_places": [
+      "Krishnagiri Reservoir",
+      "Rayakottai Fort",
+      "Hosur Eco Park",
+      "Denkanikottai Forest"
+    ],
+    "food": [
+      {
+        "title": "Krishnagiri Mango Varieties",
+        "description": "Famous rose-scented Kili Mooku and Dashehari mangoes — Krishnagiri is TN's largest mango-producing district.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mango_Maduro_y_Verde.jpg/640px-Mango_Maduro_y_Verde.jpg",
+        "price_range": "₹60–150/kg",
+        "where_to_buy": "Krishnagiri Aavin mango fair",
+        "best_time": "April–June",
+        "shelf_life": "5 days"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Rose Water & Products",
+        "description": "Krishnagiri rose gardens produce pure rose water and attar — fragrant and affordable gifts.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Essential_oils.jpg/640px-Essential_oils.jpg",
+        "price_range": "₹50–200",
+        "where_to_buy": "Krishnagiri market",
+        "best_time": "Anytime",
+        "shelf_life": "1 year"
+      },
+      {
+        "title": "Mango Pickles & Preserves",
+        "description": "Mango-based pickles, jams, and preserves sourced directly from Krishnagiri's abundant orchards.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mango_pickle.jpg/640px-Mango_pickle.jpg",
+        "price_range": "₹100–300",
+        "where_to_buy": "Local pickle shops",
+        "best_time": "Anytime",
+        "shelf_life": "1 year"
+      }
+    ]
+  },
+  "Erode": {
+    "famous_places": [
+      "Bhavani Sangameswarar Temple",
+      "Thindal Murugan Temple",
+      "Vellode Bird Sanctuary",
+      "Kodumudi Temple"
+    ],
+    "food": [
+      {
+        "title": "Turmeric Rice",
+        "description": "Simple yet vibrant yellow rice flavoured with freshly ground Erode turmeric — packed with anti-inflammatory benefits.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Turmeric_rice.jpg/640px-Turmeric_rice.jpg",
+        "price_range": "₹40–80",
+        "where_to_buy": "Erode local hotel",
+        "best_time": "Lunch",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Pure Turmeric (Manjal)",
+        "description": "Erode is the world's largest trading hub for turmeric. Buy pure, unadulterated turmeric powder directly.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Turmeric.jpg/640px-Turmeric.jpg",
+        "price_range": "₹80–200/250g",
+        "where_to_buy": "Erode turmeric market yard",
+        "best_time": "Jan–Mar post harvest",
+        "shelf_life": "2 years"
+      },
+      {
+        "title": "Pure Turmeric Powder",
+        "description": "Vacuum-packed Erode turmeric powder — a medicinal and culinary gift loved by all.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Turmeric.jpg/640px-Turmeric.jpg",
+        "price_range": "₹60–150/200g",
+        "where_to_buy": "Erode wholesale market",
+        "best_time": "Anytime",
+        "shelf_life": "2 years"
+      }
+    ]
+  },
+  "Tiruppur": {
+    "famous_places": [
+      "Thirumoorthi Hills",
+      "Amaravathi Dam",
+      "Kannapuram Cattle Fair",
+      "Sivanmalai Temple"
+    ],
+    "food": [
+      {
+        "title": "Pallipalayam Chicken",
+        "description": "Dry-roast chicken sautéed with shallots, red chillies, and coconut — a bold Kongu Nadu specialty from Tiruppur.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chettinad_chicken.jpg/640px-Chettinad_chicken.jpg",
+        "price_range": "₹120–200/plate",
+        "where_to_buy": "Pallipalayam area roadside stalls",
+        "best_time": "Dinner 7–10 PM",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Banians & T-Shirts",
+        "description": "Export surplus cotton T-shirts and banians at factory outlet prices — Tiruppur is India's knitwear capital.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/T-shirt_blank.jpg/640px-T-shirt_blank.jpg",
+        "price_range": "₹100–500",
+        "where_to_buy": "Tiruppur garment factory outlets",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Hosiery Sets & Sports Wear",
+        "description": "Quality cotton innerwear and sportswear made for international export, available locally at low cost.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/T-shirt_blank.jpg/640px-T-shirt_blank.jpg",
+        "price_range": "₹150–600",
+        "where_to_buy": "Tiruppur export surplus bazaar",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      }
+    ]
+  },
+  "Namakkal": {
+    "famous_places": [
+      "Namakkal Fort",
+      "Anjaneyar Cave",
+      "Kollimalai Waterfalls",
+      "Agaya Gangai Falls"
+    ],
+    "food": [
+      {
+        "title": "Egg Dishes",
+        "description": "Namakkal is India's egg capital — try fresh egg-based omelettes, egg biryani, and curries at local eateries.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Egg_curry.jpg/640px-Egg_curry.jpg",
+        "price_range": "₹40–100",
+        "where_to_buy": "Namakkal restaurants",
+        "best_time": "Any meal",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Sago (Sabudana) Packets",
+        "description": "Affordable pure sago from Rasipuram's sago factories — common in Tamil Nadu dishes and widely available.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Sago.jpg/640px-Sago.jpg",
+        "price_range": "₹40–80/250g",
+        "where_to_buy": "Rasipuram sago shops",
+        "best_time": "Anytime",
+        "shelf_life": "1 year"
+      }
+    ]
+  },
+  "Nagapattinam": {
+    "famous_places": [
+      "Velankanni Basilica",
+      "Nagore Dargah",
+      "Point Calimere Wildlife Sanctuary",
+      "Sikkal Singaravelar Temple"
+    ],
+    "food": [
+      {
+        "title": "Nagore Halwa",
+        "description": "Sweet wheat halwa with saffron and ghee — a coastal specialty associated with the Nagore Dargah's food tradition.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Tirunelveli_halwa.jpg/640px-Tirunelveli_halwa.jpg",
+        "price_range": "₹80–150/100g",
+        "where_to_buy": "Nagore Dargah sweet stalls",
+        "best_time": "Evening",
+        "shelf_life": "5 days"
+      },
+      {
+        "title": "Fish Curry",
+        "description": "Tangy coconut-milk fish curry with freshly caught sea fish — the daily meal of Nagapattinam's fishing villages.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fish_curry.jpg/640px-Fish_curry.jpg",
+        "price_range": "₹80–150/plate",
+        "where_to_buy": "Nagapattinam coastal restaurants",
+        "best_time": "Lunch",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Dry Fish",
+        "description": "Sun-dried sea fish from Nagapattinam's fishing harbour — a coastal pantry staple available in bulk.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Dried_fish.jpg/640px-Dried_fish.jpg",
+        "price_range": "₹100–400/kg",
+        "where_to_buy": "Nagapattinam fish market",
+        "best_time": "Anytime",
+        "shelf_life": "6 months"
+      },
+      {
+        "title": "Shell Mirrors & Décor",
+        "description": "Decorative craft items made from collected sea shells — unique coastal souvenirs from Nagapattinam.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Seashells.jpg/640px-Seashells.jpg",
+        "price_range": "₹150–600",
+        "where_to_buy": "Velankanni beach shops",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      }
+    ]
+  },
+  "Tenkasi": {
+    "famous_places": [
+      "Courtallam Falls",
+      "Kasi Viswanathar Temple",
+      "Shenbaga Devi Falls",
+      "Mundanthurai Wildlife"
+    ],
+    "food": [
+      {
+        "title": "Courtallam Border Parotta",
+        "description": "Layered parotta with spicy salna served in roadside stalls near Courtallam Falls — post-falls feast.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Parotta.jpg/640px-Parotta.jpg",
+        "price_range": "₹60–120",
+        "where_to_buy": "Roadside stalls near Courtallam Falls",
+        "best_time": "After waterfall visit",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Cardamom & Spices",
+        "description": "Fresh hillside spices including cardamom, pepper, and cloves from the Western Ghats foothills of Tenkasi.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cardamom_pods.jpg/640px-Cardamom_pods.jpg",
+        "price_range": "₹200–600/100g",
+        "where_to_buy": "Tenkasi spice shops",
+        "best_time": "Anytime",
+        "shelf_life": "1 year"
+      },
+      {
+        "title": "Mixed Spice Boxes",
+        "description": "Assorted Tenkasi spice gift boxes with cardamom, cloves, and cinnamon — a fragrant return gift.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cardamom_pods.jpg/640px-Cardamom_pods.jpg",
+        "price_range": "₹150–400",
+        "where_to_buy": "Tenkasi market",
+        "best_time": "Anytime",
+        "shelf_life": "1 year"
+      }
+    ]
+  },
+  "Ramanathapuram": {
+    "famous_places": [
+      "Rameswaram Temple",
+      "Pamban Bridge",
+      "Adam's Bridge",
+      "Dhanushkodi Ruins",
+      "Gandhamana Hill"
+    ],
+    "food": [
+      {
+        "title": "Rameswaram Fish Fry",
+        "description": "Fresh sea fish marinated in local spices and shallow-fried — best enjoyed near the harbour in Rameswaram.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fish_curry.jpg/640px-Fish_curry.jpg",
+        "price_range": "₹100–200",
+        "where_to_buy": "Harbour restaurants, Rameswaram",
+        "best_time": "Lunch & dinner",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Conch Shells (Shangu)",
+        "description": "Sacred conch shells from Rameswaram — available in various sizes. Used in temple rituals and as décor.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Seashells.jpg/640px-Seashells.jpg",
+        "price_range": "₹100–1000",
+        "where_to_buy": "Rameswaram temple street stalls",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      },
+      {
+        "title": "Shell Decoratives",
+        "description": "Sea shell souvenirs, wind chimes, and lamps — handcrafted near Pamban Bridge by local fishermen.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Seashells.jpg/640px-Seashells.jpg",
+        "price_range": "₹50–500",
+        "where_to_buy": "Pamban island shops",
+        "best_time": "Anytime",
+        "shelf_life": "Permanent"
+      }
+    ]
+  },
+  "Virudhunagar": {
+    "famous_places": [
+      "Srivilliputhur Andal Temple",
+      "Sathuragiri Hills",
+      "Rajam Rose Garden"
+    ],
+    "food": [
+      {
+        "title": "Srivilliputhur Palkova",
+        "description": "World-famous thick milk sweet made by slow-cooking pure cow milk — once sent as a gift to the President of India.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Milk_sweet.jpg/640px-Milk_sweet.jpg",
+        "price_range": "₹120–180/250g",
+        "where_to_buy": "AAVIN shops, Srivilliputhur town",
+        "best_time": "Anytime",
+        "shelf_life": "10 days (refrigerated)"
+      },
+      {
+        "title": "Virudhunagar Parotta",
+        "description": "Crispy, layered roadside parotta served with spicy kurma — a beloved street food from Virudhunagar town.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Parotta.jpg/640px-Parotta.jpg",
+        "price_range": "₹50–100",
+        "where_to_buy": "Town dhabas",
+        "best_time": "Dinner 7–10 PM",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Palkova Tins",
+        "description": "Vacuum-sealed Srivilliputhur Palkova tins — the most iconic return gift from Virudhunagar.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Milk_sweet.jpg/640px-Milk_sweet.jpg",
+        "price_range": "₹200–400",
+        "where_to_buy": "AAVIN Srivilliputhur",
+        "best_time": "Anytime",
+        "shelf_life": "10 days"
+      }
+    ]
+  },
+  "Theni": {
+    "famous_places": [
+      "Megamalai Hills",
+      "Vaigai Dam",
+      "Kurangani Trekking",
+      "Manjolai Hills",
+      "Top Station"
+    ],
+    "food": [
+      {
+        "title": "Cardamom Dishes",
+        "description": "Bodinayakanur (Bodi) is the Cardamom Capital of Tamil Nadu — enjoy cardamom-flavoured tea, desserts and sweets.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cardamom_pods.jpg/640px-Cardamom_pods.jpg",
+        "price_range": "₹20–40/cup tea",
+        "where_to_buy": "Bodi tea shops",
+        "best_time": "Morning",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Fresh Cardamom",
+        "description": "Direct from Theni's high-altitude cardamom estates — premium quality at farm-gate prices.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cardamom_pods.jpg/640px-Cardamom_pods.jpg",
+        "price_range": "₹400–900/100g",
+        "where_to_buy": "Bodi cardamom market",
+        "best_time": "Oct–Dec harvest season",
+        "shelf_life": "6 months"
+      },
+      {
+        "title": "Cardamom Spice Packs",
+        "description": "Packed green cardamom pods from Bodi's cardamom auction yards — a premium and useful gift.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cardamom_pods.jpg/640px-Cardamom_pods.jpg",
+        "price_range": "₹200–500",
+        "where_to_buy": "Bodi market",
+        "best_time": "Anytime",
+        "shelf_life": "6 months"
+      }
+    ]
+  },
+  "Pudukkottai": {
+    "famous_places": [
+      "Thirugokarnam Temple",
+      "Sittannavasal Cave Paintings",
+      "Viralimalai Murugan Temple",
+      "Kodumbalur Heritage"
+    ],
+    "food": [
+      {
+        "title": "Muttarpa (Egg Sweet)",
+        "description": "A unique sweet made with eggs, coconut milk, and jaggery — an old Pudukkottai royalty-era dessert.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Egg_curry.jpg/640px-Egg_curry.jpg",
+        "price_range": "₹50–100",
+        "where_to_buy": "Pudukkottai sweet shops",
+        "best_time": "Festival times",
+        "shelf_life": "2 days"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Fresh Cashew Nuts",
+        "description": "Local raw and roasted cashews at wholesale prices from Pudukkottai's cashew-rich coastal hinterland.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Cashew_nut.jpg/640px-Cashew_nut.jpg",
+        "price_range": "₹300–600/250g",
+        "where_to_buy": "Pudukkottai market",
+        "best_time": "Feb–May season",
+        "shelf_life": "6 months"
+      },
+      {
+        "title": "Roasted Cashew Boxes",
+        "description": "Salted and spiced cashew nut packs — a tasty, healthy, and well-loved return gift from Pudukkottai.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Cashew_nut.jpg/640px-Cashew_nut.jpg",
+        "price_range": "₹250–500",
+        "where_to_buy": "Local dry fruit shops",
+        "best_time": "Anytime",
+        "shelf_life": "3 months"
+      }
+    ]
+  },
+  "Karur": {
+    "famous_places": [
+      "Thanthonimalai Murugan Temple",
+      "Vanthiyam Waterfalls",
+      "Pasupatheeswarar Temple"
+    ],
+    "food": [
+      {
+        "title": "Murungai (Drumstick) Dishes",
+        "description": "Karur is India's hinterland for drumstick cultivation — sambar, poriyal, and subzi with fresh drumstick.",
+        "type": "Food",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Drumstick_curry.jpg/640px-Drumstick_curry.jpg",
+        "price_range": "₹50–100",
+        "where_to_buy": "Karur local hotels",
+        "best_time": "Lunch",
+        "shelf_life": "Same day"
+      }
+    ],
+    "buy": [
+      {
+        "title": "Kitchen Linen & Curtains",
+        "description": "Karur is the Kitchen Linen export capital of India — affordable table runners, curtains, and fancy napkins.",
+        "type": "Shopping",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Table_runner.jpg/640px-Table_runner.jpg",
+        "price_range": "₹200–2000",
+        "where_to_buy": "Karur export surplus shops",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      },
+      {
+        "title": "Table Mats & Runners",
+        "description": "Hand-loomed kitchen table mats and fancy curtain sets — beautiful and practical return gifts from Karur.",
+        "type": "Return Gift",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Table_runner.jpg/640px-Table_runner.jpg",
+        "price_range": "₹150–600",
+        "where_to_buy": "Karur handloom stores",
+        "best_time": "Anytime",
+        "shelf_life": "N/A"
+      }
+    ]
+  }
 }

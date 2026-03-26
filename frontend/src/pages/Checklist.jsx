@@ -1,359 +1,330 @@
-import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { 
-  ClipboardDocumentCheckIcon,
-  CheckCircleIcon,
-  PlusCircleIcon,
-  TrashIcon,
-  SunIcon,
-  CloudIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline'
-import { servicesAPI } from '../services/api'
-import AnimatedCard from '../components/AnimatedCard'
+import React, { useState, useCallback } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Luggage, Sparkles, RefreshCw, Download, Share2, CheckSquare, Square,
+  ChevronDown, ChevronUp, AlertCircle, Info, Plus
+} from 'lucide-react'
+import { sendMessage } from '../services/claude'
 import toast from 'react-hot-toast'
 
-const Checklist = () => {
-  const [checklist, setChecklist] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [customItems, setCustomItems] = useState([])
-  const [newItem, setNewItem] = useState('')
-  const [filters, setFilters] = useState({
-    travel_type: 'Solo',
-    duration: 2,
-    season: 'Winter'
-  })
+// ─── Static category icons & colours ─────────────────────────────────────────
+const CAT_META = {
+  '👕 Clothing': { color: '#3b82f6' },
+  '📄 Documents': { color: '#10b981' },
+  '💊 Medicines': { color: '#f43f5e' },
+  '📱 Gadgets': { color: '#8b5cf6' },
+  '🧴 Toiletries': { color: '#f59e0b' },
+  '🎒 Gear': { color: '#0d9488' },
+  '🍱 Food & Snacks': { color: '#d97706' },
+  '⚠️ Temple-Specific': { color: '#f97316' },
+}
 
-  useEffect(() => {
-    loadChecklist()
-  }, [filters])
+// ─── Offline fallback list ────────────────────────────────────────────────────
+const FALLBACK_ITEMS = {
+  '👕 Clothing': ['Lightweight cotton clothes (heat-friendly)', 'Walking shoes/sandals', 'Dress modestly for temples (cover shoulders & knees)', 'Sweater/jacket if going to hills (Ooty/Kodaikanal)', 'Raincoat/umbrella if monsoon season', 'Comfortable inner wear (pack extra)'],
+  '📄 Documents': ['Aadhar / Passport for ID', 'Hotel booking confirmations', 'e-Tickets (train/bus)', 'Travel insurance policy', 'Emergency contacts list', 'Driving licence if hiring vehicle'],
+  '💊 Medicines': ['ORS packets (stay hydrated)', 'Antacid tablets (spicy food!)', 'Mosquito repellent cream/spray', 'Paracetamol & basic first aid', 'Any personal prescription meds', 'Eye drops (dusty roads)'],
+  '📱 Gadgets': ['Phone + charger + power bank', 'Universal power adapter', 'Earphones', 'Camera / extra memory cards', 'Download offline maps (Google Maps)', 'Download VoyagerAI app offline data'],
+  '🧴 Toiletries': ['Sunscreen SPF 50+ (Tamil Nadu is hot!)', 'Sanitizer & wet wipes', 'Toilet paper (not everywhere)', 'Face wash and moisturizer', 'Deodorant', 'Small towel'],
+  '🎒 Gear': ['Day bag / small backpack', 'Water bottle (carry always)', 'Reusable bag (plastic banned in TN)', 'Small padlock for hostel lockers', 'Ziplock bags (waterproofing)', 'Pocket torch/flashlight'],
+}
 
-  const loadChecklist = async () => {
-    setLoading(true)
+// ─── System prompt for packing list generation ────────────────────────────────
+const PACKING_SYSTEM = `You are a Tamil Nadu travel expert and professional packing advisor.
+Generate a detailed, practical packing list in JSON format. Be specific to the destination, season, and trip type.
+Response must be ONLY valid JSON in this exact format:
+{
+  "items": {
+    "👕 Clothing": ["item 1", "item 2", ...],
+    "📄 Documents": ["item 1", ...],
+    "💊 Medicines": ["item 1", ...],
+    "📱 Gadgets": ["item 1", ...],
+    "🧴 Toiletries": ["item 1", ...],
+    "🎒 Gear": ["item 1", ...],
+    "🍱 Food & Snacks": ["item 1", ...],
+    "⚠️ Temple-Specific": ["only if destination has temples"]
+  },
+  "warnings": ["important warning 1", "warning 2"],
+  "doNotWear": ["item not to wear at temples", "..."]
+}`
+
+// ─── Component ────────────────────────────────────────────────────────────────
+export default function SmartPacking() {
+  const [destination, setDestination] = useState('')
+  const [season, setSeason] = useState('Summer')
+  const [tripType, setTripType] = useState('Family')
+  const [duration, setDuration] = useState(3)
+  const [generating, setGenerating] = useState(false)
+  const [packingList, setPackingList] = useState(null)
+  const [warnings, setWarnings] = useState([])
+  const [doNotWear, setDoNotWear] = useState([])
+  const [checked, setChecked] = useState({})
+  const [collapsed, setCollapsed] = useState({})
+  const [customItem, setCustomItem] = useState('')
+  const [customCat, setCustomCat] = useState('🎒 Gear')
+
+  const toggleItem = (cat, item) => {
+    const key = `${cat}::${item}`
+    setChecked(prev => ({ ...prev, [key]: !prev[key] }))
+  }
+
+  const toggleCollapse = (cat) => setCollapsed(prev => ({ ...prev, [cat]: !prev[cat] }))
+
+  const totalItems = packingList ? Object.values(packingList).flat().length : 0
+  const checkedCount = Object.values(checked).filter(Boolean).length
+
+  const generate = useCallback(async () => {
+    if (!destination.trim()) { toast.error('Please enter a destination'); return }
+    setGenerating(true)
+    setPackingList(null)
+    setChecked({})
+    setWarnings([])
+    setDoNotWear([])
+
     try {
-      // Try to get from API, if fails use default
-      try {
-        const response = await servicesAPI.getChecklist(
-          filters.travel_type,
-          filters.duration,
-          filters.season
-        )
-        setChecklist(response.checklist || response)
-      } catch (error) {
-        console.log('Using default checklist')
-        setChecklist(getDefaultChecklist())
+      const prompt = `Generate a packing list for a ${duration}-day ${tripType.toLowerCase()} trip to ${destination}, Tamil Nadu during ${season}.
+Include temple-specific items if this district has major temples. Be practical and specific to Tamil Nadu conditions.`
+      const response = await sendMessage([{ role: 'user', content: prompt }], PACKING_SYSTEM)
+      const jsonMatch = response.match(/\{[\s\S]*\}/)
+      if (jsonMatch) {
+        const parsed = JSON.parse(jsonMatch[0])
+        setPackingList(parsed.items || FALLBACK_ITEMS)
+        setWarnings(parsed.warnings || [])
+        setDoNotWear(parsed.doNotWear || [])
+        toast.success('Packing list generated!')
+      } else {
+        setPackingList(FALLBACK_ITEMS)
+        toast('Using offline packing list (set API key for AI-personalized list)', { icon: 'ℹ️' })
       }
-    } catch (error) {
-      console.error('Error loading checklist:', error)
-      setChecklist(getDefaultChecklist())
+    } catch {
+      setPackingList(FALLBACK_ITEMS)
+      toast('Using offline packing list', { icon: 'ℹ️' })
     } finally {
-      setLoading(false)
+      setGenerating(false)
     }
-  }
-
-  const getDefaultChecklist = () => {
-    return {
-      essential: [
-        { item: 'Smartphone with charger', checked: false, category: 'essential' },
-        { item: 'Power bank', checked: false, category: 'essential' },
-        { item: 'Government ID (Aadhar/PAN/Passport)', checked: false, category: 'essential' },
-        { item: 'Prescription medicines', checked: false, category: 'essential' },
-        { item: 'First aid kit', checked: false, category: 'essential' },
-        { item: 'Water bottle', checked: false, category: 'essential' },
-        { item: 'Hand sanitizer', checked: false, category: 'essential' },
-        { item: 'Face masks', checked: false, category: 'essential' }
-      ],
-      weather_based: [
-        { item: 'Sunscreen (SPF 50+)', checked: false, category: 'weather' },
-        { item: 'Sun hat / Cap', checked: false, category: 'weather' },
-        { item: 'Sunglasses', checked: false, category: 'weather' },
-        { item: 'Umbrella', checked: false, category: 'weather' }
-      ],
-      optional: [
-        { item: 'Camera', checked: false, category: 'optional' },
-        { item: 'Travel adapter', checked: false, category: 'optional' },
-        { item: 'Snacks', checked: false, category: 'optional' },
-        { item: 'Travel pillow', checked: false, category: 'optional' }
-      ],
-      documents: [
-        { item: 'Hotel booking confirmation', checked: false, category: 'documents' },
-        { item: 'Train/flight tickets', checked: false, category: 'documents' },
-        { item: 'Attraction entry tickets', checked: false, category: 'documents' },
-        { item: 'Emergency contacts list', checked: false, category: 'documents' }
-      ]
-    }
-  }
-
-  const toggleItem = (category, index) => {
-    setChecklist(prev => ({
-      ...prev,
-      [category]: prev[category].map((item, i) => 
-        i === index ? { ...item, checked: !item.checked } : item
-      )
-    }))
-  }
+  }, [destination, season, tripType, duration])
 
   const addCustomItem = () => {
-    if (newItem.trim()) {
-      setCustomItems(prev => [
-        ...prev,
-        { item: newItem, checked: false, category: 'custom' }
-      ])
-      setNewItem('')
-      toast.success('Item added to checklist')
-    }
+    if (!customItem.trim()) return
+    setPackingList(prev => ({
+      ...prev,
+      [customCat]: [...(prev[customCat] || []), customItem.trim()]
+    }))
+    setCustomItem('')
+    toast.success('Custom item added!')
   }
 
-  const removeCustomItem = (index) => {
-    setCustomItems(prev => prev.filter((_, i) => i !== index))
-    toast.success('Item removed')
-  }
-
-  const getProgress = () => {
-    if (!checklist) return 0
-    
-    const allItems = [
-      ...(checklist.essential || []),
-      ...(checklist.weather_based || []),
-      ...(checklist.optional || []),
-      ...(checklist.documents || []),
-      ...customItems
-    ]
-    
-    const checked = allItems.filter(item => item.checked).length
-    return allItems.length > 0 ? (checked / allItems.length) * 100 : 0
-  }
-
-  const getCategoryIcon = (category) => {
-    switch(category) {
-      case 'essential': return '⭐'
-      case 'weather_based': return '🌤️'
-      case 'optional': return '✨'
-      case 'documents': return '📄'
-      default: return '📋'
-    }
-  }
-
-  const getCategoryTitle = (category) => {
-    switch(category) {
-      case 'essential': return 'Essential Items'
-      case 'weather_based': return 'Weather Based'
-      case 'optional': return 'Optional Items'
-      case 'documents': return 'Documents'
-      default: return category
-    }
-  }
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-64">
-        <div className="loader"></div>
-      </div>
-    )
+  const exportList = () => {
+    if (!packingList) return
+    const lines = [`VoyagerAI Packing List — ${destination || 'Tamil Nadu'}`, `${season} | ${tripType} | ${duration} days`, '']
+    Object.entries(packingList).forEach(([cat, items]) => {
+      lines.push(cat)
+      items.forEach(item => {
+        const key = `${cat}::${item}`
+        lines.push(`  [${checked[key] ? 'x' : ' '}] ${item}`)
+      })
+      lines.push('')
+    })
+    if (warnings.length) { lines.push('⚠️ Warnings:'); warnings.forEach(w => lines.push(`  • ${w}`)) }
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain' })
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(blob)
+    a.download = `packing-list-${(destination || 'trip').replace(/\s+/g, '-')}.txt`
+    a.click()
+    toast.success('List exported!')
   }
 
   return (
-    <div className="py-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-8"
-      >
-        <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
-          Smart Travel Checklist
-        </h1>
-        <p className="text-gray-600 dark:text-gray-300">
-          Personalized checklist for your Chennai trip
-        </p>
-      </motion.div>
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#0a0f1e] pt-24 pb-16 px-4 md:px-6">
+      <div className="max-w-5xl mx-auto">
 
-      {/* Filters */}
-      <AnimatedCard className="p-6 mb-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              <UserGroupIcon className="w-4 h-4 inline mr-1" />
-              Travel Type
-            </label>
-            <select
-              value={filters.travel_type}
-              onChange={(e) => setFilters({...filters, travel_type: e.target.value})}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
-            >
-              <option value="Solo">Solo</option>
-              <option value="Family">Family</option>
-              <option value="Friends">Friends</option>
-              <option value="Couple">Couple</option>
-            </select>
+        {/* Header */}
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-2xl shadow-lg shadow-blue-500/30">🎒</div>
+            <div>
+              <h1 className="font-display text-3xl font-bold text-slate-900 dark:text-white">Smart Packing Checklist</h1>
+              <p className="text-slate-500 dark:text-slate-400 text-sm">AI generates a personalized Tamil Nadu packing list in seconds</p>
+            </div>
           </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              <SunIcon className="w-4 h-4 inline mr-1" />
-              Duration (Days)
-            </label>
-            <input
-              type="number"
-              value={filters.duration}
-              onChange={(e) => setFilters({...filters, duration: parseInt(e.target.value)})}
-              min="1"
-              max="7"
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
-            />
+        </motion.div>
+
+        {/* Input Form */}
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm p-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Destination</label>
+              <input value={destination} onChange={e => setDestination(e.target.value)}
+                placeholder="e.g. Ooty, Madurai…"
+                onKeyDown={e => e.key === 'Enter' && generate()}
+                className="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white text-sm outline-none focus:ring-2 focus:ring-blue-200" />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Season</label>
+              <select value={season} onChange={e => setSeason(e.target.value)}
+                className="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white text-sm outline-none focus:ring-2 focus:ring-blue-200">
+                {['Summer (Mar-Jun)', 'Monsoon (Jul-Sep)', 'Winter (Oct-Feb)', 'Festival Season'].map(s => (
+                  <option key={s} value={s.split(' ')[0]}>{s}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Trip Type</label>
+              <select value={tripType} onChange={e => setTripType(e.target.value)}
+                className="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white text-sm outline-none focus:ring-2 focus:ring-blue-200">
+                {['Solo', 'Couple', 'Family', 'Group', 'Backpacking', 'Pilgrimage', 'Adventure'].map(t => (
+                  <option key={t} value={t}>{t}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Duration (days)</label>
+              <input type="number" min={1} max={30} value={duration} onChange={e => setDuration(parseInt(e.target.value) || 1)}
+                className="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white text-sm outline-none focus:ring-2 focus:ring-blue-200" />
+            </div>
           </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              <CloudIcon className="w-4 h-4 inline mr-1" />
-              Season
-            </label>
-            <select
-              value={filters.season}
-              onChange={(e) => setFilters({...filters, season: e.target.value})}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
-            >
-              <option value="Summer">Summer</option>
-              <option value="Monsoon">Monsoon</option>
-              <option value="Winter">Winter</option>
-            </select>
-          </div>
+          <button onClick={generate} disabled={generating}
+            className="mt-5 flex items-center gap-2 px-8 py-3.5 rounded-2xl font-black text-white text-sm shadow-lg hover:shadow-blue-500/30 transition-all disabled:opacity-60"
+            style={{ background: 'linear-gradient(135deg, #2563eb 0%, #0891b2 100%)' }}>
+            {generating ? <><RefreshCw className="w-5 h-5 animate-spin" /> Generating…</> : <><Sparkles className="w-5 h-5" /> Generate AI Packing List</>}
+          </button>
         </div>
-      </AnimatedCard>
 
-      {/* Progress Bar */}
-      <AnimatedCard className="p-6 mb-6">
-        <div className="flex justify-between mb-2">
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            Packing Progress
-          </span>
-          <span className="text-sm font-medium text-accent">
-            {Math.round(getProgress())}%
-          </span>
-        </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-          <motion.div
-            className="bg-accent h-2.5 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${getProgress()}%` }}
-            transition={{ duration: 0.5 }}
-          />
-        </div>
-      </AnimatedCard>
-
-      {/* Checklist Categories */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {checklist && Object.keys(checklist).map((category) => (
-          <ChecklistCategory
-            key={category}
-            title={getCategoryTitle(category)}
-            items={checklist[category]}
-            icon={getCategoryIcon(category)}
-            onToggle={(index) => toggleItem(category, index)}
-          />
-        ))}
-
-        {/* Custom Items */}
-        <AnimatedCard className="p-6 md:col-span-2">
-          <h2 className="text-xl font-semibold mb-4 flex items-center">
-            <PlusCircleIcon className="w-5 h-5 mr-2 text-accent" />
-            Custom Items
-          </h2>
-
-          <div className="flex mb-4">
-            <input
-              type="text"
-              value={newItem}
-              onChange={(e) => setNewItem(e.target.value)}
-              placeholder="Add your own item..."
-              className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-l-lg bg-white dark:bg-gray-800"
-              onKeyPress={(e) => e.key === 'Enter' && addCustomItem()}
-            />
-            <button
-              onClick={addCustomItem}
-              className="px-4 py-2 bg-accent text-white rounded-r-lg hover:bg-accent/90"
-            >
-              Add
-            </button>
-          </div>
-
-          <div className="space-y-2">
-            {customItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg"
-              >
-                <div className="flex items-center flex-1">
-                  <button
-                    onClick={() => {
-                      const newItems = [...customItems]
-                      newItems[index].checked = !newItems[index].checked
-                      setCustomItems(newItems)
-                    }}
-                    className="mr-3"
-                  >
-                    {item.checked ? (
-                      <CheckCircleIcon className="w-5 h-5 text-green-500" />
-                    ) : (
-                      <div className="w-5 h-5 border-2 border-gray-300 dark:border-gray-600 rounded" />
-                    )}
-                  </button>
-                  <span className={item.checked ? 'line-through text-gray-400' : ''}>
-                    {item.item}
-                  </span>
+        {/* Results */}
+        <AnimatePresence>
+          {packingList && (
+            <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
+              {/* Progress bar */}
+              <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 p-4 mb-5 flex items-center gap-4">
+                <div className="flex-1">
+                  <div className="flex justify-between text-xs font-bold text-slate-500 mb-2">
+                    <span>Packing Progress</span>
+                    <span>{checkedCount} / {totalItems} items</span>
+                  </div>
+                  <div className="h-3 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }} animate={{ width: `${(checkedCount / totalItems) * 100}%` }}
+                      className="h-full rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
+                  </div>
                 </div>
-                <button
-                  onClick={() => removeCustomItem(index)}
-                  className="text-red-500 hover:text-red-700"
-                >
-                  <TrashIcon className="w-5 h-5" />
-                </button>
-              </motion.div>
-            ))}
-            {customItems.length === 0 && (
-              <p className="text-center text-gray-500 dark:text-gray-400 py-4">
-                No custom items added yet
-              </p>
-            )}
+                <div className="flex gap-2">
+                  <button onClick={exportList} className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 transition">
+                    <Download className="w-3.5 h-3.5" /> Export
+                  </button>
+                  {checkedCount === totalItems && (
+                    <div className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 font-bold text-xs">
+                      <CheckSquare className="w-3.5 h-3.5" /> All packed!
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Warnings */}
+              {warnings.length > 0 && (
+                <div className="mb-5 rounded-2xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 p-4">
+                  <div className="flex items-center gap-2 font-black text-amber-700 dark:text-amber-300 mb-2">
+                    <AlertCircle className="w-4 h-4" /> Important Warnings
+                  </div>
+                  <ul className="space-y-1">
+                    {warnings.map((w, i) => <li key={i} className="text-sm text-amber-700 dark:text-amber-300">⚠️ {w}</li>)}
+                  </ul>
+                </div>
+              )}
+
+              {/* Do Not Wear */}
+              {doNotWear.length > 0 && (
+                <div className="mb-5 rounded-2xl bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-700 p-4">
+                  <div className="flex items-center gap-2 font-black text-rose-700 dark:text-rose-300 mb-2">
+                    <Info className="w-4 h-4" /> What NOT to Wear (Temple etiquette)
+                  </div>
+                  <ul className="space-y-1">
+                    {doNotWear.map((d, i) => <li key={i} className="text-sm text-rose-700 dark:text-rose-300">❌ {d}</li>)}
+                  </ul>
+                </div>
+              )}
+
+              {/* Category Checklists */}
+              <div className="space-y-3">
+                {Object.entries(packingList).map(([cat, items]) => {
+                  const catChecked = items.filter(item => checked[`${cat}::${item}`]).length
+                  const isCollapsed = collapsed[cat]
+                  const meta = CAT_META[cat] || { color: '#6b7280' }
+                  return (
+                    <div key={cat} className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+                      <button onClick={() => toggleCollapse(cat)}
+                        className="w-full flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                        <div className="flex items-center gap-3">
+                          <div className="text-xl">{cat.split(' ')[0]}</div>
+                          <div>
+                            <div className="font-black text-slate-900 dark:text-white text-sm">{cat.slice(cat.indexOf(' ') + 1)}</div>
+                            <div className="text-xs text-slate-400">{catChecked}/{items.length} packed</div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          {catChecked === items.length && items.length > 0 && (
+                            <span className="text-xs font-bold text-green-600 dark:text-green-400">✓ Done</span>
+                          )}
+                          {isCollapsed ? <ChevronDown className="w-4 h-4 text-slate-400" /> : <ChevronUp className="w-4 h-4 text-slate-400" />}
+                        </div>
+                      </button>
+                      {!isCollapsed && (
+                        <div className="border-t border-slate-100 dark:border-slate-800 px-4 pb-4 pt-2">
+                          <div className="space-y-2">
+                            {items.map((item, i) => {
+                              const key = `${cat}::${item}`
+                              const isChecked = checked[key]
+                              return (
+                                <button key={i} onClick={() => toggleItem(cat, item)}
+                                  className={`w-full flex items-center gap-3 p-2.5 rounded-xl text-left transition-all ${isChecked
+                                    ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800'
+                                    : 'hover:bg-slate-50 dark:hover:bg-slate-800'}`}>
+                                  {isChecked
+                                    ? <CheckSquare className="w-5 h-5 text-green-500 shrink-0" />
+                                    : <Square className="w-5 h-5 text-slate-300 dark:text-slate-600 shrink-0" />}
+                                  <span className={`text-sm ${isChecked ? 'line-through text-slate-400 dark:text-slate-500' : 'text-slate-700 dark:text-slate-300 font-medium'}`}>
+                                    {item}
+                                  </span>
+                                </button>
+                              )
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Add Custom Item */}
+              <div className="mt-5 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-blue-300 dark:border-blue-700 p-4">
+                <div className="text-sm font-black text-slate-700 dark:text-slate-300 mb-3">Add Custom Item</div>
+                <div className="flex gap-2">
+                  <select value={customCat} onChange={e => setCustomCat(e.target.value)}
+                    className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-200">
+                    {Object.keys(packingList).map(c => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                  <input value={customItem} onChange={e => setCustomItem(e.target.value)}
+                    onKeyDown={e => e.key === 'Enter' && addCustomItem()}
+                    placeholder="Add custom item…"
+                    className="flex-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-200" />
+                  <button onClick={addCustomItem}
+                    className="px-4 py-2 rounded-xl bg-blue-600 text-white font-black text-sm hover:bg-blue-700 transition">
+                    <Plus className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {!packingList && !generating && (
+          <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-700 p-16 text-center">
+            <Luggage className="w-16 h-16 mx-auto text-slate-300 dark:text-slate-600 mb-4" />
+            <p className="font-bold text-slate-500 dark:text-slate-400">Enter your destination above to generate a personalized AI packing list</p>
+            <p className="text-xs text-slate-400 mt-2">Tailored for Tamil Nadu weather, culture, and temple etiquette</p>
           </div>
-        </AnimatedCard>
+        )}
       </div>
     </div>
   )
 }
-
-const ChecklistCategory = ({ title, items, icon, onToggle }) => (
-  <AnimatedCard className="p-6">
-    <h2 className="text-xl font-semibold mb-4 flex items-center">
-      <span className="mr-2">{icon}</span>
-      {title}
-    </h2>
-    <div className="space-y-2 max-h-96 overflow-y-auto">
-      {items.map((item, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.05 }}
-          className="flex items-center p-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg cursor-pointer"
-          onClick={() => onToggle(index)}
-        >
-          <button className="mr-3">
-            {item.checked ? (
-              <CheckCircleIcon className="w-5 h-5 text-green-500" />
-            ) : (
-              <div className="w-5 h-5 border-2 border-gray-300 dark:border-gray-600 rounded" />
-            )}
-          </button>
-          <span className={item.checked ? 'line-through text-gray-400' : ''}>
-            {item.item}
-          </span>
-        </motion.div>
-      ))}
-    </div>
-  </AnimatedCard>
-)
-
-export default Checklist

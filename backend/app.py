@@ -37,6 +37,7 @@ def create_app():
     from routes.auth_routes import auth_bp
     from routes.ai_routes import ai_bp
     from routes.trip_planner_routes import trip_planner_bp
+    from routes.advanced_planner_routes import advanced_planner_bp
     from routes.travel_routes import travel_bp
     from routes.services_routes import services_bp
     from routes.emergency_routes import emergency_bp
@@ -45,6 +46,7 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
     app.register_blueprint(ai_bp, url_prefix='/api', name='ai_assistant')
     app.register_blueprint(trip_planner_bp, url_prefix='/api', name='trip_planner')
+    app.register_blueprint(advanced_planner_bp, url_prefix='/api', name='advanced_planner')
     app.register_blueprint(travel_bp, url_prefix='/api')
     app.register_blueprint(services_bp, url_prefix='/api')
     app.register_blueprint(emergency_bp, url_prefix='/api')

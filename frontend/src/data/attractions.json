@@ -1,63 +1,1346 @@
 {
   "Chennai": [
-    { "title": "Marina Beach", "category": "Beach", "durationHours": 2.0, "entryFee": 0, "bestTime": "Evening", "notes": "Sunset walk and street snacks." },
-    { "title": "Kapaleeshwarar Temple (Mylapore)", "category": "Temple", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Traditional Dravidian architecture." },
-    { "title": "Fort St. George", "category": "Heritage", "durationHours": 2.0, "entryFee": 25, "bestTime": "Morning", "notes": "Colonial history and museum visit." },
-    { "title": "Government Museum (Egmore)", "category": "Museum", "durationHours": 2.0, "entryFee": 15, "bestTime": "Afternoon", "notes": "Archaeology and art collections." },
-    { "title": "Besant Nagar Beach", "category": "Beach", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Clean beach vibe and cafes." },
-    { "title": "Food Tour: Mylapore Tiffin Trail", "category": "Food Tour", "durationHours": 2.0, "entryFee": 300, "bestTime": "Morning", "notes": "Filter coffee, idli, pongal." },
-    { "title": "Photowalk: Georgetown Heritage Streets", "category": "Photography", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Markets, colonial facades, street life." }
+    {
+      "title": "Marina Beach",
+      "category": "Beach",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Sunset walk, sundal, street snacks near the world's second longest beach."
+    },
+    {
+      "title": "Kapaleeshwarar Temple (Mylapore)",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Classic Dravidian architecture; arrive early for rituals."
+    },
+    {
+      "title": "Fort St. George",
+      "category": "Heritage",
+      "durationHours": 2.0,
+      "entryFee": 25,
+      "bestTime": "Morning",
+      "notes": "India's first English fortress; museum inside."
+    },
+    {
+      "title": "Government Museum (Egmore)",
+      "category": "Museum",
+      "durationHours": 2.0,
+      "entryFee": 15,
+      "bestTime": "Afternoon",
+      "notes": "Largest museum in South Asia; bronze gallery."
+    },
+    {
+      "title": "Besant Nagar Beach",
+      "category": "Beach",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Cleaner beach with cafes and walks."
+    },
+    {
+      "title": "Food Tour: Mylapore Tiffin Trail",
+      "category": "Food Tour",
+      "durationHours": 2.0,
+      "entryFee": 300,
+      "bestTime": "Morning",
+      "notes": "Filter coffee, idli, pongal at Murugan Idli."
+    },
+    {
+      "title": "Photowalk: Georgetown Heritage Streets",
+      "category": "Photography",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Colonial facades, wholesale markets, street life."
+    }
   ],
   "Madurai": [
-    { "title": "Meenakshi Amman Temple", "category": "Temple", "durationHours": 2.5, "entryFee": 0, "bestTime": "Morning", "notes": "Iconic gopurams and carvings." },
-    { "title": "Thirumalai Nayakkar Palace", "category": "Heritage", "durationHours": 1.5, "entryFee": 50, "bestTime": "Evening", "notes": "Light & sound show if available." },
-    { "title": "Gandhi Memorial Museum", "category": "Museum", "durationHours": 1.5, "entryFee": 0, "bestTime": "Afternoon", "notes": "Freedom movement exhibits." },
-    { "title": "Food Tour: Jigarthanda + Street Snacks", "category": "Food Tour", "durationHours": 1.0, "entryFee": 250, "bestTime": "Evening", "notes": "Must-try local refreshment." },
-    { "title": "Photowalk: Temple Streets", "category": "Photography", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Golden hour near temple markets." }
+    {
+      "title": "Meenakshi Amman Temple",
+      "category": "Temple",
+      "durationHours": 2.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Iconic gopurams with 33,000 sculptures; visit early."
+    },
+    {
+      "title": "Thirumalai Nayakkar Palace",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 50,
+      "bestTime": "Evening",
+      "notes": "Indo-Saracenic palace; light & sound show at 6:45 PM."
+    },
+    {
+      "title": "Gandhi Memorial Museum",
+      "category": "Museum",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Blood-stained clothes of Gandhi on display."
+    },
+    {
+      "title": "Food Tour: Jigarthanda + Kari Dosai",
+      "category": "Food Tour",
+      "durationHours": 1.0,
+      "entryFee": 200,
+      "bestTime": "Evening",
+      "notes": "Jigarthanda is a must-try Madurai chilled drink."
+    },
+    {
+      "title": "Photowalk: Temple Streets",
+      "category": "Photography",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Golden hour near Meenakshi temple markets."
+    }
   ],
   "Mahabalipuram": [
-    { "title": "Shore Temple", "category": "Heritage", "durationHours": 1.5, "entryFee": 40, "bestTime": "Morning", "notes": "UNESCO monument by the sea." },
-    { "title": "Pancha Rathas", "category": "Heritage", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Rock-cut monoliths." },
-    { "title": "Mahabalipuram Beach", "category": "Beach", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Seaside stroll and photos." },
-    { "title": "Photowalk: Stone Carving Lanes", "category": "Photography", "durationHours": 1.0, "entryFee": 0, "bestTime": "Afternoon", "notes": "Local artisans and sculpture shops." }
+    {
+      "title": "Shore Temple",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 40,
+      "bestTime": "Morning",
+      "notes": "UNESCO monument by the sea."
+    },
+    {
+      "title": "Pancha Rathas",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 40,
+      "bestTime": "Morning",
+      "notes": "Rock-cut monoliths from the Pallava era."
+    },
+    {
+      "title": "Mahabalipuram Beach",
+      "category": "Beach",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Seaside stroll and photos near stone carvings."
+    },
+    {
+      "title": "Krishna's Butterball",
+      "category": "Heritage",
+      "durationHours": 0.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Giant balancing rock — fun photo spot."
+    },
+    {
+      "title": "Photowalk: Stone Carving Lanes",
+      "category": "Photography",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Local artisans and sculpture shops."
+    }
   ],
   "Thanjavur": [
-    { "title": "Brihadeeswarar Temple (Big Temple)", "category": "Temple", "durationHours": 2.0, "entryFee": 0, "bestTime": "Morning", "notes": "Chola-era masterpiece." },
-    { "title": "Thanjavur Palace & Art Gallery", "category": "Museum", "durationHours": 2.0, "entryFee": 50, "bestTime": "Afternoon", "notes": "Royal heritage and exhibits." },
-    { "title": "Heritage Walk: Old Town", "category": "Heritage", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Markets and temple streets." },
-    { "title": "Food Tour: Banana Leaf Meals", "category": "Food Tour", "durationHours": 1.0, "entryFee": 250, "bestTime": "Afternoon", "notes": "Traditional South Indian meals." }
+    {
+      "title": "Brihadeeswarar Temple (Big Temple)",
+      "category": "Temple",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "UNESCO World Heritage; 1000-year-old Chola masterpiece."
+    },
+    {
+      "title": "Thanjavur Palace & Art Gallery",
+      "category": "Museum",
+      "durationHours": 2.0,
+      "entryFee": 50,
+      "bestTime": "Afternoon",
+      "notes": "Royal artefacts, Chola bronzes, and Nayak murals."
+    },
+    {
+      "title": "Heritage Walk: Old Town",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Markets and temple streets."
+    },
+    {
+      "title": "Food Tour: Banana Leaf Meals",
+      "category": "Food Tour",
+      "durationHours": 1.0,
+      "entryFee": 250,
+      "bestTime": "Afternoon",
+      "notes": "Traditional South Indian meals with 20+ side dishes."
+    }
   ],
   "Ooty": [
-    { "title": "Ooty Lake", "category": "Hill Station", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Boating and lakeside views." },
-    { "title": "Doddabetta Peak", "category": "Hill Station", "durationHours": 2.0, "entryFee": 20, "bestTime": "Morning", "notes": "Panoramic Nilgiris viewpoint." },
-    { "title": "Tea Estate Viewpoints", "category": "Photography", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Golden hour in tea gardens." },
-    { "title": "Easy Trek: Pine Forest Trail", "category": "Trekking", "durationHours": 2.0, "entryFee": 0, "bestTime": "Morning", "notes": "Light hike with scenic stops." },
-    { "title": "Wildlife Spotting (Mudumalai add-on)", "category": "Wildlife", "durationHours": 3.0, "entryFee": 350, "bestTime": "Morning", "notes": "Safari availability varies by season." }
+    {
+      "title": "Ooty Lake",
+      "category": "Hill Station",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Boating and lakeside views."
+    },
+    {
+      "title": "Doddabetta Peak",
+      "category": "Hill Station",
+      "durationHours": 2.0,
+      "entryFee": 20,
+      "bestTime": "Morning",
+      "notes": "Highest peak in Nilgiris; panoramic views."
+    },
+    {
+      "title": "Tea Estate Viewpoints",
+      "category": "Photography",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Golden hour in tea gardens."
+    },
+    {
+      "title": "Pine Forest Trek",
+      "category": "Trekking",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Light hike through pine forests."
+    },
+    {
+      "title": "Mudumalai Wildlife Safari",
+      "category": "Wildlife",
+      "durationHours": 3.0,
+      "entryFee": 350,
+      "bestTime": "Morning",
+      "notes": "Elephant, deer, and jeep safaris at Tiger Reserve."
+    },
+    {
+      "title": "Nilgiri Mountain Railway",
+      "category": "Heritage",
+      "durationHours": 4.0,
+      "entryFee": 250,
+      "bestTime": "Morning",
+      "notes": "UNESCO World Heritage toy train to Coonoor."
+    }
   ],
   "Kodaikanal": [
-    { "title": "Kodaikanal Lake", "category": "Hill Station", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Cycling and lakeside walk." },
-    { "title": "Coaker’s Walk", "category": "Photography", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Misty viewpoints." },
-    { "title": "Bear Shola Falls", "category": "Waterfall", "durationHours": 1.5, "entryFee": 0, "bestTime": "Morning", "notes": "Seasonal waterfall." },
-    { "title": "Nature Trail: Pine Forest", "category": "Trekking", "durationHours": 2.0, "entryFee": 0, "bestTime": "Afternoon", "notes": "Short trek and photos." },
-    { "title": "Wildlife: Berijam Lake Region", "category": "Wildlife", "durationHours": 3.0, "entryFee": 300, "bestTime": "Morning", "notes": "Permit-based routes." }
+    {
+      "title": "Kodaikanal Lake",
+      "category": "Hill Station",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Cycling and lakeside walk; star-shaped lake."
+    },
+    {
+      "title": "Coaker's Walk",
+      "category": "Photography",
+      "durationHours": 1.5,
+      "entryFee": 25,
+      "bestTime": "Morning",
+      "notes": "Misty cliff viewpoints."
+    },
+    {
+      "title": "Bear Shola Falls",
+      "category": "Waterfall",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Seasonal waterfall near lake."
+    },
+    {
+      "title": "Pillar Rocks",
+      "category": "Photography",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Three 400m tall vertical granite pillars."
+    },
+    {
+      "title": "Pine Forest Nature Trail",
+      "category": "Trekking",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Short trek and pine forest walk."
+    },
+    {
+      "title": "Berijam Lake Region",
+      "category": "Wildlife",
+      "durationHours": 3.0,
+      "entryFee": 300,
+      "bestTime": "Morning",
+      "notes": "Permit-based routes; wildlife spotting."
+    }
   ],
   "Kanyakumari": [
-    { "title": "Sunrise Viewpoint", "category": "Photography", "durationHours": 1.0, "entryFee": 0, "bestTime": "Morning", "notes": "Arrive early for the best spot." },
-    { "title": "Vivekananda Rock Memorial", "category": "Heritage", "durationHours": 2.0, "entryFee": 40, "bestTime": "Morning", "notes": "Ferry ride and memorial visit." },
-    { "title": "Kanyakumari Beach", "category": "Beach", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Sunset and sea breeze." },
-    { "title": "Thiruvalluvar Statue View", "category": "Heritage", "durationHours": 1.0, "entryFee": 0, "bestTime": "Evening", "notes": "Great photo vantage points." }
+    {
+      "title": "Sunrise Viewpoint",
+      "category": "Photography",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Arrive by 5:30 AM for the best spot."
+    },
+    {
+      "title": "Vivekananda Rock Memorial",
+      "category": "Heritage",
+      "durationHours": 2.0,
+      "entryFee": 40,
+      "bestTime": "Morning",
+      "notes": "Ferry ride to the rock; meditation hall."
+    },
+    {
+      "title": "Kanyakumari Beach",
+      "category": "Beach",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Three-sea confluence; sunset views."
+    },
+    {
+      "title": "Thiruvalluvar Statue View",
+      "category": "Heritage",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "133-foot statue of Tamil poet."
+    },
+    {
+      "title": "Padmanabhapuram Palace",
+      "category": "Heritage",
+      "durationHours": 2.0,
+      "entryFee": 30,
+      "bestTime": "Morning",
+      "notes": "16th century wooden palace."
+    }
   ],
   "Rameswaram": [
-    { "title": "Ramanathaswamy Temple", "category": "Temple", "durationHours": 2.5, "entryFee": 0, "bestTime": "Morning", "notes": "Famous corridors and rituals." },
-    { "title": "Pamban Bridge Viewpoint", "category": "Photography", "durationHours": 1.0, "entryFee": 0, "bestTime": "Morning", "notes": "Iconic rail/road bridge views." },
-    { "title": "Dhanushkodi Beach", "category": "Beach", "durationHours": 2.0, "entryFee": 0, "bestTime": "Evening", "notes": "Windy and photogenic coastline." },
-    { "title": "Heritage: APJ Abdul Kalam Memorial", "category": "Museum", "durationHours": 1.5, "entryFee": 0, "bestTime": "Afternoon", "notes": "Memorial and exhibits." }
+    {
+      "title": "Ramanathaswamy Temple",
+      "category": "Temple",
+      "durationHours": 2.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "World's longest temple corridor; 22 sacred wells."
+    },
+    {
+      "title": "Pamban Bridge Viewpoint",
+      "category": "Photography",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "India's first sea bridge; Palk Strait views."
+    },
+    {
+      "title": "Dhanushkodi Beach",
+      "category": "Beach",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Ghost town ruins; dramatic coastline."
+    },
+    {
+      "title": "APJ Abdul Kalam Memorial",
+      "category": "Museum",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Missile Man's birthplace memorial."
+    }
   ],
   "Pondicherry": [
-    { "title": "Promenade Beach Walk", "category": "Beach", "durationHours": 1.5, "entryFee": 0, "bestTime": "Evening", "notes": "Seafront and cafés." },
-    { "title": "White Town Heritage Streets", "category": "Heritage", "durationHours": 2.0, "entryFee": 0, "bestTime": "Morning", "notes": "French-era architecture." },
-    { "title": "Auroville Visit", "category": "Heritage", "durationHours": 3.0, "entryFee": 0, "bestTime": "Morning", "notes": "Matri Mandir viewing by slots." },
-    { "title": "Food Tour: Cafés & Bakeries", "category": "Food Tour", "durationHours": 1.5, "entryFee": 400, "bestTime": "Afternoon", "notes": "Fusion cuisine and pastries." }
+    {
+      "title": "Promenade Beach Walk",
+      "category": "Beach",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Seafront promenade with French cafés."
+    },
+    {
+      "title": "White Town Heritage Streets",
+      "category": "Heritage",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "French-era colonial architecture."
+    },
+    {
+      "title": "Auroville Visit",
+      "category": "Heritage",
+      "durationHours": 3.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Matri Mandir viewing by prior slots."
+    },
+    {
+      "title": "Food Tour: Cafés & Bakeries",
+      "category": "Food Tour",
+      "durationHours": 1.5,
+      "entryFee": 400,
+      "bestTime": "Afternoon",
+      "notes": "French pastries, crepes, and fusion cuisine."
+    }
+  ],
+  "Coimbatore": [
+    {
+      "title": "Marudhamalai Murugan Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Hill temple with scenic Western Ghats views."
+    },
+    {
+      "title": "Isha Yoga Center (Adiyogi)",
+      "category": "Heritage",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "World's largest bust of Shiva; guided tour available."
+    },
+    {
+      "title": "Siruvani Waterfall",
+      "category": "Waterfall",
+      "durationHours": 2.0,
+      "entryFee": 30,
+      "bestTime": "Morning",
+      "notes": "Said to have the world's second sweetest water."
+    },
+    {
+      "title": "Velliangiri Hills Trek",
+      "category": "Trekking",
+      "durationHours": 5.0,
+      "entryFee": 50,
+      "bestTime": "Morning",
+      "notes": "South Kailash; 7 hills trek for the adventurous."
+    },
+    {
+      "title": "VOC Park & Zoo",
+      "category": "Wildlife",
+      "durationHours": 2.0,
+      "entryFee": 40,
+      "bestTime": "Afternoon",
+      "notes": "City zoo with rare animals and botanical garden."
+    },
+    {
+      "title": "Food Tour: Annapoorna Sambar",
+      "category": "Food Tour",
+      "durationHours": 1.0,
+      "entryFee": 200,
+      "bestTime": "Morning",
+      "notes": "Famous Coimbatore breakfast institution since 1946."
+    }
+  ],
+  "Trichy": [
+    {
+      "title": "Rock Fort Temple",
+      "category": "Temple",
+      "durationHours": 2.0,
+      "entryFee": 5,
+      "bestTime": "Morning",
+      "notes": "437 steps to a dramatic hilltop temple."
+    },
+    {
+      "title": "Ranganathaswamy Temple (Srirangam)",
+      "category": "Temple",
+      "durationHours": 2.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "World's largest functioning temple complex."
+    },
+    {
+      "title": "Jambukeswarar Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Water element Shiva temple with submerged lingam."
+    },
+    {
+      "title": "Kallanai (Grand Anicut) Dam",
+      "category": "Heritage",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "2000-year-old dam; world's oldest water-regulation structure."
+    },
+    {
+      "title": "Food Tour: Manapparai Murukku",
+      "category": "Food Tour",
+      "durationHours": 1.0,
+      "entryFee": 150,
+      "bestTime": "Afternoon",
+      "notes": "Buy fresh murukku from Manapparai town."
+    }
+  ],
+  "Vellore": [
+    {
+      "title": "Vellore Fort",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 25,
+      "bestTime": "Morning",
+      "notes": "16th century fort with moat; museum inside."
+    },
+    {
+      "title": "Sripuram Golden Temple",
+      "category": "Temple",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "1500 kg of gold used in construction."
+    },
+    {
+      "title": "Jalakandeswarar Temple",
+      "category": "Temple",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Inside Vellore Fort; fine Vijayanagara sculpture."
+    },
+    {
+      "title": "Government Museum Vellore",
+      "category": "Museum",
+      "durationHours": 1.0,
+      "entryFee": 10,
+      "bestTime": "Afternoon",
+      "notes": "Archaeology and natural history exhibits."
+    }
+  ],
+  "Kanchipuram": [
+    {
+      "title": "Kailasanathar Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Oldest standing temple in Kanchipuram; Pallava era."
+    },
+    {
+      "title": "Ekambareswarar Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Earth element Shiva temple; 58-meter tower."
+    },
+    {
+      "title": "Kamakshi Amman Temple",
+      "category": "Temple",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "One of the most sacred goddess temples in India."
+    },
+    {
+      "title": "Silk Weaver Workshop",
+      "category": "Heritage",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Watch GI-tagged Kanchipuram silk being hand-woven."
+    }
+  ],
+  "Salem": [
+    {
+      "title": "Yercaud Hill Station",
+      "category": "Hill Station",
+      "durationHours": 4.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Poor man's Ooty; coffee estates, lake, and viewpoints."
+    },
+    {
+      "title": "Kiliyur Falls (Yercaud)",
+      "category": "Waterfall",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Seasonal waterfall inside Yercaud hills."
+    },
+    {
+      "title": "Mettur Dam",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Largest dam in Tamil Nadu; Stanley Reservoir views."
+    },
+    {
+      "title": "Thirumandakunnu Temple",
+      "category": "Temple",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Ancient Murugan temple in Salem."
+    },
+    {
+      "title": "Food Tour: Salem Mangoes & Thattu Vadai",
+      "category": "Food Tour",
+      "durationHours": 1.0,
+      "entryFee": 150,
+      "bestTime": "Evening",
+      "notes": "Famous mango varieties and spiced vadai plates."
+    }
+  ],
+  "Tirunelveli": [
+    {
+      "title": "Nellaiyappar Temple",
+      "category": "Temple",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Massive temple complex with musical pillars."
+    },
+    {
+      "title": "Papanasam Falls",
+      "category": "Waterfall",
+      "durationHours": 2.0,
+      "entryFee": 30,
+      "bestTime": "Morning",
+      "notes": "Scenic Thamirabharani river falls and dam."
+    },
+    {
+      "title": "Mundanthurai Tiger Reserve",
+      "category": "Wildlife",
+      "durationHours": 4.0,
+      "entryFee": 150,
+      "bestTime": "Morning",
+      "notes": "Part of Kalakkad-Mundanthurai Tiger Reserve."
+    },
+    {
+      "title": "Krishnapuram Palace",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 20,
+      "bestTime": "Afternoon",
+      "notes": "Travancore-era palace with Kerala murals."
+    },
+    {
+      "title": "Food Tour: Iruttu Kadai Halwa",
+      "category": "Food Tour",
+      "durationHours": 0.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Buy Tirunelveli wheat halwa from the legendary dark shop."
+    }
+  ],
+  "Dindigul": [
+    {
+      "title": "Dindigul Rock Fort",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 25,
+      "bestTime": "Morning",
+      "notes": "18th century fort on a 90m rock; city views."
+    },
+    {
+      "title": "Palani Murugan Temple",
+      "category": "Temple",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "One of six holy Murugan abodes; rope car available."
+    },
+    {
+      "title": "Kodaikanal Day Trip",
+      "category": "Hill Station",
+      "durationHours": 8.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Kodaikanal is 1.5 hours from Dindigul."
+    },
+    {
+      "title": "Food Tour: Dindigul Biryani Trail",
+      "category": "Food Tour",
+      "durationHours": 1.0,
+      "entryFee": 200,
+      "bestTime": "Afternoon",
+      "notes": "Thalappakatti clay pot seeraga samba biryani."
+    }
+  ],
+  "Thoothukudi": [
+    {
+      "title": "Tiruchendur Murugan Temple",
+      "category": "Temple",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Coastal Murugan temple with dramatic sea backdrop."
+    },
+    {
+      "title": "Kalugumalai Rock-cut Temple",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 25,
+      "bestTime": "Morning",
+      "notes": "Pandya-era carvings; unfinished Vettuvan Koil."
+    },
+    {
+      "title": "Vembar Beach",
+      "category": "Beach",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Quiet beach with seashell hunting."
+    },
+    {
+      "title": "Food Tour: Thoothukudi Macaroons",
+      "category": "Food Tour",
+      "durationHours": 0.5,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Colonial-era macaroons unique to Tuticorin."
+    }
+  ],
+  "Viluppuram": [
+    {
+      "title": "Gingee Fort",
+      "category": "Heritage",
+      "durationHours": 3.0,
+      "entryFee": 25,
+      "bestTime": "Morning",
+      "notes": "Troy of the East; three-hilltop fortress complex."
+    },
+    {
+      "title": "Pichavaram Mangrove Forest",
+      "category": "Wildlife",
+      "durationHours": 2.0,
+      "entryFee": 50,
+      "bestTime": "Morning",
+      "notes": "Boat through world's second largest mangrove forest."
+    },
+    {
+      "title": "Melmalayanur Angala Parameswari Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Famous fire-walking festival temple."
+    }
+  ],
+  "Nagapattinam": [
+    {
+      "title": "Velankanni Basilica",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "National Shrine; millions of pilgrims annually."
+    },
+    {
+      "title": "Nagore Dargah",
+      "category": "Heritage",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "500-year-old dargah; multi-religious pilgrimage site."
+    },
+    {
+      "title": "Point Calimere Wildlife Sanctuary",
+      "category": "Wildlife",
+      "durationHours": 3.0,
+      "entryFee": 50,
+      "bestTime": "Morning",
+      "notes": "Flamingos and migratory birds; Dec-Feb best."
+    },
+    {
+      "title": "Poompuhar (Kaveripattinam)",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Ancient Chola port; Silappathikaram museum."
+    }
+  ],
+  "Mayiladuthurai": [
+    {
+      "title": "Vaitheeswaran Koil",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Famous Navagraha Mars temple; healing rituals."
+    },
+    {
+      "title": "Chidambaram Natarajar Temple",
+      "category": "Temple",
+      "durationHours": 2.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Cosmic dance of Shiva; sky element temple."
+    },
+    {
+      "title": "Poompuhar Museum",
+      "category": "Museum",
+      "durationHours": 1.0,
+      "entryFee": 10,
+      "bestTime": "Afternoon",
+      "notes": "Silappathikaram archaeological site and museum."
+    },
+    {
+      "title": "Tharangambadi (Tranquebar)",
+      "category": "Heritage",
+      "durationHours": 2.0,
+      "entryFee": 20,
+      "bestTime": "Morning",
+      "notes": "Danish Fort and colonial heritage on the coast."
+    }
+  ],
+  "Kumbakonam": [
+    {
+      "title": "Mahamaham Tank (Pushkarini)",
+      "category": "Heritage",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Sacred tank where rivers meet every 12 years."
+    },
+    {
+      "title": "Sarangapani Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Tallest gopuram among Vishnu temples in Tamil Nadu."
+    },
+    {
+      "title": "Dharasuram Airavatesvara Temple",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "UNESCO World Heritage; Chola stonework masterpiece."
+    },
+    {
+      "title": "Food Tour: Kumbakonam Degree Coffee",
+      "category": "Food Tour",
+      "durationHours": 1.0,
+      "entryFee": 100,
+      "bestTime": "Morning",
+      "notes": "The gold standard of South Indian filter coffee."
+    }
+  ],
+  "Tiruvarur": [
+    {
+      "title": "Thyagarajaswamy Temple",
+      "category": "Temple",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Largest Tamil Nadu temple complex by area; 5-day car festival."
+    },
+    {
+      "title": "Mannargudi Rajagopalaswamy Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Second largest temple in Tamil Nadu by area."
+    },
+    {
+      "title": "Muthupet Mangrove Forest",
+      "category": "Wildlife",
+      "durationHours": 2.0,
+      "entryFee": 50,
+      "bestTime": "Morning",
+      "notes": "Boat ride through mangroves; flamingo spotting."
+    }
+  ],
+  "Sivaganga": [
+    {
+      "title": "Kalayarkoil Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Famous Murugan shrine celebrated in Thiruvilayadal."
+    },
+    {
+      "title": "Chettinad Heritage Walk",
+      "category": "Heritage",
+      "durationHours": 3.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Palatial mansions of Nattukotai Chettiars in Karaikudi."
+    },
+    {
+      "title": "Keeladi Archaeological Site",
+      "category": "Museum",
+      "durationHours": 1.5,
+      "entryFee": 20,
+      "bestTime": "Afternoon",
+      "notes": "Sangam era site rivalling Indus Valley civilization."
+    },
+    {
+      "title": "Food Tour: Chettinad Cuisine",
+      "category": "Food Tour",
+      "durationHours": 1.5,
+      "entryFee": 400,
+      "bestTime": "Afternoon",
+      "notes": "Authentic Chettinad chicken curry and Kavuni Arisi sweet."
+    }
+  ],
+  "Ramanathapuram": [
+    {
+      "title": "Ramanathaswamy Temple",
+      "category": "Temple",
+      "durationHours": 2.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Same as Rameswaram — sacred Jyotirlinga."
+    },
+    {
+      "title": "Dhanushkodi Ghost Town",
+      "category": "Photography",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Ruins of a 1964 cyclone-destroyed town; dramatic seascape."
+    },
+    {
+      "title": "Devipattinam Navabashanam",
+      "category": "Temple",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Nine stones in the sea representing Navagrahas."
+    }
+  ],
+  "Theni": [
+    {
+      "title": "Megamalai Wildlife Sanctuary",
+      "category": "Wildlife",
+      "durationHours": 5.0,
+      "entryFee": 100,
+      "bestTime": "Morning",
+      "notes": "Bison, elephants, and tea estates at 1500m elevation."
+    },
+    {
+      "title": "Kurangani Hills Trekking",
+      "category": "Trekking",
+      "durationHours": 4.0,
+      "entryFee": 50,
+      "bestTime": "Morning",
+      "notes": "Notable trek; avoid peak months."
+    },
+    {
+      "title": "Kumbakarai Falls",
+      "category": "Waterfall",
+      "durationHours": 1.5,
+      "entryFee": 20,
+      "bestTime": "Morning",
+      "notes": "Scenic Periyakulam area waterfall."
+    },
+    {
+      "title": "Vaigai Dam",
+      "category": "Heritage",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Andipatti township with dam views."
+    }
+  ],
+  "Virudhunagar": [
+    {
+      "title": "Srivilliputhur Andal Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Gopuram on Tamil Nadu's state emblem; 59m tall."
+    },
+    {
+      "title": "Sathuragiri Hills",
+      "category": "Trekking",
+      "durationHours": 5.0,
+      "entryFee": 70,
+      "bestTime": "Morning",
+      "notes": "Shaivite pilgrimage trek with 64 Siddhas."
+    },
+    {
+      "title": "Sivakasi Firecracker Factory Tour",
+      "category": "Heritage",
+      "durationHours": 2.0,
+      "entryFee": 100,
+      "bestTime": "Morning",
+      "notes": "India's firecracker capital; printing industry hub."
+    },
+    {
+      "title": "Food Tour: Srivilliputhur Palkova",
+      "category": "Food Tour",
+      "durationHours": 0.5,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Famous milk sweet from GI-tagged Srivilliputhur."
+    }
+  ],
+  "Erode": [
+    {
+      "title": "Bhavani Sangameswarar Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "At the confluence of three rivers."
+    },
+    {
+      "title": "Sathyamangalam Tiger Reserve",
+      "category": "Wildlife",
+      "durationHours": 5.0,
+      "entryFee": 200,
+      "bestTime": "Morning",
+      "notes": "Tigers, leopards, elephants; good jungle drives."
+    },
+    {
+      "title": "Thindal Murugan Temple",
+      "category": "Temple",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Famous hilltop Murugan temple on Erode outskirts."
+    },
+    {
+      "title": "Erode Textile Market Tour",
+      "category": "Heritage",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Turmeric market, textile showrooms — Erode's industrial soul."
+    }
+  ],
+  "Pudukkottai": [
+    {
+      "title": "Sittannavasal Cave Paintings",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 25,
+      "bestTime": "Morning",
+      "notes": "2nd century Jain cave murals of lotus pond."
+    },
+    {
+      "title": "Nartamalai Rock Temples",
+      "category": "Heritage",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "8th century Pallava cave temples."
+    },
+    {
+      "title": "Viralimalai Murugan Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Hilltop Murugan temple where peacocks roam freely."
+    },
+    {
+      "title": "Kodumbalur Temples",
+      "category": "Heritage",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "9th century Moovar Koil — early Chola stonework."
+    }
+  ],
+  "Ariyalur": [
+    {
+      "title": "Gangaikonda Cholapuram Temple",
+      "category": "Heritage",
+      "durationHours": 2.5,
+      "entryFee": 10,
+      "bestTime": "Morning",
+      "notes": "UNESCO World Heritage; Rajendra Chola's capital."
+    },
+    {
+      "title": "Ariyalur Fossil Park",
+      "category": "Museum",
+      "durationHours": 1.5,
+      "entryFee": 20,
+      "bestTime": "Afternoon",
+      "notes": "70-million-year-old marine fossils in the rock beds."
+    }
+  ],
+  "Dharmapuri": [
+    {
+      "title": "Hogenakkal Falls",
+      "category": "Waterfall",
+      "durationHours": 3.0,
+      "entryFee": 50,
+      "bestTime": "Morning",
+      "notes": "Niagara of India; coracle boat rides in the gorge."
+    },
+    {
+      "title": "Pennagaram Hills",
+      "category": "Photography",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Scenic views near Hogenakkal."
+    }
+  ],
+  "Krishnagiri": [
+    {
+      "title": "Krishnagiri Dam",
+      "category": "Photography",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Peaceful KRP Dam backwaters."
+    },
+    {
+      "title": "Denkanikottai Hills",
+      "category": "Hill Station",
+      "durationHours": 3.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Little England; rose gardens and pleasant climate."
+    },
+    {
+      "title": "Mango Orchards Tour",
+      "category": "Food Tour",
+      "durationHours": 2.0,
+      "entryFee": 100,
+      "bestTime": "Morning",
+      "notes": "Alphonso and Banganapalli mango orchards in season."
+    }
+  ],
+  "Tiruvannamalai": [
+    {
+      "title": "Arunachaleswarar Temple",
+      "category": "Temple",
+      "durationHours": 2.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Fire element Shiva temple; one of the largest in India."
+    },
+    {
+      "title": "Girivalam (Hill Circumambulation)",
+      "category": "Heritage",
+      "durationHours": 4.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "14 km sacred walk around Arunachala Hill."
+    },
+    {
+      "title": "Ramana Maharshi Ashram",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Peaceful ashram of the great sage."
+    },
+    {
+      "title": "Sathanur Dam & Boating",
+      "category": "Photography",
+      "durationHours": 1.0,
+      "entryFee": 30,
+      "bestTime": "Evening",
+      "notes": "Dam boating and sunset views."
+    }
+  ],
+  "Tirupathur": [
+    {
+      "title": "Yelagiri Hills",
+      "category": "Hill Station",
+      "durationHours": 4.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Gentle hill station with orchards and trekking."
+    },
+    {
+      "title": "Swamimalai Hills Trek",
+      "category": "Trekking",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Light trek in Yelagiri."
+    },
+    {
+      "title": "Punganoor Lake",
+      "category": "Photography",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Picturesque lake inside Yelagiri."
+    }
+  ],
+  "Nilgiris": [
+    {
+      "title": "Ooty Botanical Garden",
+      "category": "Photography",
+      "durationHours": 2.0,
+      "entryFee": 50,
+      "bestTime": "Morning",
+      "notes": "150-year-old garden; annual flower show in May."
+    },
+    {
+      "title": "Avalanche Lake",
+      "category": "Hill Station",
+      "durationHours": 2.0,
+      "entryFee": 30,
+      "bestTime": "Morning",
+      "notes": "Remote alpine lake; permit required."
+    },
+    {
+      "title": "Mudumalai Tiger Reserve",
+      "category": "Wildlife",
+      "durationHours": 4.0,
+      "entryFee": 350,
+      "bestTime": "Morning",
+      "notes": "Elephant sanctuary and tiger reserve."
+    },
+    {
+      "title": "Coonoor Tea Estates",
+      "category": "Photography",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "Sim's Park and Highfield tea gardens."
+    }
+  ],
+  "Karur": [
+    {
+      "title": "Thanthonimalai Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Hilltop Murugan temple with Karur views."
+    },
+    {
+      "title": "Mayanur Dam & Barrage",
+      "category": "Photography",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Evening",
+      "notes": "Cauvery River dam with scenic views."
+    },
+    {
+      "title": "Karur Textile Market",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Home linen capital of India; wholesale shopping."
+    }
+  ],
+  "Tenkasi": [
+    {
+      "title": "Courtallam Falls (Main)",
+      "category": "Waterfall",
+      "durationHours": 2.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Spa of South India; medicinal herbs in water."
+    },
+    {
+      "title": "Five Falls (Aintharuvi)",
+      "category": "Waterfall",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Five strands of Chittar River falls."
+    },
+    {
+      "title": "Kasi Viswanathar Temple",
+      "category": "Temple",
+      "durationHours": 1.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Ancient Shiva temple inside Tenkasi town."
+    }
+  ],
+  "Perambalur": [
+    {
+      "title": "Arumbavur Wood Carvings",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Village famous for intricate temple wood carvings."
+    },
+    {
+      "title": "Pachaimalai Hills",
+      "category": "Hill Station",
+      "durationHours": 3.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Coffee, pepper, and vanilla plantations."
+    }
+  ],
+  "Cuddalore": [
+    {
+      "title": "Chidambaram Natarajar Temple",
+      "category": "Temple",
+      "durationHours": 2.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Cosmic dance of Shiva; sky element among Pancha Bhuta."
+    },
+    {
+      "title": "Pichavaram Mangrove Forest",
+      "category": "Wildlife",
+      "durationHours": 2.0,
+      "entryFee": 50,
+      "bestTime": "Morning",
+      "notes": "One of world's largest mangrove forests; boat through it."
+    },
+    {
+      "title": "Neyveli Thermal Plant",
+      "category": "Heritage",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Afternoon",
+      "notes": "India's largest lignite mine complex; guided tours."
+    }
+  ],
+  "Namakkal": [
+    {
+      "title": "Namakkal Rock Fort Temple",
+      "category": "Temple",
+      "durationHours": 1.5,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "Largest monolithic Anjaneya statue; Narasimha above."
+    },
+    {
+      "title": "Kolli Hills",
+      "category": "Hill Station",
+      "durationHours": 5.0,
+      "entryFee": 0,
+      "bestTime": "Morning",
+      "notes": "72 hair-pin bends through dense forest; Agaya Gangai."
+    },
+    {
+      "title": "Agaya Gangai Falls",
+      "category": "Waterfall",
+      "durationHours": 2.0,
+      "entryFee": 30,
+      "bestTime": "Morning",
+      "notes": "1000 steps down in Kolli Hills."
+    }
+  ],
+  "Chengalpattu": [
+    {
+      "title": "Vedanthangal Bird Sanctuary",
+      "category": "Wildlife",
+      "durationHours": 2.0,
+      "entryFee": 30,
+      "bestTime": "Morning",
+      "notes": "Thousands of migratory birds: Nov-Feb season."
+    },
+    {
+      "title": "Mahabalipuram (Day Trip)",
+      "category": "Heritage",
+      "durationHours": 5.0,
+      "entryFee": 40,
+      "bestTime": "Morning",
+      "notes": "45 mins from Chengalpattu; Shore Temple & Pandya Rathas."
+    }
   ]
 }
-

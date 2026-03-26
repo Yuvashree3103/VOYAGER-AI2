@@ -1,95 +1,113 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { jwtDecode } from 'jwt-decode'
-import { authAPI } from '../services/api'
 import toast from 'react-hot-toast'
 
 const AuthContext = createContext()
 
 export const useAuth = () => {
-  const context = useContext(AuthContext)
-  if (!context) {
-    throw new Error('useAuth must be used within AuthProvider')
-  }
-  return context
+  const ctx = useContext(AuthContext)
+  if (!ctx) throw new Error('useAuth must be used within AuthProvider')
+  return ctx
+}
+
+const DEFAULT_GUEST = {
+  id: 'guest_default',
+  name: 'Guest Traveler',
+  email: 'guest@voyagerai.com',
+  avatar: 'https://ui-avatars.com/api/?name=Guest&background=2563eb&color=fff&bold=true',
+  phone: '',
+  homeDistrict: '',
+  travelStyle: [],
+  savedTrips: [],
+  emergencyContact: '',
+  preferredLanguage: 'English',
+  joinedDate: new Date().toISOString(),
+  tripsPlanned: 0,
+}
+
+const GOOGLE_DEMO_USER = {
+  id: 'google_demo_001',
+  name: 'Arjun Kumar',
+  email: 'arjun@gmail.com',
+  avatar: 'https://ui-avatars.com/api/?name=Arjun+Kumar&background=2563eb&color=fff&bold=true',
+  phone: '+91 98765 43210',
+  homeDistrict: 'Chennai',
+  travelStyle: ['Temple', 'Heritage', 'Food Tour'],
+  savedTrips: [],
+  emergencyContact: 'Priya Kumar: +91 87654 32109',
+  preferredLanguage: 'Tamil',
+  joinedDate: new Date().toISOString(),
+  tripsPlanned: 3,
 }
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [showLoginModal, setShowLoginModal] = useState(false)
   const [loading, setLoading] = useState(true)
-  const [token, setToken] = useState(localStorage.getItem('token'))
 
+  // Restore session from localStorage on mount
   useEffect(() => {
-    if (token) {
-      try {
-        const decoded = jwtDecode(token)
-        // Check if token is expired
-        if (decoded.exp * 1000 < Date.now()) {
-          logout()
-        } else {
-          setUser({ id: decoded.user_id, username: decoded.username })
-        }
-      } catch (error) {
-        console.error('Token decode error:', error)
-        logout()
+    try {
+      const stored = localStorage.getItem('voyager_user')
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        setUser(parsed)
+        setIsLoggedIn(true)
       }
-    }
+    } catch { /* ignore parse errors */ }
     setLoading(false)
-  }, [token])
+  }, [])
 
-  const login = async (username, password) => {
-    try {
-      const response = await authAPI.login({ username, password })
-      const { token, user } = response
-      
-      localStorage.setItem('token', token)
-      setToken(token)
-      setUser(user)
-      
-      toast.success('Login successful!')
-      return { success: true }
-    } catch (error) {
-      const message = error.message || 'Login failed'
-      toast.error(message)
-      return { success: false, error: message }
-    }
-  }
+  const login = (provider = 'guest') => {
+    const newUser = provider === 'google'
+      ? { ...GOOGLE_DEMO_USER, joinedDate: new Date().toISOString() }
+      : { ...DEFAULT_GUEST, id: `guest_${Date.now()}`, joinedDate: new Date().toISOString() }
 
-  const register = async (username, email, password) => {
-    try {
-      const response = await authAPI.register({ username, email, password })
-      const { token, user } = response
-      
-      localStorage.setItem('token', token)
-      setToken(token)
-      setUser(user)
-      
-      toast.success('Registration successful!')
-      return { success: true }
-    } catch (error) {
-      const message = error.message || 'Registration failed'
-      toast.error(message)
-      return { success: false, error: message }
-    }
+    localStorage.setItem('voyager_user', JSON.stringify(newUser))
+    setUser(newUser)
+    setIsLoggedIn(true)
+    setShowLoginModal(false)
+    toast.success(`Welcome${provider === 'google' ? ', Arjun' : ''}! 👋`)
   }
 
   const logout = () => {
-    localStorage.removeItem('token')
-    setToken(null)
+    localStorage.removeItem('voyager_user')
     setUser(null)
+    setIsLoggedIn(false)
     toast.success('Logged out successfully')
   }
 
-  const value = {
-    user,
-    login,
-    register,
-    logout,
-    isAuthenticated: !!user,
-    loading
+  const updateProfile = (data) => {
+    const updated = { ...user, ...data }
+    localStorage.setItem('voyager_user', JSON.stringify(updated))
+    setUser(updated)
+    toast.success('Profile saved! ✅')
+  }
+
+  const saveTrip = (trip) => {
+    const trips = [...(user?.savedTrips || []), { ...trip, id: `trip_${Date.now()}`, savedAt: new Date().toISOString() }]
+    const updated = { ...user, savedTrips: trips, tripsPlanned: (user?.tripsPlanned || 0) + 1 }
+    localStorage.setItem('voyager_user', JSON.stringify(updated))
+    setUser(updated)
+    toast.success('Trip saved! 🗺️')
+  }
+
+  const deleteTrip = (tripId) => {
+    const trips = (user?.savedTrips || []).filter(t => t.id !== tripId)
+    const updated = { ...user, savedTrips: trips }
+    localStorage.setItem('voyager_user', JSON.stringify(updated))
+    setUser(updated)
+    toast.success('Trip removed')
   }
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider value={{
+      user, isLoggedIn, loading,
+      showLoginModal, setShowLoginModal,
+      login, logout, updateProfile, saveTrip, deleteTrip,
+      // Legacy compatibility
+      isAuthenticated: isLoggedIn,
+    }}>
       {children}
     </AuthContext.Provider>
   )

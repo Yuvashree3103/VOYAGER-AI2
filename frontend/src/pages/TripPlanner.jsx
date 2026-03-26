@@ -88,7 +88,7 @@ const TripPlanner = () => {
   }, [plan, showOriginal])
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] px-6 py-10">
+    <div className="min-h-screen bg-[#f8fafc] px-6 pt-24 pb-10">
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
           <h1 className="text-3xl font-black text-slate-900">Smart Trip Planner</h1>
@@ -325,3 +325,4 @@ const TripPlanner = () => {
 }
 
 export default TripPlanner
+
